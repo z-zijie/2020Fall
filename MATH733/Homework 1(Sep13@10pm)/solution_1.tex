@@ -1,0 +1,45 @@
+\documentclass{article}
+% --- Modify margins --- %
+\usepackage{geometry}
+\geometry{a4paper,scale=0.8}
+% --- Involved packages --- %
+\usepackage{amssymb}
+\usepackage{amsthm}
+
+% --- Title information --- %
+\title{Math 733 - Fall 2020\\
+        {\Large \textbf{Homework 1}}\\
+        {\normalsize \textbf{Due: 09/13, 10pm}}
+    }
+\author{Zijie Zhang}
+\date{\today}
+
+
+% --- main --- %
+
+\begin{document}
+    \maketitle
+    \begin{enumerate}
+        \item \begin{proof}
+            We noticed that $A \circ B = (A \cup B) \setminus (A \cap B)$. So it
+            gives
+            $$B \circ C \cup A \circ C = (A \cup B \cup C) 
+                \setminus (A \cap B \cap C)$$
+            this means
+            $$B \circ C \cup A \circ C \supset A \circ B$$
+            thus
+            $$\mathbf{P}(B \circ C \cup A \circ C) 
+                \geqslant \mathbf{P}(A \circ B)$$
+            we know
+            $$\mathbf{P}(B \circ C) + \mathbf{P}(A \circ C)
+                \geqslant \mathbf{P}(B \circ C \cup A \circ C)$$
+            so, we proved
+            $$\mathbf{P}(A \circ B) \leqslant
+                \mathbf{P}(B \circ C) + \mathbf{P}(A \circ C)$$
+        \end{proof}
+
+        \item \begin{proof}
+            
+        \end{proof}
+    \end{enumerate}
+\end{document}

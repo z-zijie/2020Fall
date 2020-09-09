@@ -8,7 +8,6 @@
     - [Extra Reading](#extra-reading)
   - [Course content](#course-content)
   - [Evaluation](#evaluation)
-  - [><center>Updated on 2020/08/29/Saturday</center>](#blockquotecenterupdated-on-20200829saturdaycenterblockquote)
 - [Introduction](#introduction)
   - [What is probability theory?](#what-is-probability-theory)
   - [Simple example with built in symmetry](#simple-example-with-built-in-symmetry)
@@ -48,7 +47,7 @@ Course grades will be based on **biweekly**
 See the _Canvas_ page for more information  
 
 ><center>Updated on 2020/08/29/Saturday</center>
-----
+- - - -
 ><center>2020/09/03/Thursday</center>
 
 # Introduction
@@ -62,8 +61,12 @@ Upload Homework 1 on Canvas before Sep 13.
 **Goal:** model uncertain events, quantify...  
 ## Simple example with built in symmetry
 1. Filp a fair coin. What's the probability of tails?  
-  Normal average : $\frac{1}{2}$  
-2. We filp a fair coin 10 times. What's the probability of getting 10 tails?  
-  
+   Normal average : $\frac{1}{2}$  
+2. We filp a fair coin 10 times. 
+   What's the probability of getting 10 tails?  $\frac{1}{2^{10}}$  
+   $2^{10}$ outcomes, each outcome : a sequence of H/T  
+3. Dartboard with radius 10in, bull's seye: a disc of radius 1in.  
+   We throw a dart at the board. What's the probability of hitting the bull's
+
 
 ><center>Updated on 2020/09/03/2020/09/03</center>

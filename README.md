@@ -5,6 +5,8 @@
 * MATH 735
 * COMP 726
 
+<center><img src="Schedule.PNG"/></center>
+
 ## Learning progress
 ### COMP 726
 - [ ] Lecture 1

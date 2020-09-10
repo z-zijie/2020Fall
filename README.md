@@ -3,4 +3,11 @@
 * COMP 760
 * MATH 733
 * MATH 735
-* MATH 726
+* COMP 726
+
+## Learning progress
+### COMP 726
+- [ ] Lecture 1
+  - [x] Video
+  - [x] Notes
+  - [ ] Reading

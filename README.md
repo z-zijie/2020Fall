@@ -9,7 +9,11 @@
 
 ## Learning progress
 ### COMP 726
-- [ ] Lecture 1
+- [x] Lecture 1
+  - [x] Video
+  - [x] Notes
+  - [x] Reading
+- [ ] Lecture 2
   - [x] Video
   - [x] Notes
   - [ ] Reading

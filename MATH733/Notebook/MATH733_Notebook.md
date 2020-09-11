@@ -66,7 +66,8 @@ Upload Homework 1 on Canvas before Sep 13.
    What's the probability of getting 10 tails?  $\frac{1}{2^{10}}$  
    $2^{10}$ outcomes, each outcome : a sequence of H/T  
 3. Dartboard with radius 10in, bull's seye: a disc of radius 1in.  
-   We throw a dart at the board. What's the probability of hitting the bull's
+   We throw a dart at the board. What's the probability of hitting the bull's eye? $\frac{1}{100}$  
+
 
 
 ><center>Updated on 2020/09/03/2020/09/03</center>

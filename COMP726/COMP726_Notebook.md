@@ -10,6 +10,7 @@
 - [Lecture 1](#lecture-1)
   - [Our standard optimization problem:](#our-standard-optimization-problem)
   - [Specifying the optimization problem](#specifying-the-optimization-problem)
+- [Lecture 2](#lecture-2)
 
 
 ><center>2020/09/04/Friday === Create Notebook</center>
@@ -95,11 +96,85 @@ If you could certify whether $val(P_F)\not ={0}$, you would have found a proof f
 * Ex: Unconstrainted optimation, many minima:
   "Arbitrary optimization problems are hopeless, we always need some structive"
 ## Specifying the optimization problem
-* Vector space(where the optimization variables and the feasible set "live")  
+1. **Vector space**(where the optimization variables and the feasible set "live")  
   $(\mathbb{R}^d, ||\cdot||)$:normed vector space
 * Most often, we will take $||x||=||x||_2 = \left(\sum_{i=1}^d x_i^2\right)^{\frac{1}{2}}$
 * We might sometimes also consider $l_p$ norms:
 $$ ||x||_p = \left(\sum_{i=1}^d x_i^p\right)^{\frac{1}{p}} , p\geqslant 1$$
-$$ ||x||_1 = \sum_i |x_i|, ||x||_\infty = \max_{1\leqslant i \leqslant d} |x_i| $$
+$$ ||x||_1 = \sum_i |x_i|, \ \ ||x||_\infty = \max_{1\leqslant i \leqslant d} |x_i| $$
 ><center>Updated on 2020/09/04/Friday</center>
+- - - -
+><center>2020/09/09/Wednesday</center>
 
+# Lecture 2
+We will use $\langle \cdot,\cdot \rangle$ to denote inner products.  
+Standard inner product:
+$$ \langle x,y \rangle=x^T y = \sum_{i=1}^d x_i y_i $$
+**When we work with $(\mathbb{R}^d, ||\cdot||_p)$, view $\langle y, x \rangle$ as the value of a linear function $y$ at $x$. So, if we are measuring the length $x$ using the $||\cdot||_p$, we should measure the length of $y$ using $||\cdot||_{p^*}$, where $\frac{1}{p}+\frac{1}{p^*}=1.$**  
+dual norm:$||z||_* = \sup_{||x||\leqslant 1}\langle z,x \rangle$  
+$$\forall z,x:\langle z,x \rangle \leqslant ||z||_* \cdot ||x|| $$
+*proof:* Fix any two vectors $x,z$. Assume $x \not ={0}, z\not ={0}$, o.w. trivial. Define $\hat{x}=\frac{x}{||x||}$.
+$$||z||_* \geqslant \langle z,\hat{x} \rangle = \frac{\langle z,x \rangle}{||x||}$$
+<center><img src="src\Lec2-1.PNG"/></center>
+
+2. **Feasible set**:
+  * specifies what solution points we are allowed to output $X \subseteq \mathbb{R}^d$. If $x=\mathbb{R}^d$, we say that (P) is unconstrained. o.w., we say that (P) is constrained.  
+$X$ can be specified:
+* as an abstract geometric body (a ball, a box, a polyhedron)
+* via functional constraints: $g_i(x)\leqslant 0, i=1,2,\cdots, m.$, $\mu_i(x)=0, i=1,2,\cdots, p$.
+$$ f_i(x) \geqslant C \Leftrightarrow g_i(x)=C-f_i(x)$$
+E.g., $X = \mathcal{B}_2(0,1)$ (Unit Euclidean ball) $X = \{ x\in \mathbb{R}^d:||x||_2\leqslant 1\}$
+* In this class, we will always assume that X is **closed** and **convex**.
+<center><img src="src\Lec2-2.PNG"/></center>
+
+* **Heine-Borel Thm:** If X is closed and bounded, then it is compact.  
+*If $X\subseteq U_{\alpha \in A} U_\alpha$ for some family of open sets $\{U_\alpha\}$ then $\exist$ a finite subfamily $\{U_{\alpha_i}\}_{i=1}^n$ s.t. $X \subseteq U_{1\leqslant i \leqslant n} U_{\alpha_i}$*
+* **Weierstrass Exrtreme Value Theorem:** If X is compact and $f$ is a function that is defined and continous on X, then $f$ attains its extreme values on X.
+* What if X is not bounded?  
+Consider $f(x)=e^x$, $\inf_{x\in \mathbb{R}} f(x)=0$.
+<center><img src="src\Lec2-3.PNG"/></center>
+
+* When we work with unconstrained problems, we will normally assume that $f$ is bounded below.
+* Convex sets:  
+**Def:** A set $X \subseteq \mathbb{R}^d$ is convex if ($\forall x,y \in X$)($\forall \alpha \in (0,1)$): $(1-\alpha)x+\alpha y \in X$. 
+$x+\alpha(y-x)$
+<center><img src="src\Lec2-4.PNG"/></center>
+
+3. **Object function:**
+* "cost", "loss"
+* Extended real valued functions:
+$$f: \mathcal{D}\to \mathbb{R} \cup \{-\infty, \infty\}$$
+* We will define $f$ on all of $\mathbb{R}^d$ by assigning it value $+\infty$ at each point $X\in \mathbb{R}^d \setminus \mathcal{D}$.
+* Effective domain: $dom(f)=\{x\in \mathbb{R}^d:f(x) < \infty\}$.
+* "nonlinear opt" =(?) "continuous opt"
+* Lower semicontinuous functions:
+**Def:** A function $f:\mathbb{R}^d \to \bar{\mathbb{R}}$ if
+$$\liminf_{y\to x} f(y) \geqslant f(x)$$
+f is l.s.c. on $\mathbb{R}^d$ if it is l.s.c. at all $X\in \mathbb{R}^d$.
+<center><img src="src\Lec2-5.PNG"/></center>
+
+Ex. indicator of a **closed** set is l.s.c.
+$$ 
+I_X(x)=
+\left\{
+             \begin{array}{lr}
+             0&, x\in X\\
+             \infty &, x\not\in X\\
+             \end{array}
+\right.
+$$
+$\min_{x\in X} f(x) \equiv \min_{x \in \mathbb{R}^d}\{f(x) + I_X(x)\}$
+* Unless we are abstracting away constraints, the least we will assume about $f$ is that it is continuous.
+* **Def:** $f:\mathbb{R}^d \to \bar{\mathbb{R}}$ is said to be:
+  * *Lipschitz-continuous* on $X\subseteq \mathbb{R}^d$ if $\exist M < \infty$  
+  $\forall x, y \in X: |f(x)-f(y)| \leqslant M ||x-y||$.
+  * Smooth on $X\subseteq \mathbb{R}^d$ if $f$'s gradients are *Lipschitz-continuous*, i.e., $\exist L < \infty$ s.t. $\forall x,y \in X$:
+  $$||\nabla f(x)-\nabla f(y)||_* \leqslant L ||x-y||$$
+  ![](src\Lec2-6.PNG) ![](src\Lec2-7.PNG)
+  * **Def:** $f:\mathbb{R}^d \to \bar{\mathbb{R}}$ is convex if $\forall x,y\in \mathbb{R}^d, \forall \alpha \in (0,1)$:
+  $$f((1-\alpha)x+\alpha y) \leqslant (1-\alpha)f(x) + \alpha f(y)$$
+  <center><img src="src\Lec2-8.PNG"/></center>
+  * Ex. function that is  differentiable on its domain but not smooth: $f(x)=\frac{1}{x}, dom(f)=R_{++}$
+  <center><img src="src\Lec2-9.PNG"/></center>
+
+><center>Updated on 2020/09/09/Wednesday</center>

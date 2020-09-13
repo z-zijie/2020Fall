@@ -11,6 +11,7 @@
 - [Introduction](#introduction)
   - [What is probability theory?](#what-is-probability-theory)
   - [Simple example with built in symmetry](#simple-example-with-built-in-symmetry)
+  - [Even in this simple setup you can come up with non-trivial problems.](#even-in-this-simple-setup-you-can-come-up-with-non-trivial-problems)
 
 
 ><center>2020/08/29/Saturday === Create Notebook</center>
@@ -67,7 +68,12 @@ Upload Homework 1 on Canvas before Sep 13.
    $2^{10}$ outcomes, each outcome : a sequence of H/T  
 3. Dartboard with radius 10in, bull's seye: a disc of radius 1in.  
    We throw a dart at the board. What's the probability of hitting the bull's eye? $\frac{1}{100}$  
-
-
+## Even in this simple setup you can come up with non-trivial problems.
+1. We flip a fair coin 100 times.  
+    What is the probability that the number of heads >= number of tails at any given time?
+2. Button's needle problem.  
+   needle with length $l<1$.  
+   Infinite grid of parallel lines with distance 1 from each other.  
+   <center> <src img="src/Lec1-1.PNG"> </center>
 
 ><center>Updated on 2020/09/03/2020/09/03</center>

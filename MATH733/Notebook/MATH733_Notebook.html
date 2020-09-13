@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Overview</title>
+        <style>
+</style>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.2/dist/katex.min.css" integrity="sha384-yFRtMMDnQtDRO8rLpMIKrtPCD5jdktao2TV19YiZYWMDkUR5GQZR/NOVTdquEx1j" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        
+        <script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+        
+    </head>
+    <body class="vscode-light">
+        <center>Math/Stat 733 : Theory of Probability I</center>  
+<center>Notebook</center>
+<center>Zijie Zhang </center>
+<ul>
+<li><a href="#overview">Overview</a>
+<ul>
+<li><a href="#basic-information">Basic Information</a></li>
+<li><a href="#textbook">Textbook</a>
+<ul>
+<li><a href="#extra-reading">Extra Reading</a></li>
+</ul>
+</li>
+<li><a href="#course-content">Course content</a></li>
+<li><a href="#evaluation">Evaluation</a></li>
+</ul>
+</li>
+<li><a href="#introduction">Introduction</a>
+<ul>
+<li><a href="#what-is-probability-theory">What is probability theory?</a></li>
+<li><a href="#simple-example-with-built-in-symmetry">Simple example with built in symmetry</a></li>
+<li><a href="#even-in-this-simple-setup-you-can-come-up-with-non-trivial-problems">Even in this simple setup you can come up with non-trivial problems.</a></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<center>2020/08/29/Saturday === Create Notebook</center>
+</blockquote>
+<h1 id="overview">Overview</h1>
+<h2 id="basic-information">Basic Information</h2>
+<p><strong>Meetings:</strong> TR 1pm-2:15pm (online)<br>
+<strong>Instructor:</strong> Benedek Valkó<br>
+<strong>Email:</strong> <a href="mailto:valko@math.wisc.edu">valko@math.wisc.edu</a><br>
+<strong>Office hours:</strong> Tu 4-5pm, F 3-4pm, or by appointment (online)</p>
+<h2 id="textbook">Textbook</h2>
+<p><em>Richard Durrett: Probability: Theory and Examples, 5th edition, 2019</em></p>
+<h3 id="extra-reading">Extra Reading</h3>
+<ul>
+<li>Olav Kallenberg: Foundations of Modern Probability. 2nd edition, Springer, 2002</li>
+<li>William Feller. An introduction to probability theory and its applications. Vol. I. Third edition. John Wiley and Sons Inc., New York, 1968.</li>
+<li>David Williams. Probability with martingales. Cambridge Mathematical Textbooks. Cambridge University Press, Cambridge, 1991.</li>
+<li>Patrick Billingsley. Probability and measure. Wiley Series in Probability and Mathematical Statistics. John Wiley &amp; Sons Inc., New York, 1995.</li>
+</ul>
+<h2 id="course-content">Course content</h2>
+<p>We cover selected portions of Chapters 1-4 of Durrett. This is a rough course outline:</p>
+<ul>
+<li>Weeks 1-2: Foundations, properties of probability spaces</li>
+<li>Independence, 0-1 laws, strong law of large numbers</li>
+<li>Characteristic functions, weak convergence and the central limit theorem</li>
+<li>Conditional expectation, Martingales<br>
+The course continues in the spring semester as Math 734 covering topics such as Markov chains, stationary processes, ergodic theory, and Brownian motion.</li>
+</ul>
+<h2 id="evaluation">Evaluation</h2>
+<p>Course grades will be based on <strong>biweekly</strong></p>
+<ul>
+<li>home work assignments (25%)</li>
+<li>class participation (15%)</li>
+<li>midterm exam (30%)</li>
+<li>final exam (30%)<br>
+See the <em>Canvas</em> page for more information</li>
+</ul>
+<blockquote>
+<center>Updated on 2020/08/29/Saturday</center>
+</blockquote>
+<hr>
+<blockquote>
+<center>2020/09/03/Thursday</center>
+</blockquote>
+<h1 id="introduction">Introduction</h1>
+<p>Upload Homework 1 on Canvas before Sep 13.</p>
+<ul>
+<li>Midterm exam and final exam, open book.</li>
+<li>Midterm is evening exam.</li>
+<li>Textbook is <em>Richard Durrett: Probability: Theory and Examples, 5th edition, 2019</em>.</li>
+<li>Lecture Notes will be uploaded.</li>
+</ul>
+<h2 id="what-is-probability-theory">What is probability theory?</h2>
+<p><strong>Goal:</strong> model uncertain events, quantify...</p>
+<h2 id="simple-example-with-built-in-symmetry">Simple example with built in symmetry</h2>
+<ol>
+<li>Filp a fair coin. What's the probability of tails?<br>
+Normal average : <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac{1}{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.190108em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></li>
+<li>We filp a fair coin 10 times.
+What's the probability of getting 10 tails?  <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><msup><mn>2</mn><mn>10</mn></msup></mfrac></mrow><annotation encoding="application/x-tex">\frac{1}{2^{10}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.190108em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7463142857142857em;"><span style="top:-2.786em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">0</span></span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span><br>
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>2</mn><mn>10</mn></msup></mrow><annotation encoding="application/x-tex">2^{10}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">0</span></span></span></span></span></span></span></span></span></span></span></span> outcomes, each outcome : a sequence of H/T</li>
+<li>Dartboard with radius 10in, bull's seye: a disc of radius 1in.<br>
+We throw a dart at the board. What's the probability of hitting the bull's eye? <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mn>100</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac{1}{100}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.190108em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">0</span><span class="mord mtight">0</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></li>
+</ol>
+<h2 id="even-in-this-simple-setup-you-can-come-up-with-non-trivial-problems">Even in this simple setup you can come up with non-trivial problems.</h2>
+<ol>
+<li>We flip a fair coin 100 times.<br>
+What is the probability that the number of heads &gt;= number of tails at any given time?</li>
+<li>Button's needle problem.<br>
+needle with length <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><mo>&lt;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">l&lt;1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.73354em;vertical-align:-0.0391em;"></span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>.<br>
+Infinite grid of parallel lines with distance 1 from each other.<center> <src img="src/Lec1-1.PNG"> </center>
+</li>
+</ol>
+<blockquote>
+<center>Updated on 2020/09/03/2020/09/03</center></blockquote>
+
+    </body>
+    </html>

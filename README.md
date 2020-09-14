@@ -40,6 +40,6 @@
 - - - -
 - [x] Topic 1: Overview
 - [x] Topic 2: Review of Linear Algebra
-- [ ] Topic 3: Review of Probability
-- [ ] Topic 4: Review of Optimization
+- [x] Topic 3: Review of Probability
+- [x] Topic 4: Review of Optimization
 - [ ] Topic 5: Linear Regression

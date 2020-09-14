@@ -3,7 +3,7 @@
 <center>Zijie Zhang </center>
 
 - [Lecture 1](#lecture-1)
-- [Lecture 2](#lecture-2)
+- [Lecture 2S](#lecture-2s)
 
 
 ><center>2020/09/08/Tuesday === Create Notebook</center>
@@ -14,4 +14,4 @@
 
 ><center>Updated on 2020/09/08/Tuesday</center>
 
-# Lecture 2
+# Lecture 2S

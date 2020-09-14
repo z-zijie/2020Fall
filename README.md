@@ -35,5 +35,11 @@
   - [ ] Reading
 
 ### COMP 760
-- [ ] 9/8/20, Lecture / recording_1
-- [ ] 9/10/20, Lecture / recording_2
+- [x] 9/8/20, Lecture / recording_1
+- [x] 9/10/20, Lecture / recording_2
+- - - -
+- [x] Topic 1: Overview
+- [x] Topic 2: Review of Linear Algebra
+- [x] Topic 3: Review of Probability
+- [x] Topic 4: Review of Optimization
+- [x] Topic 5: Linear Regression

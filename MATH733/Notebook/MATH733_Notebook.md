@@ -17,6 +17,7 @@
   - [Def of a $\sigma$-field(or $\sigma$-algebra)](#def-of-a-sigma-fieldor-sigma-algebra)
   - [Probability measure](#probability-measure)
     - [Examples:](#examples)
+- [Lecture 2](#lecture-2)
 
 
 ><center>2020/08/29/Saturday === Create Notebook</center>
@@ -133,4 +134,5 @@ If $\Omega$ is **finite** or **countable infinite** then usually we can take $\m
 ><center>Updated on 2020/09/03</center>
  - - - -
  ><center>2020/09/08/Tuesday</center>
+ # Lecture 2
  ><center>Updated on 2020/09/08</center>

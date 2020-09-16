@@ -197,6 +197,7 @@ $\min_{x\in X} f(x) \equiv \min_{x \in \mathbb{R}^d}\{f(x) + I_X(x)\}$
 * *Ex*. Every isolated local minimizer is strict.  
   *(But the opposite does not hold.)*  
   E.g., 
+  git test
 
 
 ><center>Updated on 2020/09/14/Monday</center>

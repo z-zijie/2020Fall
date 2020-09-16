@@ -38,6 +38,8 @@
   - [x] Notes
   - [x] Reading
 
+- [ ] Homework 1
+
 ### COMP 760
 - [x] 9/8/20, Lecture / recording_1
 - [x] 9/10/20, Lecture / recording_2

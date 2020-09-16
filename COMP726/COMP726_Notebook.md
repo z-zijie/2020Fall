@@ -11,6 +11,8 @@
   - [Our standard optimization problem:](#our-standard-optimization-problem)
   - [Specifying the optimization problem](#specifying-the-optimization-problem)
 - [Lecture 2](#lecture-2)
+- [Lecture 3](#lecture-3)
+  - [**A Taxonomy of solutions to (P)**](#a-taxonomy-of-solutions-to-p)
 
 
 ><center>2020/09/04/Friday === Create Notebook</center>
@@ -177,4 +179,24 @@ $\min_{x\in X} f(x) \equiv \min_{x \in \mathbb{R}^d}\{f(x) + I_X(x)\}$
   * Ex. function that is  differentiable on its domain but not smooth: $f(x)=\frac{1}{x}, dom(f)=R_{++}$
   <center><img src="src\Lec2-9.PNG"/></center>
 
+  * **Def:** We say that a function $f:\mathbb{R}^d \to \bar{\mathbb{R}}$ is **proper** if $\exist x \in \mathbb{R}^d$ s.t. $f(x) \in \mathbb{R}$.
 ><center>Updated on 2020/09/09/Wednesday</center>
+- - - -
+><center>2020/09/14/Monday</center>
+
+# Lecture 3
+
+(P) $\min_{x \in \mathcal{X}} f(x)$  
+## **A Taxonomy of solutions to (P)**
+* Terminology: I will not distinguish b/w "**solution**" and "**minimizer**".  
+* **Def:** We say that $x^* \in \text{dom}(f)$ is:
+  1. a local minimizer of (P) (or a local solution to(P)) if $\exists$ a neighborhood $\mathcal{N}_{x^*}$ of $x^*$ s.t. $\forall x \in \mathcal{N}_{x^*} \cap \mathcal{X}$ we have $f(x) \geqslant f(x^*)$. ![](src/Lec3-1.PNG)
+  2. a strict local minimizer of (P) if it satisfies (1)  but the inequality is strict: $f(x) > f(x^*)$.
+  3. a global minimizer of (P) if $\forall x \in \mathcal{X}$: $f(x) \geqslant f(x^*)$.
+  4. an isolated local minimizer of (P), if $\exists$ a neighborhood $\mathcal{N}_{x^*}$ s.t. $\forall x \in \mathcal{N}_{x^*} \cap \mathcal{X}$:$f(x) \geqslant f(x^*)$ and $\mathcal{N}_{x^*}$ does not contain any other local minimizers.
+* *Ex*. Every isolated local minimizer is strict.  
+  *(But the opposite does not hold.)*  
+  E.g., 
+
+
+><center>Updated on 2020/09/14/Monday</center>

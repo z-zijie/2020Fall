@@ -14,6 +14,10 @@
 - [Lecture 3](#lecture-3)
   - [**A Taxonomy of solutions to (P)**](#a-taxonomy-of-solutions-to-p)
   - [Taylor's Theorem:](#taylors-theorem)
+  - [Theorem(2.1 in WR)](#theorem21-in-wr)
+  - [Properties of smooth funcitons:](#properties-of-smooth-funcitons)
+    - [Lemma 2.2](#lemma-22)
+    - [Lemma 2.3](#lemma-23)
 
 
 ><center>2020/09/04/Friday === Create Notebook</center>
@@ -203,6 +207,35 @@ $\min_{x\in X} f(x) \equiv \min_{x \in \mathbb{R}^d}\{f(x) + I_X(x)\}$
 * For this part and until explicitly stated otherwise, we will be assuming that $f$ is at least once continuously differentiable.
 * Taylor's Theorem for 1D functions from calculus:  
   $f:\mathbb{R} \to \mathbb{R}$, $f$ k-times continuously differentiable.  
-  $\Rightarrow \forall x, y \in \mathbb{R}$
+  $\Rightarrow \forall x, y \in \mathbb{R}$ ![](src/Lec3-4.PNG)  
+  Typical forms of $R_k(x)$:(assume that $f$ is (k+1)-times cont.ly diff.able)
+  1. Lagrange(mean-value) remainder:  
+   $\exists \gamma \in (0,1): R_k(x) = \frac{1}{(k+1)!} f^{(k+1)}(x+\gamma(y-x))(y-x)^{k+1}$
+  2. Integral remainder:  
+   $R_k(x)=\frac{1}{k!}\int_0^1f^{(k+1)}(x+t(y-x))(y-x)^{k+1}dt$  
+## Theorem(2.1 in WR)
+Let $f:\mathbb{R}^d \to \bar{\mathbb{R}}$ be a cont.ly diff.able function. Then, $\forall x,y \in \text{dom}(f)$ and s.t. $\forall \alpha \in (0,1)$ $(1-\alpha)x+\alpha y \in \text{dom}(f)$:  
+1. $f(y) = f(x) + \int_0^1 \nabla \langle f(x+t(y-x)), y-x\rangle dt$
+2. $\exist \gamma \in (0,1)$: $f(y)=f(x)+\langle \nabla f(x+\gamma(y-x)), y-x \rangle$.(*Mean Value Throrem*)  
+
+If $f$ is twice cont.ly diff.able:  
+3. $\nabla f(y) = \nabla f(x) + \int_0^1 \nabla^2 f(x+t(y-x))(y-x) dt$
+   ![](src/Lec3-5.PNG)
+4. $\exist \gamma \in (0,1)$: $f(y) = f(x) + \langle \nabla f(x), y-x \rangle + \frac{1}{2} \langle \nabla^2 f(x+\gamma(y-x))(y-x), y-x \rangle (y-x)^T \nabla^2 f(x+\gamma(y-x))(y-x)$
+
+**Q. Can you have:**  
+$\exist \gamma \in (0,1)$: $\nabla f(y) = \nabla f(x) +\nabla^2 f(x+\gamma(y-x))(y-x)$ ? **NO!**  
+$(f(x) = \sum_i f_i(x_i))$  
+
+## Properties of smooth funcitons:
+* Terminology: $f$ is L-smooth w.r.t $||\cdot||$ $\Leftrightarrow$ $\forall x, y \in \text{dom}(f)$: $||\nabla f(x) - \nabla f(y)||_* \leqslant L||x-y||$.
+### Lemma 2.2 
+Let $f: \mathbb{R}^d \to \bar{\mathbb{R}}$ be an **L-smooth** funciton w.r.t $||\cdot||$. Then, $\forall x,y \in \text{dom}(f)$:  
+$$f(y) \leqslant f(x) + \langle\nabla f(x), y-x\rangle + \frac{L}{2} ||y-x||^2$$  
+**Proof:** ![](src/Lec3-6.PNG)  
+* *Ex* Prove that, under the same assumptions as in *Lemma 2.2*,
+$$f(y) \geqslant f(x) + \langle \nabla f(x), y-x\rangle - \frac{L}{2}||y-x||^2$$
+### Lemma 2.3
+Suppose that $f: \mathbb{R}^d \to \bar{\mathbb{R}}$ is twice cont.ly diff.able on $\text{dom}(f)$. Then $f$ is **L-smooth** w.r.t $||\cdot||_2$ if and only if ![](src/Lec3-7.PNG)
 
 ><center>Updated on 2020/09/14/Monday</center>

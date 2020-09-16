@@ -29,10 +29,14 @@
   - [x] Video
   - [x] Notes
   - [x] Reading
-- [ ] Lecture 2
+- [x] Lecture 2
   - [x] Video
   - [x] Notes
-  - [ ] Reading
+  - [x] Reading
+- [x] Lecture 3
+  - [x] Video
+  - [x] Notes
+  - [x] Reading
 
 ### COMP 760
 - [x] 9/8/20, Lecture / recording_1

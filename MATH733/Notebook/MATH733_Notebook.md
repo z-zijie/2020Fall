@@ -70,4 +70,4 @@ Upload Homework 1 on Canvas before Sep 13.
 
 
 
-><center>Updated on 2020/09/03/2020/09/03</center>
+><center>Updated on 2020/09/03</center>

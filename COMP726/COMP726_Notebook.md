@@ -13,6 +13,7 @@
 - [Lecture 2](#lecture-2)
 - [Lecture 3](#lecture-3)
   - [**A Taxonomy of solutions to (P)**](#a-taxonomy-of-solutions-to-p)
+  - [Taylor's Theorem:](#taylors-theorem)
 
 
 ><center>2020/09/04/Friday === Create Notebook</center>
@@ -196,7 +197,12 @@ $\min_{x\in X} f(x) \equiv \min_{x \in \mathbb{R}^d}\{f(x) + I_X(x)\}$
   4. an isolated local minimizer of (P), if $\exists$ a neighborhood $\mathcal{N}_{x^*}$ s.t. $\forall x \in \mathcal{N}_{x^*} \cap \mathcal{X}$:$f(x) \geqslant f(x^*)$ and $\mathcal{N}_{x^*}$ does not contain any other local minimizers.
 * *Ex*. Every isolated local minimizer is strict.  
   *(But the opposite does not hold.)*  
-  E.g., 
+  E.g., ![](src/Lec3-2.PNG) ![](src/Lec3-3.PNG)
 
+## Taylor's Theorem:
+* For this part and until explicitly stated otherwise, we will be assuming that $f$ is at least once continuously differentiable.
+* Taylor's Theorem for 1D functions from calculus:  
+  $f:\mathbb{R} \to \mathbb{R}$, $f$ k-times continuously differentiable.  
+  $\Rightarrow \forall x, y \in \mathbb{R}$
 
 ><center>Updated on 2020/09/14/Monday</center>

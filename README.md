@@ -21,10 +21,10 @@ Learning progress
 - [ ] 9/15/20 2nd (integration with respect to a probability measure)
 - [ ] 9/15/20 1st lecture (properties of random variables)
 
-- [x] Homework 1 (Sep 13 @ 10pm)
-  - [ ] Bonus Problem
-- [ ] Homework 1 (Sep 27 @ 10pm)
-  - [ ] Bonus Problem
+- [x] [Homework 1 (Sep 13 @ 10pm)](/MATH733/Homework%201(Sep13)/hw_1.pdf)
+  - [x] [Solution](/MATH733/Homework%201(Sep13)/solution_1.pdf)
+- [ ] [Homework 1 (Sep 27 @ 10pm)](/MATH733/Homework%202(Sep27)/hw_2.pdf)
+  - [ ] Solution
 
 # MATH 735
 - [ ] 1. Review of foundations of probability
@@ -44,7 +44,7 @@ Learning progress
   - [x] Notes
   - [x] Reading
 
-- [ ] Homework 1
+- [ ] [Homework 1(Sep 21)](/COMP726/Homework%201(Sep%2021)/CS_726_HW_1_Fall_2020.pdf)
 
 # COMP 760
 - [x] 9/8/20, Lecture / recording_1
@@ -55,3 +55,5 @@ Learning progress
 - [x] Topic 3: Review of Probability
 - [x] Topic 4: Review of Optimization
 - [ ] Topic 5: Linear Regression
+- - - -
+- [ ] [Homework 1(Sep 24)](/COMP760/Homework%201(Sep%2024)/CS760_1Overview.pdf)

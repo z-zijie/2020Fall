@@ -11,13 +11,19 @@
 
 ### MATH 733
 - [x] 9/3/20 - First part (intro)
-- [ ] 9/3/20 - 2nd part (Kolmogorov axioms, examples)
-- [ ] 9/8/20 - 1st part (Further examples)
-- [ ] 9/8/20 2nd part (Properties of prob measures)
+- [x] 9/3/20 - 2nd part (Kolmogorov axioms, examples)
+- [x] 9/8/20 - 1st part (Further examples)
+- [x] 9/8/20 2nd part (Properties of prob measures)
 - [ ] 9/10/20 1st part (measures on R)
 - [ ] 9/10/20 2nd part (random variables and distributions)
+- [ ] 9/17/20 2nd part (change of variables formula, variance)	
+- [ ] 9/17/20 1st part (inequalities, limits and expectation)
+- [ ] 9/15/20 2nd (integration with respect to a probability measure)
+- [ ] 9/15/20 1st lecture (properties of random variables)
 
 - [x] Homework 1 (Sep 13 @ 10pm)
+  - [ ] Bonus Problem
+- [ ] Homework 1 (Sep 27 @ 10pm)
   - [ ] Bonus Problem
 
 ### MATH 735

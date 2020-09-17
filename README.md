@@ -1,16 +1,15 @@
-# <center>This repository contains all the documents for the 2020 fall semester.</center>
 
-- [MATH 733](###math-733)
-- [MATH 735](###math-735)
-- [COMP 726](###comp-726)
-- [COMP 760](###comp-760)
+- [MATH 733](#math-733)
+- [MATH 735](#math-735)
+- [COMP 726](#comp-726)
+- [COMP 760](#comp-760)
 
 
 <center><img src="Schedule.PNG"/></center>
 
-## Learning progress
+Learning progress
 
-### MATH 733
+# MATH 733
 - [x] 9/3/20 - First part (intro)
 - [x] 9/3/20 - 2nd part (Kolmogorov axioms, examples)
 - [x] 9/8/20 - 1st part (Further examples)
@@ -27,11 +26,11 @@
 - [ ] Homework 1 (Sep 27 @ 10pm)
   - [ ] Bonus Problem
 
-### MATH 735
+# MATH 735
 - [ ] 1. Review of foundations of probability
 - [ ] 2. Stochastic process
 
-### COMP 726
+# COMP 726
 - [x] Lecture 1
   - [x] Video
   - [x] Notes
@@ -47,7 +46,7 @@
 
 - [ ] Homework 1
 
-### COMP 760
+# COMP 760
 - [x] 9/8/20, Lecture / recording_1
 - [x] 9/10/20, Lecture / recording_2
 - - - -

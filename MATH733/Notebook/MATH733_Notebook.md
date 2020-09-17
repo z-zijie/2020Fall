@@ -18,6 +18,9 @@
   - [Probability measure](#probability-measure)
     - [Examples:](#examples)
 - [Lecture 2](#lecture-2)
+  - [Word Problem:](#word-problem)
+    - [Ex: We roll two dice](#ex-we-roll-two-dice)
+    - [Examples:](#examples-1)
 
 
 ><center>2020/08/29/Saturday === Create Notebook</center>
@@ -133,6 +136,22 @@ If $\Omega$ is **finite** or **countable infinite** then usually we can take $\m
 
 ><center>Updated on 2020/09/03</center>
  - - - -
- ><center>2020/09/08/Tuesday</center>
- # Lecture 2
- ><center>Updated on 2020/09/08</center>
+><center>2020/09/08/Tuesday</center>
+# Lecture 2
+## Word Problem:
+1. Identify $(\Omega, \mathscr{F}, \mathbb{P})$
+2. Identify the event in question
+3. Try to compute $\mathbb{P}(event)$.
+### Ex: We roll two dice
+What's the probility that the sum is even?
+$\Omega = \{(a_1,a_2): 1 \leqslant a_i \leqslant 6\}$  
+$\mathscr{F}=2^\Omega$, $\mathbb{P}:\mathscr{F}\to (0,1]$  
+$\mathbb{P}(\{(a_1,a_2)\}) = \frac{1}{36}$  
+$\# \Omega = 36$, $A = \{the\ sum\ is\ even\} = \{(a_1, a_2): 1\leqslant a_i \leqslant 6, a_1+a_2 \ is\ even\}$.  
+$\mathbb{P}(A) = \sum_{(a_1,a_2)\in A} \mathbb{P}(\{(a_1,a_2)\}) = \frac{\# A}{36}$.
+### Examples:
+1. If $\Omega$ is finite or countable infinite (nonempty). If all all singleterms are events then $\mathbb{P}$ can be described via the probabilities of the singleterms.  
+   $\Omega = \{\omega_1, \omega_2, \cdots\}$, 
+   
+ 
+><center>Updated on 2020/09/08</center>

@@ -1,9 +1,10 @@
 # <center>This repository contains all the documents for the 2020 fall semester.</center>
 
-* COMP 760
-* MATH 733
-* MATH 735
-* COMP 726
+- [MATH 733](###math-733)
+- [MATH 735](###math-735)
+- [COMP 726](###comp-726)
+- [COMP 760](###comp-760)
+
 
 <center><img src="Schedule.PNG"/></center>
 

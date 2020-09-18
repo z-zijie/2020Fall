@@ -24,17 +24,50 @@
 % --- Question 1 --- %
 \section*{Question 1}
     \begin{proof}
-    When $\boldsymbol{x} = (1,0,0,\cdots,0)$,
-    $$ ||x||_q = \left(\sum_{i=1}^n|x_i|^q\right)^{\frac{1}{q}} = 1 $$
-    $$ ||x||_p = \left(\sum_{i=1}^n|x_i|^p\right)^{\frac{1}{p}} = 1 $$
-    $$ ||x||_q = ||x||_p $$
-    When $\boldsymbol{x} = (1,1,1,\cdots,1)$,
-    $$ ||x||_p = \left(\sum_{i=1}^n|x_i|^p\right)^{\frac{1}{p}} = d^{\frac{1}{p}} $$
-    $$ d^{\frac{1}{p}-\frac{1}{q}}||x||_q = d^{\frac{1}{p}-\frac{1}{q}} \left(\sum_{i=1}^n|x_i|^q\right)^{\frac{1}{q}} = d^{\frac{1}{p}} $$
-    $$ ||x||_p = d^{\frac{1}{p}-\frac{1}{q}}||x||_q $$
+        When $\boldsymbol{x} = (1,0,0,\cdots,0)$,
+        $$ ||x||_q = \left(\sum_{i=1}^n|x_i|^q\right)^{\frac{1}{q}} = 1 $$
+        $$ ||x||_p = \left(\sum_{i=1}^n|x_i|^p\right)^{\frac{1}{p}} = 1 $$
+        $$ ||x||_q = ||x||_p $$
+        When $\boldsymbol{x} = (1,1,1,\cdots,1)$,
+        $$ ||x||_p = \left(\sum_{i=1}^n|x_i|^p\right)^{\frac{1}{p}} = d^{\frac{1}{p}} $$
+        $$ d^{\frac{1}{p}-\frac{1}{q}}||x||_q = d^{\frac{1}{p}-\frac{1}{q}} \left(\sum_{i=1}^n|x_i|^q\right)^{\frac{1}{q}} = d^{\frac{1}{p}} $$
+        $$ ||x||_p = d^{\frac{1}{p}-\frac{1}{q}}||x||_q $$
     \end{proof}
 
+% --- Question 2 --- %
 \section*{Question 2}
+    \begin{proof}
+        We know $$ L_2 \geqslant \frac{||\nabla f(\mathbf{x})-\nabla f(\mathbf{y})||_2}{||\mathbf{x}-\mathbf{y}||_2} $$
+        so, the smallest $L_2$ should be $\max{\left(\frac{||\nabla f(\mathbf{x})-\nabla f(\mathbf{y})||_2}{||\mathbf{x}-\mathbf{y}||_2}\right)}, \forall \mathbf{x,y}\in \mathbb{R}^d$,
+        which is $\max{||\nabla^2 f(\mathbf{x})||_2}, \forall \mathbf{x}\in \mathbb{R}^d$.
+
+    \end{proof}
+
+% --- Question 3 --- %
+\section*{Question 3}
+    \begin{proof}
+        If $\alpha_1$ and $\alpha_2$ are two aribitray nonnegative real numbers such that $\alpha_1+\alpha_2=1$ then
+        the convexity of $f$ implies
+        $$ \forall x_1, x_2, \ f(\alpha_1 x_1 + \alpha_2 x_2) \leqslant \alpha_1 f(x_1) + \alpha_2 f(x_2) $$
+        This can be easily generalized: if $\alpha_1, \cdots, \alpha_n$ are nonnegative real numbers such that
+        $\alpha_1 + \cdots + \alpha_n = 1$, then
+        $$f(\alpha_1 x_1 + \cdots + \alpha_n x_n) \leqslant \alpha_1 f(x_1) + \cdots \alpha_n f(x_n)$$
+        for any $x_1, \cdots, x_n$.\\
+        By induction:\\
+        The statement is true for $n=2$. Suppose it is also for some $n$, one needs to prove it for $n+1$.
+        At least one of the $\alpha_i$ is strictly positive, say $\alpha_1$: therefore by convexity inequality:
+        \begin{align*}
+            f\left(\sum_{i=1}^{n+1}\alpha_i x_i\right) &= f\left(\alpha_1 x_1 + (1-\alpha_1)\sum_{i=2}^{n+1}\frac{\alpha_i}{1-\alpha_1}x_i\right)\\
+            &\leqslant \alpha_1 f(x_1) + (1-\alpha_1) f\left(\alpha_1 x_1 + (1-\alpha_1)\sum_{i=2}^{n+1}\frac{\alpha_i}{1-\alpha_1}x_i\right)
+        \end{align*}
+        Since $$ \sum_{i=2}^{n+1}\frac{\alpha_i}{1-\alpha_1} = 1 $$
+        one can apply the induction hypotheses to the last term in the previous formula to obtain the result, namely the finite form of the Jensen's inequality.
+        The finite form can be rewritten as:
+        $$f\left(\sum_{i=1}^k \alpha_i x_i\right) \leqslant \sum_{i=1}^k \alpha_i f(x_i)$$
+    \end{proof}
+
+% --- Question 4 --- %
+\section*{Question 4}
     \begin{proof}
         
     \end{proof}

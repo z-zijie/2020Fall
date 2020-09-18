@@ -22,6 +22,7 @@
     - [Ex: We roll two dice](#ex-we-roll-two-dice)
     - [Examples:](#examples-1)
   - [2nd Part](#2nd-part)
+- [Lecture 3](#lecture-3)
 
 
 ><center>2020/08/29/Saturday === Create Notebook</center>
@@ -183,3 +184,10 @@ $\mathbb{P}(A) = \sum_{(a_1,a_2)\in A} \mathbb{P}(\{(a_1,a_2)\}) = \frac{\# A}{3
 ![](src/Lec2-6.png)
 
 ><center>Updated on 2020/09/08</center>
+
+><center>2020/09/10/Thursday</center>
+
+# Lecture 3
+
+
+><center>Updated on 2020/09/10</center>

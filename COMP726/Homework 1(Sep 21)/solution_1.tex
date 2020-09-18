@@ -1,0 +1,42 @@
+\documentclass{article}
+% --- Modify margins --- %
+\usepackage{geometry}
+\geometry{a4paper,scale=0.8}
+% --- Involved packages --- %
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+
+% --- Title information --- %
+\title{CS 726 - Fall 2020\\
+        {\Large \textbf{Homework \#1}}\\
+        {\normalsize \textbf{Due : 09/21/2020, 5pm}}
+    }
+\author{Zijie Zhang}
+\date{\today}
+
+
+% --- main --- %
+
+\begin{document}
+    \maketitle
+
+% --- Question 1 --- %
+\section*{Question 1}
+    \begin{proof}
+    When $\boldsymbol{x} = (1,0,0,\cdots,0)$,
+    $$ ||x||_q = \left(\sum_{i=1}^n|x_i|^q\right)^{\frac{1}{q}} = 1 $$
+    $$ ||x||_p = \left(\sum_{i=1}^n|x_i|^p\right)^{\frac{1}{p}} = 1 $$
+    $$ ||x||_q = ||x||_p $$
+    When $\boldsymbol{x} = (1,1,1,\cdots,1)$,
+    $$ ||x||_p = \left(\sum_{i=1}^n|x_i|^p\right)^{\frac{1}{p}} = d^{\frac{1}{p}} $$
+    $$ d^{\frac{1}{p}-\frac{1}{q}}||x||_q = d^{\frac{1}{p}-\frac{1}{q}} \left(\sum_{i=1}^n|x_i|^q\right)^{\frac{1}{q}} = d^{\frac{1}{p}} $$
+    $$ ||x||_p = d^{\frac{1}{p}-\frac{1}{q}}||x||_q $$
+    \end{proof}
+
+\section*{Question 2}
+    \begin{proof}
+        
+    \end{proof}
+
+\end{document}

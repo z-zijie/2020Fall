@@ -37,12 +37,12 @@
 % --- Question 2 --- %
 \section*{Question 2}
     \begin{proof}
-        By \textbf{Lemma 2.3} in Lecture notes:\\
-        $f$ is smooth w.r.t. $||\cdot||_2$ iff.
-        $$-L\cdot \mathcal{I} \leqslant \nabla^2 f(x) \leqslant L \cdot \mathcal{I}$$
-        So $L \geqslant ||\nabla^2 f(x)||_2$, the smallest constant $L_2$ is $||\nabla^2 f(x)||_2$.\\
+        Assume that $p>2>q$
+        $$||x||_p \geqslant ||x||_2 \geqslant d^{\frac{1}{2}-\frac{1}{p}}||x||_p$$
+        $$||x||_2 \geqslant ||x||_q \geqslant d^{\frac{1}{q}-\frac{1}{2}}||x||_2$$
+        $$L_2\geqslant \frac{||\nabla f(x)-\nabla f(y)||_2}{||x-y||_2} \geqslant \frac{d^{\frac{1}{2}-\frac{1}{q}}||\nabla f(x)-\nabla f(y)||_q}{d^{\frac{1}{2}-\frac{1}{p}}||x-y||_p} \geqslant L_p \cdot d^{\frac{2}{p}-1}$$
 
-
+        If $p=1$, $L_2 \geqslant d\cdot L_p$.
     \end{proof}
 
 % --- Question 3 --- %

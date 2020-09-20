@@ -43,8 +43,11 @@ Learning progress
   - [x] Video
   - [x] Notes
   - [x] Reading
+- [ ] Lecture 4
+  - [ ] video
+  - [ ] Notes
 
-- [ ] [Homework 1(Sep 21)](/COMP726/Homework%201(Sep%2021)/CS_726_HW_1_Fall_2020.pdf)
+- [x] [Homework 1(Sep 21)](/COMP726/Homework%201(Sep%2021)/CS_726_HW_1_Fall_2020.pdf)
 
 # COMP 760
 - [x] 9/8/20, Lecture / recording_1

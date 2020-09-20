@@ -37,9 +37,11 @@
 % --- Question 2 --- %
 \section*{Question 2}
     \begin{proof}
-        We know $$ L_2 \geqslant \frac{||\nabla f(\mathbf{x})-\nabla f(\mathbf{y})||_2}{||\mathbf{x}-\mathbf{y}||_2} $$
-        so, the smallest $L_2$ should be $\max{\left(\frac{||\nabla f(\mathbf{x})-\nabla f(\mathbf{y})||_2}{||\mathbf{x}-\mathbf{y}||_2}\right)}, \forall \mathbf{x,y}\in \mathbb{R}^d$,
-        which is $\max{||\nabla^2 f(\mathbf{x})||_2}, \forall \mathbf{x}\in \mathbb{R}^d$.
+        By \textbf{Lemma 2.3} in Lecture notes:\\
+        $f$ is smooth w.r.t. $||\cdot||_2$ iff.
+        $$-L\cdot \mathcal{I} \leqslant \nabla^2 f(x) \leqslant L \cdot \mathcal{I}$$
+        So $L \geqslant ||\nabla^2 f(x)||_2$, the smallest constant $L_2$ is $||\nabla^2 f(x)||_2$.\\
+
 
     \end{proof}
 
@@ -69,7 +71,85 @@
 % --- Question 4 --- %
 \section*{Question 4}
     \begin{proof}
-        
+        \indent
+        \begin{itemize}
+            \item[(i)]
+            
+            \item[{(ii)}]
+            By the convexity of function $f$, for all $y \in \mathbb{R}^d$, $x \in \mathbb{R}^d$, $|f(x)| = M$. For $\alpha \in [0,1]$
+            $$M \geqslant \alpha f(x) + (1-\alpha)f(y) \geqslant f\left(\alpha x + (1-\alpha) y\right)\geqslant f(y)$$
+            $$f(x)\geqslant f(y)$$
+            Thus, $f$ has maximum, this contradicts that $f$ is a convex function.
+        \end{itemize}
+
     \end{proof}
 
+% --- Question 5 --- %
+\section*{Question 5}
+    \begin{proof}
+        This can be verified by using the definition of convex function and convex set.
+        \begin{itemize}
+            \item $\Rightarrow$
+                Suppose $(x,a_1),\ (y,a_2) \in epi(f)$ then $f(x)\leqslant a_1,\ f(y)\leqslant a_2$ \\
+                For any $\lambda \in [0,1]$, by convexity of $f$,
+                $$f(\lambda x + (1-\lambda)y) \leqslant \lambda f(x) + (1-\lambda) f(y) \leqslant \lambda a_1 + (1-\lambda) a_2$$
+                This implies that $$\lambda (x, a_1) + (1-\lambda) (y, a_2) \in epi(f)$$
+                Hence $epi(f)$ is convex.
+            \item $\Leftarrow$
+                Let $x,\ y \in \mathbb{R}^d$, since $(x, f(x))$ and $(y, f(y))$ lie in $epi(f)$
+                by convexity of epigraph set, we have
+                $\forall \lambda \in [0,1]$
+                $$(\lambda x+(1-\lambda)y,\ \lambda f(x) + (1-\lambda)f(y)) \in epi(f)$$
+                By definition, $f(\lambda x+(1-\lambda)y) \leqslant \lambda f(x) + (1-\lambda)f(y))$.\\
+                Hence, function $f$ is convex.
+        \end{itemize}
+    \end{proof}
+
+% --- Question 6 --- %
+\section*{Question 6}
+    \begin{proof}
+        By \textbf{Theorem 2.1}, we know
+        $$f(y) = f(x) + \int_0^1 \langle\nabla f\left(x+t(y-x)\right), y-x\rangle dt$$
+        thus, $f(y)-f(x)-\langle\nabla f(x), y-x\rangle = \int_0^1 \langle\nabla f\left(x+t(y-x)\right)-\nabla f(x), y-x\rangle dt$\\
+        By the convexity of $f$, the integral is nonnegative. So, we proved
+        $$f(y) \geqslant f(x) + \langle f(x), y-x\rangle$$
+    \end{proof}
+
+% --- Question 7 --- %
+\section*{Question 7}
+    \begin{proof}
+        A is symmetric therefore diagonalisable in an orthonormal basis of $\mathbb{R}^d$. Let $(e_i)$ be that basis and write
+        $$x = \sum_i x_i\cdot e_i,\ Ae_i = \lambda_i e_i$$
+        $$f(x)=\frac{\sum_i \lambda_i x_i^2}{\sum_i x_i^2}$$
+        Then, \begin{align*}
+            x^T A x &= x^T A \sum_i x_i e_i\\
+            &= x^T \sum_i x_i \lambda_i e_i\\
+            &= \sum_i \lambda_i x_i^2
+        \end{align*}
+        Thus, $$\lambda_1 \leqslant f(x) \leqslant \lambda_d$$
+        So we proved, \begin{itemize}
+            \item[(i)] $$x^T A x \geqslant \lambda_1 ||x||_2$$
+            \item[(ii)] $$x^T A x \leqslant \lambda_d ||x||_2$$
+        \end{itemize}
+    \end{proof}
+
+% --- Question 8 --- %
+\section*{Question 8}
+    \begin{proof}
+        $A$ is positive semidefinite means $x^T A x \geqslant 0$ for all $x\in\mathbb{R}^d$.\\
+        In \textbf{Question 7} we have prove the symmetric matrix $A$ satisfies $x^T A x \geqslant \lambda_1 ||x||_2$ for all $x\in\mathbb{R}^d$.\\
+        So, we just need the smallest eigenvalue of matrix $A$ is nonnegative.\\
+        By \textbf{LDL} decomposition, we know
+        $$L^{-1} = \begin{bmatrix}
+            1 & 0\\
+            1/2 & 1 & 0\\
+            1/3 & 2/3 & 1 & 0\\
+            \vdots & & & & \ddots\\
+            1/d-1 & 2/d-1 & 3/d-1 & \cdots & d-2/d-1 & 1 & 0\\
+            1 & 1 & 1 & 1 & 1 & 1 & 1\\
+        \end{bmatrix}$$
+        Then $$D = L^{-1} A {L^{-1}}^{T}$$
+        Obviously, the eigenvalues of $A$ are all nonnegative.\\
+        By the way, $\det(A) = 0$, 0 is the smallest eigenvalue of matrix $A$.
+    \end{proof}
 \end{document}

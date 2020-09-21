@@ -21,9 +21,9 @@ Learning progress
 - [ ] 9/15/20 2nd (integration with respect to a probability measure)
 - [ ] 9/15/20 1st lecture (properties of random variables)
 
-- [x] [Homework 1 (Sep 13 @ 10pm)](/MATH733/Homework%201(Sep13)/hw_1.pdf)
-  - [x] [Solution](/MATH733/Homework%201(Sep13)/solution_1.pdf)
-- [ ] [Homework 1 (Sep 27 @ 10pm)](/MATH733/Homework%202(Sep27)/hw_2.pdf)
+- [x] [Homework 1 (Sep 13 @ 10pm)](/MATH733/Homework1/hw_1.pdf)
+  - [x] [Solution](/MATH733/Homework1/solution_1.pdf)
+- [ ] [Homework 1 (Sep 27 @ 10pm)](/MATH733/Homework2/hw_2.pdf)
   - [ ] Solution
 
 # MATH 735
@@ -47,7 +47,8 @@ Learning progress
   - [ ] video
   - [ ] Notes
 
-- [x] [Homework 1(Sep 21)](/COMP726/Homework%201(Sep%2021)/CS_726_HW_1_Fall_2020.pdf)
+- [x] [Homework 1(Sep 21)](/COMP726/Homework1/CS_726_HW_1_Fall_2020.pdf)
+  - [x] [Solution](/COMP726/Homework1/solution_1.pdf)
 
 # COMP 760
 - [x] 9/8/20, Lecture / recording_1

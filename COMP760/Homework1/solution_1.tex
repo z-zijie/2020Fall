@@ -6,6 +6,7 @@
 \usepackage{amssymb}
 \usepackage{amsthm}
 \usepackage{amsmath}
+\usepackage{bm}
 
 % --- Title information --- %
 \title{CS 760: Machine Learning - Fall 2020\\
@@ -21,4 +22,64 @@
 \begin{document}
     \maketitle
     
+% --- Problem 1 ---%
+\section*{Problem 1}
+    \begin{proof}
+        By the definition, $\mathbb{R}^D$ is a subspace if for every
+        $a,\ b\in \mathbb{R}$ and every $\bm{u}, \bm{v} \in \mathbb{R}^D$,
+        $a\bm{u}+b\bm{v} \in \mathbb{R}^D$.\\
+        \indent It is trivial.
+    \end{proof}
+
+% --- Problem 2 ---%
+\section*{Problem 2}
+    \begin{proof}
+        \indent
+        \begin{itemize}
+            \item[(a)]
+                $\bm{x} = (-1,\cdots,-1) \in \mathbb{R}^D$. The element-wise square roots is
+                $(i,\cdots,i) \not\in \mathbb{R}^D$.\\
+                $\mathbb{R}^D$ is not closed under element-wise square roots.
+            \item[(b)] 
+                $\mathbb{C}^D$.
+        \end{itemize}
+    \end{proof}
+
+% --- Problem 3 ---%
+\section*{Problem 3}
+    \begin{proof}
+        For every element $\bm{x},\ \bm{y} \in \mathbb{U}$. They can be represented by a linear
+        combination of $\bm{u}_1, \cdots, \bm{u}_R$.
+        $$\bm{x} = \alpha_1 \bm{u}_1 + \cdots + \alpha_R \bm{u}_R$$
+        $$\bm{y} = \beta_1 \bm{u}_1 + \cdots + \beta_R \bm{u}_R$$
+        For every $a,\ b\in\mathbb{R}$,
+        $$a\bm{x}+b\bm{y} = (a\alpha_1+b\beta_1)\bm{u}_1+\cdots+(a\alpha_R+b\beta_R)\bm{u}_R $$
+        $a\bm{x}+b\bm{y} \in \mathbb{U}$, so $\mathbb{U}$ is a subspace.
+    \end{proof}
+
+% --- Problem 4 ---%
+\section*{Problem 4}
+    \begin{proof}
+        
+    \end{proof}
+
+% --- Problem 5 ---%
+\section*{Problem 5}
+    \begin{proof}
+        
+    \end{proof}
+
+% --- Problem 6 ---%
+\section*{Problem 6}
+    \begin{proof}
+        
+    \end{proof}
+
+% --- Problem 7 ---%
+\section*{Problem 7}
+    \begin{proof}
+        
+    \end{proof}
+
+
 \end{document}

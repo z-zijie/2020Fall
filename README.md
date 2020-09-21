@@ -60,4 +60,5 @@ Learning progress
 - [x] Topic 4: Review of Optimization
 - [ ] Topic 5: Linear Regression
 - - - -
-- [ ] [Homework 1(Sep 24)](/COMP760/Homework1/CS760_1Overview.pdf)
+- [ ] [Homework 1(Sep 24)](/COMP760/Homework1/CS760_hw1_Review.pdf)
+  - [ ] [Solution](/COMP760/Homework1/solution_1.pdf)

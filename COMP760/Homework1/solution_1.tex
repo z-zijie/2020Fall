@@ -137,7 +137,22 @@
 % --- Problem 7 ---%
 \section*{Problem 7}
     \begin{proof}
-        
+        \indent
+        \begin{itemize}
+            \item[(a)]
+                $$\nabla \ell(\bm{\theta}) = \sum_{i=1}^{N} \bm{x}_i\left(y_i-\frac{1}{1+e^{-\bm{\theta}^T \bm{x}_i}}\right)$$
+            \item[(b)]
+                $$\bm{H}=\nabla^2 \ell(\bm{\theta}) = -\sum_{i=1}^{N}\frac{e^{\bm{\theta}^T \bm{x}_i}}{\left(1+e^{\bm{\theta}^T \bm{x_i}}\right)^2}\cdot
+                \begin{pmatrix}
+                    \bm{x}_{i_1}^2 & \bm{x}_{i_1}\bm{x}_{i_2} & \cdots & \bm{x}_{i_1}\bm{x}_{i_n}\\
+                    \vdots & & & \vdots\\
+                    \bm{x}_{i_n}\bm{x}_{i_1} & \bm{x}_{i_n}\bm{x}_{i_2} & \cdots & \bm{x}_{i_n}^2
+                \end{pmatrix}$$
+            \item[(c)]
+                $\ell(\bm{\theta})$ is a scalar.\\
+                Its gradient $\nabla \ell(\bm{\theta})$ is a vector.\\
+                Its Hessian $\nabla^2 \ell(\bm{\theta})$ is a matrix.\\
+        \end{itemize}
     \end{proof}
 
 

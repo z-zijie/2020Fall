@@ -60,13 +60,45 @@
 % --- Problem 4 ---%
 \section*{Problem 4}
     \begin{proof}
-        
+        \indent
+        \begin{itemize}
+            \item[(a)]
+                By the \textit{Bayes rule},
+                \begin{align*}
+                    \mathbb{P}(&\text{Have diabetes}|\text{These genes inactive})\\
+                    &= \frac{\mathbb{P}(\text{These genes inactive}|\text{Have diabetes})\cdot \mathbb{P}(\text{Have diabetes})}{\mathbb{P}(\text{These genes inactive})}
+                \end{align*}
+            \item[(b)]
+            I need to know $\mathbb{P}(\text{These genes inactive})$.
+            \item[(c)]
+                If the probability that these three genes inactive is very small,
+                I should be concerned.
+        \end{itemize}
     \end{proof}
 
 % --- Problem 5 ---%
 \section*{Problem 5}
     \begin{proof}
-        
+        \begin{equation*}
+            \mathbb{P}(x|\theta)=\left\{
+                \begin{array}{rcl}
+                &\theta e^{-\theta(x-t_0)} & ,{x \geqslant t_0}\\
+                &0 & ,{x \leqslant t_0}
+                \end{array} \right.
+        \end{equation*}
+        \begin{itemize}
+            \item $t_0$ \textit{is the minimal time delay}:
+                    $\mathbb{P}(x\leqslant t_0|\theta) = 0$
+            \item \textit{Larger delays are rarer than shorter ones}:
+                    For all $x,\ y\in [t_0,\infty]$, $x<y$,
+                    \begin{align*}
+                        \frac{\mathbb{P}(y|\theta)}{\mathbb{P}(x|\theta)}
+                        &=\frac{\theta e^{-\theta(x-t_0)}}{\theta e^{-\theta(y-t_0)}}\\
+                        &=e^{-\theta(x-y)}\\
+                        &<1
+                    \end{align*}
+            \item
+        \end{itemize}
     \end{proof}
 
 % --- Problem 6 ---%

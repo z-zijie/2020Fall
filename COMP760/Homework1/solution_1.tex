@@ -72,7 +72,7 @@
             \item[(b)]
             I need to know $\mathbb{P}(\text{These genes inactive})$.
             \item[(c)]
-                If the probability that these three genes inactive is very small,
+                If the probability that \textit{these three genes inactive} is very small,
                 I should be concerned.
         \end{itemize}
     \end{proof}
@@ -98,7 +98,18 @@
                         &=e^{-\theta(x-y)}\\
                         &<1
                     \end{align*}
-            \item 
+            \item This probabilistic model delays with a single free parameter $\theta$.
+            \item $\mathbb{E}(x|\theta) = t_0+\frac{1}{\theta}$.\
+            \item \textit{Markov property}:\\
+            Each delay has nothing to do with the previous delay.
+            \begin{align*}
+                \mathbb{P}(x-t_0>s+t|x-t_0>s)
+                &=\frac{\mathbb{P}(x-t_0>s+t \cap x-t_0>s)}{\mathbb{P}(x-t_0>s)}\\
+                &=\frac{\mathbb{P}(x-t_0>s+t)}{\mathbb{P}(x-t_0>s)}\\
+                &=\frac{e^{-\theta(s+t)}}{e^{-\theta s}}\\
+                &=e^{-\theta t}\\
+                &=\mathbb{P}(x-t_0>t)
+            \end{align*}
         \end{itemize}
     \end{proof}
 
@@ -122,7 +133,7 @@
                     \centering
                 \end{figure}
                 Yes.
-            \item[(d)] $z_k \sim \text{B(n,p)}$ 
+            \item[(d)] $z_k \sim \text{Binomial(n,p)}$ 
             \item[(e)]
             \begin{figure}[h!]
                 \includegraphics[width=5cm]{Q6/Figure_5.png}
@@ -134,6 +145,7 @@
         \end{itemize}
     \end{proof}
 
+\pagebreak
 % --- Problem 7 ---%
 \section*{Problem 7}
     \begin{proof}

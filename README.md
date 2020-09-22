@@ -53,6 +53,7 @@ Learning progress
 # COMP 760
 - [x] 9/8/20, Lecture / recording_1
 - [x] 9/10/20, Lecture / recording_2
+- [ ] 1234
 - - - -
 - [x] Topic 1: Overview
 - [x] Topic 2: Review of Linear Algebra

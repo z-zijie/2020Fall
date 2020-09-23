@@ -14,7 +14,7 @@ Learning progress
 - [x] 9/3/20 - 2nd part (Kolmogorov axioms, examples)
 - [x] 9/8/20 - 1st part (Further examples)
 - [x] 9/8/20 2nd part (Properties of prob measures)
-- [ ] 9/10/20 1st part (measures on R)
+- [x] 9/10/20 1st part (measures on R)
 - [ ] 9/10/20 2nd part (random variables and distributions)
 - [ ] 9/15/20 1st lecture (properties of random variables)
 - [ ] 9/15/20 2nd (integration with respect to a probability measure)

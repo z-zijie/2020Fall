@@ -25,6 +25,7 @@
 - [Lecture 3](#lecture-3)
   - [Probability measures on $\mathbb{R}$](#probability-measures-on-mathbbr)
   - [Random variables](#random-variables)
+  - [Random variables and distributions](#random-variables-and-distributions)
 
 
 ><center>2020/08/29/Saturday === Create Notebook</center>
@@ -261,5 +262,65 @@ Ex:
       0, &\text{if } \omega \in A^c
    \end{array}\right.$$
    We need $\emptyset, \Omega, A, A^c$ to be measurable, $A\in\mathscr{F}$, $A$ is an event.
+
+## Random variables and distributions
+Distribution of a **r.v.**  
+$X$ is a r.v. on $(\Omega, \mathscr{F}, \mathbb R)$  
+$\mu(A) = Q_X(A) = \mathbb{P}(X\in A)=\mathbb{P}(X^{-1}(A))$  
+$\mu$ is a probability measure on $(\mathbb{R},\mathscr{B})$  
+$\mu(\mathbb{R}) = \mathbb{P}(X\in \mathbb{R})=\mathbb{P}(\Omega)=1$  
+check $\sigma$-additivits!
+
+The distribution function (or cumulative distribution function) of a r.v. X is
+$$F(x) = \mathbb{P}(X\leqslant x) = Q_X((-\infty,x])$$
+Properties:
+1. nondecreasing
+2. right cont.
+3. $\lim_{x\to\infty}F(x) = 1,\ \lim_{x\to -\infty}F(x)=0$
+
+The CDF of X identified the distribution of X.
+
+* Theorem: If F satisfies these conditions (1.2.3.) then there is a prob space $(\Omega,\mathscr{F}, \mathbb{R})$
+  and a **r.v.** $X:\Omega \to \mathbb{R}$ so that the CDF of X is exactly F.  
+ *proof:*  
+ $([0,1], \mathscr{B},\mathbb{P})$, 
+ $X(\omega) = \sup\{y:F(y)<\omega\}$  
+ Suppose that the inverse $F^{-1}$ is well-defined, then $X(\omega)=F^{-1}(\omega)$.  
+ $\mathbb{P}(X\leqslant x) = \mathbb{P}(F^{-1}(\omega)\leqslant x)=\mathbb{P}(\omega\leqslant F(x)) = \mathbb{P}([0,F(x)])=F(x)$  
+ Try to finish the proof by considering the general case.  
+ In $([0,1], \mathscr{B},\mathbb{P})$, $U(\omega)=\omega$  
+ ![](src/Lec3-4.png)
+
+* **Def:** If X and Y have the same distribution if $\mathbb{P}_1(X^{-1}(\mathscr{B}))=\mathbb{P}_2(Y^{-1}(\mathscr{B}))$  
+  X lives on $(\Omega_1, \mathscr{F}_1,\mathbb{P}_1)$,
+  Y lives on $(\Omega_2, \mathscr{F}_2,\mathbb{P}_2)$,  
+  ![](src/Lec3-5.png)
+
+* Ex: $(\Omega, \mathscr{F},\mathbb{P})$, we roll a fair die, $\Omega=\{1...6\}$  
+  Give an example of two random variables on $(\Omega, \mathscr{F},\mathbb{P}_1)$
+  with the same distribution.
+  ![](src/Lec3-6.png)
+
+The distribution of an indicator random variable:
+![](src/Lec3-7.png)
+![](src/Lec3-8.png)
+$Q_X$ is supported on $\{0,1\}$  
+$Q_X(\{0\})=\mathbb{P}(A^c)=1-\mathbb{P}(A)$  
+$Q_X(\{1\})=\mathbb{P}(A)$
+The distribution is identified by $\mathbb{P}(A)$.
+
+* This distribution is called **Bernoulli** distribution with parameter $p$.  
+  $p\in[0,1]$, $\mathbb{P}(\{ 1 \})$, $\mathbb{P}(\{0\}) = 1-p$.
+
+**Homework**: Try to construct a r.v. with Bernoulli($p$) distribution on $([0,1],\mathscr{B},\mathbb{P})$.
+
+$F$ is the CDF of X then $\mathbb{P}(X\in(a,b]))=\mathbb{P}(a<X\leqslant b)=F(b)-F(a)$.  
+$\mathbb{P}(X=a) = F(a)-\lim_{x\to a^-}F(x)$.
+
+If $F$ is the CDF of the r.v. X and there is a  measurable function $f$ so that $F(x)=\int_{-\infty}^x f(y)dy$
+then $f$ is called the probability density function of X.  
+$\mathbb{P}(X\in(a,b])=\int_a^b f(y)dy$, $\mathbb{P}(X\in \mathscr{B})=\int_\mathscr{B} f(y)dy$.
+In this case we say that the distribution of X is **abs continuous**.
+
 
 ><center>Updated on 2020/09/10</center>

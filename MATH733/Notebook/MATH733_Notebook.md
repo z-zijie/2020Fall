@@ -26,6 +26,9 @@
   - [Probability measures on $\mathbb{R}$](#probability-measures-on-mathbbr)
   - [Random variables](#random-variables)
   - [Random variables and distributions](#random-variables-and-distributions)
+- [Lecture 4](#lecture-4)
+  - [Properties of random variables](#properties-of-random-variables)
+  - [Integration with respect to a probability measure](#integration-with-respect-to-a-probability-measure)
 
 
 ><center>2020/08/29/Saturday === Create Notebook</center>
@@ -324,3 +327,22 @@ In this case we say that the distribution of X is **abs continuous**.
 
 
 ><center>Updated on 2020/09/10</center>
+
+><center>2020/09/15/Tuesday</center>
+
+# Lecture 4
+## Properties of random variables
+
+$(\Omega, \mathscr{F}, \mathbb{P})$ Probability Space.  
+**(Real valued)** random variables:
+$$X:\Omega\to \mathbb{R}, \ \text{Borel measurable}$$
+Distribution of X: prob measure on $(\mathbb{R},\mathscr{B})$
+with $Q_X(B)=\mathbb{P}(X^{-1}(B))=\mathbb{P}(X\in B)$  
+Cumulative distribution function of X:
+$$F_X(y) = \mathbb{P}(X\leqslant y)=Q_X((-\infty,y]), \ y\in \mathbb{R}$$
+If $F(y)= \int_{-\infty}^{y} f(z) dz$
+
+
+## Integration with respect to a probability measure
+
+><center>Updated on 2020/09/15</center>

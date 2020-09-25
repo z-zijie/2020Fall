@@ -16,7 +16,7 @@ Learning progress
 - [x] 9/8/20 2nd part (Properties of prob measures)
 - [x] 9/10/20 1st part (measures on R)
 - [x] 9/10/20 2nd part (random variables and distributions)
-- [ ] 9/15/20 1st lecture (properties of random variables)
+- [x] 9/15/20 1st part (properties of random variables)
 - [ ] 9/15/20 2nd (integration with respect to a probability measure)
 - [ ] 9/17/20 1st part (inequalities, limits and expectation)
 - [ ] 9/17/20 2nd part (change of variables formula, variance)

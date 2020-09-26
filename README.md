@@ -36,6 +36,11 @@ Learning progress
 - [ ] 3.1 Continuous-time stochastic processes: a deeper look
 - [ ] 3.2 Martingales and basic examples
 - [ ] 3.3 Martingale inequality - Doob's maximal inequality
+- [ ] 3.4 Martingale stopping time theorem
+- [ ] 3.5 Martingale convergence theorem
+- - - -
+- [ ] [Homework 1 (due Oct 14)](/MATH735/Homework1)
+  - [ ] [Solution]
 
 
 # COMP 726
@@ -57,9 +62,15 @@ Learning progress
 - [ ] Lecture 5
   - [ ] video
   - [ ] Notes
+- [ ] Lecture 6
+  - [ ] video
+  - [ ] Notes
+- - - -
 
 - [x] [Homework 1(Sep 21)](/COMP726/Homework1/CS_726_HW_1_Fall_2020.pdf)
   - [x] [Solution](/COMP726/Homework1/solution_1.pdf)
+- [ ] [Homework 2(Oct 05)](/COMP726/Homework2/CS_726_HW_2_Fall_2020.pdf)
+  - [ ] [Solution]
 
 # COMP 760
 - [x] 9/8/20, Lecture / recording_1

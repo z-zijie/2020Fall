@@ -23,22 +23,75 @@
     \begin{enumerate}
         % === Question 1 ===
         \item \begin{proof}
-            
+            Assume $X$ and $Y$ are random variables from $\left(\Omega, \mathcal{F}\right)$
+            to $(S,\mathcal{S})$, then
+            $$\{\omega:f\left(X(\omega)\right)\in B\}
+            =\{\omega:X(\omega) \in f^{-1}(B)\}
+            \in \mathcal{F}$$
+            If and only if $f^{-1}(B) \in \sigma(X)$,
+            $Y = f(X)$ is measurable w.r.t $\sigma(X)$.
         \end{proof}
 
         % === Question 2 ===
         \item \begin{proof}
-            
+            \begin{align*}
+                E[X^p] &= \int_{0}^{1} y^p \cdot \mathbb{P}(X=y) dy\\
+                    &= \int_{0}^{1-\varepsilon} y^p \cdot \mathbb{P}(X=y) dy
+                        + \int_{1-\varepsilon}^{1} y^p \cdot \mathbb{P}(X=y) dy
+                        \ \forall \varepsilon \in [0,1]\\
+            \end{align*}
+            When $p\to\infty$,
+            $$\int_{0}^{1-\varepsilon} y^p \cdot \mathbb{P}(X=y) dy \to 0$$
+            \begin{align*}
+                \int_{1-\varepsilon}^{1} y^p \cdot \mathbb{P}(X=y) dy
+                &\leqslant \int_{1-\varepsilon}^{1} y^p dy\\
+                &=\frac{1}{p+1}\cdot \left(1-(1-\varepsilon)^p\right)\\
+                &\leqslant \frac{1}{1+p} \to 0 \ (as \ p\to \infty)
+            \end{align*}
+            So, $E\left[X^p\right]=0$ as $p\to \infty$.
         \end{proof}
 
         % === Question 3 ===
         \item \begin{proof}
-            
+            \indent
+            \begin{itemize}
+                \item[(a)]
+                    Consider \textit{Derangement formula}
+                    $$\mathbb{P}(X_n=0)=\frac{D(n)}{n!}$$
+                    where $$D(n)=n!\cdot \sum_{k=2}^{n}\frac{(-1)^k}{k!}$$
+                    Then $$\mathbb{P}(X_n=0)=\sum_{k=2}^{n}\frac{(-1)^k}{k!}$$
+                    When $n\to \infty$,
+                    $$\mathbb{P}(X_n=0)\to\sum_{k=2}^{\infty}\frac{(-1)^k}{k!}$$
+                    This is one of the expression of $\frac{1}{e}$.
+                    $$\lim_{n\to\infty} \mathbb{P}(X_n=0)=\frac{1}{e}$$
+                \item[(b)]
+                    Noticed that
+                    $$\mathbb{P}(X_n=1) = \frac{{n \choose 1}D(n-1)}{n!}=\frac{D(n-1)}{(n-1)!}=\mathbb{P}(X_{n-1}=0)$$
+                    $$\mathbb{P}(X_n=2) = \frac{{n \choose 2}D(n-2)}{n!}=\frac{1}{2}\cdot\frac{D(n-2)}{(n-2)!}=\frac{1}{2}\mathbb{P}(X_{n}=0)$$
+                    $$\mathbb{P}(X_n=k) = \frac{{n \choose k}D(n-k)}{n!}=\frac{1}{k}\mathbb{P}(X_n=k-1)$$
+                    So, we have
+                    $$\mathbb{P}(X_n=k)=\frac{1}{k!}\cdot \mathbb{P}(X_n=0)$$
+                    \begin{align*}
+                        E[X_n]&=\sum_{k=0}^n k\cdot \mathbb{P}(X_n=k)\\
+                        &=\sum_{k=0}^n k\cdot \frac{1}{k!}\mathbb{P}(X_n=0)\\
+                        &=\mathbb{P}(X_n=0)\cdot\sum_{k=1}^n \frac{1}{(k-1)!}\\
+                        &=\sum_{k=2}^n \frac{(-1)^k}{k!}\cdot \sum_{k=1}^n\frac{1}{(k-1)!}
+                    \end{align*}
+                    By the way, when $n$ is large enough, $E[X_n] \to 1$.
+            \end{itemize}
         \end{proof}
 
         % === Question 4 ===
         \item \begin{proof}
-            
+            Consider the Integral form of \textit{Cauchy–Schwarz inequality}.\\
+            Let $f = y \cdot \sqrt{\mathbb{P}(Y=y)}$, $g=\sqrt{\mathbb{P}(Y=y)}$.\\
+            By the non-negativity of $Y$
+            $$\left(\int\left(y\cdot \sqrt{\mathbb{P}(Y=y)}\right)^2 dy\right)
+            \cdot \left(
+            \int\left(\sqrt{\mathbb{P}(Y=y)}\right)^2 dy\right)
+            \geqslant \left(\int y\cdot \mathbb{P}(Y=y) dy \right)^2$$
+            That is
+            $$\mathbb{P}(Y>0) \geqslant \frac{\left(E[Y]\right)^2}{E[Y^2]}$$
         \end{proof}
 
         % === Question 5 ===

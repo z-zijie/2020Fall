@@ -1,0 +1,16 @@
+ 
+1) Prof. Seppalainen’s notes: 
+
+Exercise 2.5 (Example of modifications / versions where X is continuous and Y is not.)
+
+2) Give details for the proof of scaling property of Brownian motion in the end of Video 2-04.
+
+3) Fix t, compute the k-th moment E[B_t^k] for any positive integer k, where B is Brownian motion.
+
+4) Give 3 examples of stopping time, and 3 examples of random time being not stopping time (explain why).
+
+5) Use Jensen’s inequality, L1 martingale convergence, and Doob Lp maximal inequality to prove Lp martingale convergence for p>1 in discrete time. - See attachment.
+
+6) Prove that the martingale stopping theorem discussed in our video lecture is a corollary of Theorem 3.6 in  Prof. Seppalainen’s notes. Prove that the truncation by T in Theorem 3.6 in  Prof. Seppalainen’s notes is necessary (Hint: Exercise 3.2 in that notes)
+
+7) Prof. Seppalainen’s notes: Exercise 3.1.

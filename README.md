@@ -27,17 +27,17 @@ Learning progress
   - [ ] [Solution](/MATH733/Homework2/solution_2.pdf)
 
 # MATH 735
-- [ ] 1.1 Review of foundations of probability
-- [ ] 1.2 Review of conditional expectation
-- [ ] 2.1 Stochastic process: a first look
-- [ ] 2.2 Brownian motion: introduction
-- [ ] 2.3 Brownian motion: properties
-- [ ] 2.4 Brownian motion: more properties and examples
-- [ ] 3.1 Continuous-time stochastic processes: a deeper look
-- [ ] 3.2 Martingales and basic examples
-- [ ] 3.3 Martingale inequality - Doob's maximal inequality
-- [ ] 3.4 Martingale stopping time theorem
-- [ ] 3.5 Martingale convergence theorem
+- [ ] [1.1 Review of Probability](/MATH735/1-01%20Review%20of%20Probability.pdf)
+- [ ] [1.2 Review of conditional expectation](/MATH735/1-01%20Review%20of%20conditional%20expectation.pdf)
+- [ ] [2.1 Stochastic process: a first look](/MATH735/2-01%20Stochastic%20Processes.pdf)
+- [ ] [2.2 Brownian motion: introduction](/MATH735/2-02%20Brownian%20motion.pdf)
+- [ ] [2.3 Brownian motion: properties](/MATH735/2-03%20Brownian%20motion%20-%20properties.pdf)
+- [ ] [2.4 Brownian motion: more properties and examples](/MATH735/2-04%20Brownian%20motion%20-%20more%20examples.pdf)
+- [ ] [3.1 Continuous-time stochastic processes: a deeper look](MATH735/3-01%20A%20deeper%20look%20at%20continuous%20time%20stochastic%20processes.pdf)
+- [ ] [3.2 Martingales and basic examples](MATH735/3-02%20Martingale%20theory%20and%20basic%20examples.pdf)
+- [ ] [3.3 Martingale inequality - Doob's maximal inequality](MATH735/3-03%20Martingale%20inequality%20(Doob%20max%20inequality).pdf)
+- [ ] [3.4 Martingale stopping time theorem](MATH735/3-04%20Martingale%20stopping%20time%20theorem.pdf)
+- [ ] [3.5 Martingale convergence theorem](MATH735/3-05%20Martingale%20convergence%20theorem.pdf)
 - - - -
 - [ ] [Homework 1 (due Oct 14)](/MATH735/Homework1)
   - [ ] [Solution]

@@ -23,8 +23,8 @@ Learning progress
 
 - [x] [Homework 1 (Sep 13 @ 10pm)](/MATH733/Homework1/hw_1.pdf)
   - [x] [Solution](/MATH733/Homework1/solution_1.pdf)
-- [ ] [Homework 2 (Sep 27 @ 10pm)](/MATH733/Homework2/hw_2.pdf)
-  - [ ] [Solution](/MATH733/Homework2/solution_2.pdf)
+- [x] [Homework 2 (Sep 27 @ 10pm)](/MATH733/Homework2/hw_2.pdf)
+  - [x] [Solution](/MATH733/Homework2/solution_2.pdf)
 
 # MATH 735
 - [x] [1.1 Review of Probability](/MATH735/1-01%20Review%20of%20Probability.pdf)

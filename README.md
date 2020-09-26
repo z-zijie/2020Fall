@@ -27,7 +27,7 @@ Learning progress
   - [ ] [Solution](/MATH733/Homework2/solution_2.pdf)
 
 # MATH 735
-- [ ] [1.1 Review of Probability](/MATH735/1-01%20Review%20of%20Probability.pdf)
+- [x] [1.1 Review of Probability](/MATH735/1-01%20Review%20of%20Probability.pdf)
 - [ ] [1.2 Review of conditional expectation](/MATH735/1-01%20Review%20of%20conditional%20expectation.pdf)
 - [ ] [2.1 Stochastic process: a first look](/MATH735/2-01%20Stochastic%20Processes.pdf)
 - [ ] [2.2 Brownian motion: introduction](/MATH735/2-02%20Brownian%20motion.pdf)

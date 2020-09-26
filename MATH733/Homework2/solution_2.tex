@@ -96,12 +96,29 @@
 
         % === Question 5 ===
         \item \begin{proof}
-            
+            When $X_1=X_2=\cdots=X_n=S$, $\prod_{j=1}^n g_j =1$\\
+            Consider
+            $$\mathbb{P}\left(X_1=x_1, X_2 = S, \cdots, X_n=S\right)
+            =g_1(x_1) \cdot C \ \text{    C is a constant}$$
+            So we have
+            $$\mathbb{P}\left(X_2 = x_2, \cdots, X_n=x_n|X_1=x_1\right)
+            =\frac{\prod_{j=2}^n g_j(x_j)}{C}$$
+            Thus, $X_1$ is independent.
+            So does $X_2, \cdots, X_n$.
+            On the other hand, if they are independent, we have
+            $$\mathbb{P}\left(X_1=x_1, \cdots, X_n=x_n\right)
+            =\prod_{j=1}^n \mathbb{P}\left(X_j=x_j\right)$$
+            Here, let $g_j(x) = \mathbb{P}\left(X_j=x\right)$ for all $1\leqslant j \leqslant n$, they are non-negative functions from $S$ to $\mathbb{R}$.
         \end{proof}
 
         % === Question 6 ===
         \item \begin{proof}
-            
+            Consider the expression of $\omega$ in binary. The probability of $X_n=1$
+            means the probability that the $n$th decimal place is 1.
+            By the definition and arbitrariness of $\omega$, we know
+            $$\mathbb{P}\left(X_n=0\right)=\mathbb{P}\left(X_n=1\right)=\frac{1}{2}$$
+            That means, $$X_n \sim \text{Bernoulli(1/2)}, \ \forall n\in \mathbb{N}$$
+            And their independence is obvious.
         \end{proof}
     
     \end{enumerate}

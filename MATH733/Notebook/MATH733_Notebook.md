@@ -398,7 +398,7 @@ $$\mathbb{P}(\lim_{n\to \infty} X_n \text{ exists})$$
   then we say that $X_n \to X$ is in probability
   $$X_n\to^{\mathbb{P}} X$$
 
-
 ## Integration with respect to a probability measure
+**Q:** Is it possible to define a prob. space to 
 
 ><center>Updated on 2020/09/15</center>

@@ -28,7 +28,7 @@ Learning progress
 
 # MATH 735
 - [x] [1.1 Review of Probability](/MATH735/1-01%20Review%20of%20Probability.pdf)
-- [ ] [1.2 Review of conditional expectation](/MATH735/1-01%20Review%20of%20conditional%20expectation.pdf)
+- [x] [1.2 Review of conditional expectation](/MATH735/1-01%20Review%20of%20conditional%20expectation.pdf)
 - [ ] [2.1 Stochastic process: a first look](/MATH735/2-01%20Stochastic%20Processes.pdf)
 - [ ] [2.2 Brownian motion: introduction](/MATH735/2-02%20Brownian%20motion.pdf)
 - [ ] [2.3 Brownian motion: properties](/MATH735/2-03%20Brownian%20motion%20-%20properties.pdf)

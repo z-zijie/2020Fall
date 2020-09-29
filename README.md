@@ -56,15 +56,16 @@ Learning progress
   - [x] Video
   - [x] Notes
   - [x] Reading
-- [ ] Lecture 4
+- [ ] [Lecture 4](/COMP726/Handwritten%20notes/CS%20726%20Lecture%203%20&%204.pdf)
   - [ ] video
   - [ ] Notes
-- [ ] Lecture 5
+- [ ] [Lecture 5](/COMP726/Handwritten%20notes/CS%20726_%20Lecture%205.pdf)
   - [ ] video
   - [ ] Notes
-- [ ] Lecture 6
+- [ ] [Lecture 6](/COMP726/Handwritten%20notes/CS%20726_%20Lecture%205%20&%206.pdf)
   - [ ] video
   - [ ] Notes
+- [ ] [Lecture 7](/COMP726/Handwritten%20notes/CS%20726%20Lecture%207.pdf)
 - - - -
 
 - [x] [Homework 1(Sep 21)](/COMP726/Homework1/CS_726_HW_1_Fall_2020.pdf)

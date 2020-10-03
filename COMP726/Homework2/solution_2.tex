@@ -67,7 +67,20 @@
 % --- Question 3 --- %
 \section*{Question 3}
     \begin{proof}
-        
+        By Lemma2.2
+        \begin{align*}
+            f(x_{k+1})
+            &\leqslant f(x_k) 
+                + \left\langle \nabla f(x_k), x_{k+1}-x_k \right\rangle 
+                + \frac{L}{2} \left\lVert x_{k+1}-x_k \right \rVert_2^2\\
+            &=f(x_k)
+                -\alpha_k \left\langle \nabla f(x_k), \nabla_{i_k}f(x_k)e_{i_k} \right\rangle
+                +\frac{L}{2} \alpha_k^2 \left\lVert \nabla_{i_k}f(x_k)e_{i_k} \right \rVert_2^2\\
+            &=f(x_k)
+                +\left(\frac{L}{2}\alpha_k -1\right)\alpha_k \left\lVert \nabla_{i_k}f(x_k)e_{i_k} \right \rVert_2^2
+        \end{align*}
+        Choose $\alpha_k = \frac{1+\sqrt{1-L\beta d^2}}{L}$, then
+        $$\mathbb{E}[f(x_{k+1})-f(x_k)] = -\frac{\beta d^2}{2}\mathbb{E}[\left\lVert \nabla_{i_k}f(x_k)e_{i_k} \right \rVert_2^2]=-\frac{\beta}{2}\left\lVert \nabla f(x_k) \right \rVert_2^2$$
     \end{proof}
 
 

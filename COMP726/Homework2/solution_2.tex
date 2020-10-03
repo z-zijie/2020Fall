@@ -54,7 +54,13 @@
 % --- Question 2 --- %
 \section*{Question 2}
     \begin{proof}
-    
+    Let $x_{k+1}=x_{k}+\nabla f(x_k)$, we have
+    $$f(x_{k+1})-f(x_k)\geqslant \langle \nabla f(x_k),\nabla f(x_k) \rangle + \frac{m}{2}||\nabla f(x_k)||^2$$
+    Add them together,
+    $$f(x_{k+1})-f(x_0) \geqslant \left(1+\frac{m}{2}\right)\sum_{i=0}^{k} ||\nabla f(x_{i})||^2 \geqslant \left(1+\frac{m}{2}\right) \left\lVert \sum_{i=0}^{k} \nabla f(x_{i})\right\rVert^2 = \left(1+\frac{m}{2}\right)\left\lVert x_{k+1}-x_0 \right \rVert^2$$
+    The gradient of $f$ can go to $\infty$, when $\left\lVert x_{k+1}-x_0 \right \rVert$ is large enough.\\
+    So, $f$ cannot be Lipschitz continuous on the entire $\mathbb{R}^d$.
+    But it is possible on the unit Euclidean ball.
     \end{proof}
 
 

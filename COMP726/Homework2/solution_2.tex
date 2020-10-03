@@ -1,0 +1,81 @@
+\documentclass{article}
+% --- Modify margins --- %
+\usepackage{geometry}
+\geometry{a4paper,scale=0.8}
+% --- Involved packages --- %
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+
+% --- Title information --- %
+\title{CS 726 - Fall 2020\\
+        {\Large \textbf{Homework \#2}}\\
+        {\normalsize \textbf{Due : 10/05/2020, 5pm}}
+    }
+\author{Zijie Zhang}
+\date{\today}
+
+
+% --- main --- %
+
+\begin{document}
+    \maketitle
+
+% --- Question 1 --- %
+\section*{Question 1}
+    \begin{proof}
+        $\Rightarrow$,
+        Let
+        $$\varphi(\alpha)=\frac{1}{\alpha}\left(f\left((1-\alpha)x+\alpha y\right)-f(x)\right)$$
+        $f$ is $m$-strongly convex means,
+        $$f\left((1-\alpha)x+\alpha y\right) \leqslant (1-\alpha)f(x)+\alpha f(y)-\frac{m}{2} \alpha (1-\alpha)||y-x||^2$$
+        $$f\left((1-\alpha)x+\alpha y\right) - f(x) \leqslant \alpha\left(f(y)-f(x)\right)-\frac{m}{2}\alpha(1-\alpha)||y-x||^2$$
+        $$f(y)-f(x) \geqslant \varphi(\alpha)+\frac{m}{2}(1-\alpha)||y-x||^2$$
+        Let $\alpha \to 0$,  we have
+        $$f(y) \geqslant f(x) + \varphi^{'}(0)+\frac{m}{2}||y-x||^2=f(x) + \langle \nabla f(x), y-x\rangle + \frac{m}{2}||y-x||^2$$
+        $$f(x+\alpha(y-x)) \geqslant f(x) + \langle \nabla f(x), \alpha(y-x)\rangle + \frac{m}{2}\alpha^2||y-x||^2$$
+        Consider, Taylor Theorem:
+        $$f(x+\alpha(y-x)) = f(x)+\langle \nabla f(x), \alpha(y-x)\rangle + \frac{\alpha^2}{2}(y-x)^T \nabla^2f(x+\gamma\alpha (y-x))(y-x)$$
+        Combine the above two formulas, it gives
+        $$(y-x)^T\nabla^2 f(x) (y-x) \geqslant m ||y-x||^2$$
+        Thus, we have
+        $$\nabla^2 f(x) \succeq mI$$
+
+        $\Leftarrow$,
+        By Taylor Theorem,
+        $$f(y)=f(x)+\langle \nabla f(x), y-x \rangle + \frac{1}{2}\nabla^2 f(x+\gamma(y-x))||y-x||^2$$
+        $\nabla^2 f(x) \succeq mI$ means the smallest eigenvalue of $\nabla^2 f(x)$ is greater than $m$, therefore
+        $$\frac{1}{2}\nabla^2 f(x+\gamma(y-x))||y-x||^2 \geqslant \frac{1}{2}m||y-x||^2$$
+        That is $$f(y) \geqslant f(x) + \langle \nabla f(x), y-x\rangle + \frac{m}{2}||y-x||^2$$
+        Consider $$(1-\alpha)f(x)+\alpha f(y) -f((1-\alpha)x+\alpha y)$$
+        We will have $$(1-\alpha)f(x)+\alpha f(y) -f((1-\alpha)x+\alpha y) \geqslant \frac{m}{2}||y-x||^2(\alpha -\alpha^2)=\frac{m}{2}\alpha(1-\alpha)||y-x||^2$$
+    \end{proof}
+
+% --- Question 2 --- %
+\section*{Question 2}
+    \begin{proof}
+    
+    \end{proof}
+
+
+% --- Question 3 --- %
+\section*{Question 3}
+    \begin{proof}
+        
+    \end{proof}
+
+
+% --- Question 4 --- %
+\section*{Question 4}
+    \begin{proof}
+        
+    \end{proof}
+
+
+% --- Question 5 --- %
+\section*{Question 5}
+    \begin{proof}
+        
+    \end{proof}
+
+\end{document}

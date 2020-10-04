@@ -70,8 +70,8 @@ Learning progress
 
 - [x] [Homework 1(Sep 21)](/COMP726/Homework1/CS_726_HW_1_Fall_2020.pdf)
   - [x] [Solution](/COMP726/Homework1/solution_1.pdf)
-- [ ] [Homework 2(Oct 05)](/COMP726/Homework2/CS_726_HW_2_Fall_2020.pdf)
-  - [ ] [Solution](/COMP726/Homework2/solution_2.pdf)
+- [x] [Homework 2(Oct 05)](/COMP726/Homework2/CS_726_HW_2_Fall_2020.pdf)
+  - [x] [Solution](/COMP726/Homework2/solution_2.pdf)
 
 # COMP 760
 - [x] 9/8/20, Lecture / recording_1

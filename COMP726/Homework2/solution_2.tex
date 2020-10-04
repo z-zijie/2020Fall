@@ -153,7 +153,50 @@
 % --- Question 5 --- %
 \section*{Question 5}
     \begin{proof}
-        
+        \begin{itemize}
+            \item Let $\nabla h_z(x)=0$, that is
+            $$ z+\nabla\left(\frac{1}{2}\left\lVert x \right \rVert_p^2\right)=0$$
+            For every $i$,
+            $$z_i = -x_i^{p-1}\left(\sum_{i=1}^d x_i^p\right)^{\frac{2-p}{p}}$$
+            We need find $\left(\sum_{i=1}^d x_i^p\right)^{\frac{2-p}{p}}$ in $z$.
+            Calculate $\left\lVert z \right \rVert_q^2$, we have
+            $$\left(\sum_{i=1}^d z_i^q\right)^{\frac{1}{q}}=-\left(\sum_{i=1}^d x_i^{p}\right)^{\frac{1}{q}}\left(\sum_{i=1}^d x_i^p\right)^{\frac{2-p}{p}}=-\left(\sum_{i=1}^d x_i^p\right)^{\frac{1}{p}}$$
+            So, for every $i$, we have
+            $$x_i=-z_i^{q-1}\left(\sum_{i=1}^d z_i^q\right)^{\frac{2-q}{q}}$$
+            Which is, $$x=-\nabla\left(\frac{1}{2}\left\lVert z \right \rVert_q^2\right)$$
+            Substituting x into $h_z$ gives
+            \begin{align*}
+                h_z\left(-\nabla\left(\frac{1}{2}\left\lVert z \right \rVert_q^2\right)\right)
+                &=\left\langle z,-\nabla\left(\frac{1}{2}\left\lVert z \right \rVert_q^2\right) \right\rangle+\frac{1}{2}\left\lVert -\nabla\left(\frac{1}{2}\left\lVert z \right \rVert_q^2\right) \right \rVert_p^2\\
+                &=-\left\lVert z \right \rVert_q^2+\frac{1}{2}\left(\sum_{i}^d\left(-z_i^{q-1}\left\lVert z \right \rVert_q^{2-q}\right)^p\right)^{\frac{2}{p}}\\
+                &=-\left\lVert z \right \rVert_q^2+\frac{1}{2}\left\lVert z \right \rVert_q^2\\
+                &=-\frac{1}{2}\left\lVert z \right \rVert_q^2
+            \end{align*}
+            \item Let $$z=\frac{1}{L}\nabla f(x_k),\ x=u-x_k$$
+                We know $$f(x_{k+1})\leqslant f(x_k)-\frac{1}{2}\left\lVert \frac{1}{L}\nabla f(x_k) \right \rVert_q^2=f(x_k)-\frac{1}{2L}\left\lVert \nabla f(x_k) \right \rVert_q^2$$
+            \item \begin{align*}
+                f(x_{k+1}) &\leqslant f(x_k)-\frac{1}{2L}
+                    \left\lVert \nabla f(x_k) \right \rVert_q^2\\
+                    &\leqslant f(x_{k-1})-\frac{1}{2L}
+                    \left\lVert \nabla f(x_{k-1}) \right \rVert_q^2
+                    -\frac{1}{2L}
+                    \left\lVert \nabla f(x_{k}) \right \rVert_q^2\\
+                    &\leqslant \cdots\\
+                    &\leqslant f(x_{0})-\frac{1}{2L}
+                    \sum_{i=0}^k \left\lVert \nabla f(x_{i}) \right \rVert_q^2\\
+            \end{align*}
+            Assume $f(x)\geqslant f_{*} \geqslant -\infty$($f$ is bounded below), then
+            \begin{align*}
+                &\frac{1}{2L}(k+1) \left(
+                    \min_{0\leqslant i \leqslant k}\left\lVert \nabla f(x_{i}) \right \rVert_q\right)^2\\
+                &\leqslant \frac{1}{2L}
+                \sum_{i=0}^k \left\lVert \nabla f(x_{i}) \right \rVert_q^2\\
+                &\leqslant f(x_0)-f(x_{k+1})\\
+                &\leqslant f(x_0)-f_{*}
+            \end{align*}
+            Therefore, we have
+            $$\min_{0\leqslant i \leqslant k}\left\lVert \nabla f(x_{i}) \right \rVert_q \leqslant \sqrt{\left(f(x_0)-f_{*}\right)\frac{2L}{k+1}}$$
+        \end{itemize}
     \end{proof}
 
 \end{document}

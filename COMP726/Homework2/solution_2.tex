@@ -6,6 +6,7 @@
 \usepackage{amssymb}
 \usepackage{amsthm}
 \usepackage{amsmath}
+\usepackage{enumerate}
 
 % --- Title information --- %
 \title{CS 726 - Fall 2020\\
@@ -87,7 +88,65 @@
 % --- Question 4 --- %
 \section*{Question 4}
     \begin{proof}
-        
+        \indent
+        \begin{enumerate}[(i)]
+            \item $$\nabla \psi(y)=y-x_0$$
+            \begin{align*}
+                D_{\psi}(x,y)
+                &=\frac{1}{2}\left\lVert x-x_0 \right \rVert_2^2
+                    -\frac{1}{2}\left\lVert y-x_0 \right \rVert_2^2
+                    -\left\langle \nabla \psi(y), x-y \right\rangle\\
+                &=\frac{1}{2}\left\lVert x \right \rVert_2^2
+                    +\frac{1}{2}\left\lVert y \right \rVert_2^2
+                    -\left\langle x,y \right\rangle\\
+                &=\frac{1}{2}\left\lVert x-y \right \rVert_2^2
+            \end{align*}
+            \item $$\nabla \phi(y)=\psi(y)+x_0=y$$
+            \begin{align*}
+                D_{\phi}(x,y)
+                    &=\phi(x)-\phi(y)-\langle y,x-y\rangle\\
+                    &=\psi(x)-\psi(y)+\langle x_0-y,x-y \rangle\\
+                    &=\frac{1}{2}\left\lVert x \right \rVert_2^2
+                    +\frac{1}{2}\left\lVert y \right \rVert_2^2
+                    -\left\langle x,y \right\rangle\\
+                    &=D_{\psi}(x,y)
+            \end{align*}
+            \item Left: $D_{\psi}(x,y) = \frac{1}{2}\left\lVert x \right \rVert_2^2
+            +\frac{1}{2}\left\lVert y \right \rVert_2^2
+            -\left\langle x,y \right\rangle $\\
+            Right: \begin{align*}
+                &D_{\psi}(z,y)
+                    +\left\langle \nabla\psi(z)-\nabla\psi(y), x-z \right\rangle
+                    +D_{\psi}(x,z)\\
+                &=\frac{1}{2}\left\lVert z \right \rVert_2^2
+                    +\frac{1}{2}\left\lVert y \right \rVert_2^2
+                    -\langle z,y \rangle
+                    +\langle z-y,x-z \rangle
+                    +\frac{1}{2}\left\lVert x \right \rVert_2^2
+                    +\frac{1}{2}\left\lVert z \right \rVert_2^2
+                    -\langle x,z \rangle\\
+                &=\frac{1}{2}\left\lVert x \right \rVert_2^2
+                +\frac{1}{2}\left\lVert y \right \rVert_2^2
+                -\left\langle x,y \right\rangle
+            \end{align*}
+            \begin{center}
+                Left=Right
+            \end{center}
+            \item Obviously, $\nabla m_k(v_k)=0$, thus
+            \begin{align*}
+                D_{m_k}(x,v_k)&=m_k(x)-m_k(v_k)\\
+                &=\sum_{i=0}^k a_i D_{\psi_i}(x,v_k)\\
+                &=\sum_{i=0}^k a_i \left(
+                    \frac{1}{2}\left\lVert x \right \rVert_2^2
+                    +\frac{1}{2}\left\lVert v_k \right \rVert_2^2
+                    -\langle x,v_k \rangle
+                    \right)\\
+                &=\sum_{i=0}^k a_i \frac{1}{2}\left\lVert x-v_k \right \rVert_2^2\\
+                &=\frac{A_k}{2}\left\lVert x-v_k \right \rVert_2^2
+            \end{align*}
+            So, we have proved
+            $$m_{k+1}(x)=m_k(v_k)+a_{k+1}\psi_{k+1}(x)+\frac{A_k}{2}\left\lVert x-v_k \right \rVert_2^2$$
+        \end{enumerate}
     \end{proof}
 
 

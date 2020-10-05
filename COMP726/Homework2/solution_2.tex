@@ -101,37 +101,23 @@
                     -\left\langle x,y \right\rangle\\
                 &=\frac{1}{2}\left\lVert x-y \right \rVert_2^2
             \end{align*}
-            \item $$\nabla \phi(y)=\psi(y)+x_0=y$$
+            \item
             \begin{align*}
                 D_{\phi}(x,y)
-                    &=\phi(x)-\phi(y)-\langle y,x-y\rangle\\
-                    &=\psi(x)-\psi(y)+\langle x_0-y,x-y \rangle\\
-                    &=\frac{1}{2}\left\lVert x \right \rVert_2^2
-                    +\frac{1}{2}\left\lVert y \right \rVert_2^2
-                    -\left\langle x,y \right\rangle\\
+                    &=\phi(x)-\phi(y)-\langle \nabla \phi(y),x-y\rangle\\
+                    &=\psi(x)-\psi(y)+\langle x_0-\nabla\psi(y)-x_0 ,x-y \rangle\\
                     &=D_{\psi}(x,y)
             \end{align*}
-            \item Left: $D_{\psi}(x,y) = \frac{1}{2}\left\lVert x \right \rVert_2^2
-            +\frac{1}{2}\left\lVert y \right \rVert_2^2
-            -\left\langle x,y \right\rangle $\\
-            Right: \begin{align*}
+            \item \begin{align*}
                 &D_{\psi}(z,y)
                     +\left\langle \nabla\psi(z)-\nabla\psi(y), x-z \right\rangle
                     +D_{\psi}(x,z)\\
-                &=\frac{1}{2}\left\lVert z \right \rVert_2^2
-                    +\frac{1}{2}\left\lVert y \right \rVert_2^2
-                    -\langle z,y \rangle
-                    +\langle z-y,x-z \rangle
-                    +\frac{1}{2}\left\lVert x \right \rVert_2^2
-                    +\frac{1}{2}\left\lVert z \right \rVert_2^2
-                    -\langle x,z \rangle\\
-                &=\frac{1}{2}\left\lVert x \right \rVert_2^2
-                +\frac{1}{2}\left\lVert y \right \rVert_2^2
-                -\left\langle x,y \right\rangle
+                &=\psi(z)-\psi(y)-\langle \nabla \psi(y),z-y\rangle
+                    +\langle \nabla\psi(z) - \nabla\psi(y), x-z\rangle
+                    +\psi(x)-\psi(z)-\langle \nabla \psi(z), x-z\rangle\\
+                &=\psi(x)-\psi(y)-\langle \nabla\psi(y),x-y\rangle\\
+                &=D_{\psi}(x-y)
             \end{align*}
-            \begin{center}
-                Left=Right
-            \end{center}
             \item Obviously, $\nabla m_k(v_k)=0$, thus
             \begin{align*}
                 D_{m_k}(x,v_k)&=m_k(x)-m_k(v_k)\\

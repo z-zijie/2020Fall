@@ -34,7 +34,7 @@ Learning progress
 - [x] [2.1 Stochastic process: a first look](/MATH735/2-01%20Stochastic%20Processes.pdf)
 - [x] [2.2 Brownian motion: introduction](/MATH735/2-02%20Brownian%20motion.pdf)
 - [x] [2.3 Brownian motion: properties](/MATH735/2-03%20Brownian%20motion%20-%20properties.pdf)
-- [ ] [2.4 Brownian motion: more properties and examples](/MATH735/2-04%20Brownian%20motion%20-%20more%20examples.pdf)
+- [x] [2.4 Brownian motion: more properties and examples](/MATH735/2-04%20Brownian%20motion%20-%20more%20examples.pdf)
 - [ ] [3.1 Continuous-time stochastic processes: a deeper look](MATH735/3-01%20A%20deeper%20look%20at%20continuous%20time%20stochastic%20processes.pdf)
 - [ ] [3.2 Martingales and basic examples](MATH735/3-02%20Martingale%20theory%20and%20basic%20examples.pdf)
 - [ ] [3.3 Martingale inequality - Doob's maximal inequality](MATH735/3-03%20Martingale%20inequality%20(Doob%20max%20inequality).pdf)

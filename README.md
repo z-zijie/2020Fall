@@ -23,7 +23,7 @@
   - [x] [Solution](/MATH733/Homework1/solution_1.pdf)
 - [x] [Homework 2 (Sep 27 @ 10pm)](/MATH733/Homework2/hw_2.pdf)
   - [x] [Solution](/MATH733/Homework2/solution_2.pdf)
-- [x] [Homework 3 (Oct 11 @ 10pm)](/MATH733/Homework3/hw_3.pdf)
+- [ ] [Homework 3 (Oct 11 @ 10pm)](/MATH733/Homework3/hw_3.pdf)
   - [ ] [Solution]
 
 ## MATH 735
@@ -42,7 +42,7 @@
 
 - - - -
 
-- [ ] [Homework 1 (due Oct 14)](/MATH735/Homework1)
+- [x] [Homework 1 (due Oct 14)](/MATH735/Homework1)
   - [ ] [Solution]
 
 ## COMP 726

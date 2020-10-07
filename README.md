@@ -76,6 +76,8 @@
   - [x] [Solution](/COMP726/Homework1/solution_1.pdf)
 - [x] [Homework 2(Oct 05)](/COMP726/Homework2/CS_726_HW_2_Fall_2020.pdf)
   - [x] [Solution](/COMP726/Homework2/solution_2.pdf)
+- [ ] [Homework 3(Oct 21)](/COMP726/Homework3/CS_726_HW_3_F20.pdf)
+  - [ ] [Solution]
 
 ## COMP 760
 
@@ -97,3 +99,5 @@
 
 - [x] [Homework 1(Sep 24)](/COMP760/Homework1/CS760_hw1_Review.pdf)
   - [x] [Solution](/COMP760/Homework1/solution_1.pdf)
+- [ ] [Homework 2(Oct 13)](/COMP760/Homework2/CS760_hw2_LinReg.pdf)
+  - [ ] [Solution]

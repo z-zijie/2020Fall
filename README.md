@@ -8,6 +8,8 @@
 
 ## MATH 733
 
+**Midterm 1: Wednesday, October 21, 8pm-10pm.**
+
 - [x] 9/3/20 - First part (intro)
 - [x] 9/3/20 - 2nd part (Kolmogorov axioms, examples)
 - [x] 9/8/20 - 1st part (Further examples)
@@ -47,6 +49,8 @@ Related book: [Seppäläinen's Note](/MATH735/Textbooks/Seppäläinen's%20No
   - [ ] [Solution](/MATH735/Homework1/solution_1.pdf)
 
 ## COMP 726
+
+**The midterm is scheduled for Friday, October 16, 7-9pm CT**
 
 - [x] Lecture 1
   - [x] Video

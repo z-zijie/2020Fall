@@ -44,7 +44,7 @@
 
 Related book: [Seppäläinen's Note](/MATH735/Textbooks/Seppäläinen's%20Note.pdf)
 - [x] [Homework 1 (due Oct 14)](/MATH735/Homework1)
-  - [ ] [Solution]
+  - [ ] [Solution](/MATH735/Homework1/solution_1.pdf)
 
 ## COMP 726
 

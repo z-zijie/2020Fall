@@ -26,7 +26,7 @@
 - [x] [Homework 2 (Sep 27 @ 10pm)](/MATH733/Homework2/hw_2.pdf)
   - [x] [Solution](/MATH733/Homework2/solution_2.pdf)
 - [ ] [Homework 3 (Oct 11 @ 10pm)](/MATH733/Homework3/hw_3.pdf)
-  - [ ] [Solution]
+  - [ ] [Solution](/MATH733/Homework3/solution_3.pdf)
 
 ## MATH 735
 

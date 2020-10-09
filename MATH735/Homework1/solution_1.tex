@@ -24,25 +24,57 @@
 % --- Question 1 --- %
 \section*{Question 1}
     \begin{proof}
-    
+        If $Y$ has a single continuous path, then it means there exists a $\omega$ s.t. $Y_t(\omega)=0$ for all $t$. This is equivalent to
+        $$\exists\  \omega \in [0,1] \text{ s.t. } t \not= \omega \ \forall t\in \mathbb{R}_{+}$$
+        This is impossible, so $Y$ does not have a single continuous path.\\
+        $X$ and $Y$ are modifications of each other means
+        $$\mathbb{P}(X_t=Y_t)=\mathbb{P}(Y_t=0)=\mathbb{P}(t \not= \omega)=1$$
+        For any fixed $\omega$, this is true. So, $X$ and $Y$ are modifications of each other.
     \end{proof}
 
 % --- Question 2 --- %
 \section*{Question 2}
     \begin{proof}
-
+    We need prove $\widetilde{B_t}$ is a Gaussian process.
+    $$\widetilde{\mathbb{P}}(t,x)=\mathbb{P}(\lambda^2 t, \lambda x)=\frac{1}{\sqrt{2\pi \lambda^2 t}}e^{-\frac{(\lambda x)^2}{2\lambda^2 t}}=\frac{1}{\lambda}\cdot\frac{1}{\sqrt{2\pi t}}e^{-\frac{x^2}{2t}}=\frac{1}{\lambda}\mathbb{P}(t,x)$$
+    So, $\widetilde{B_t}\sim \frac{1}{\lambda}N(0,t)=N(0,\frac{t}{\lambda^2})$
     \end{proof}
 
 % --- Question 3 --- %
 \section*{Question 3}
     \begin{proof}
-
+    \begin{align*}
+        E[B_t^k] &=\int_{-\infty}^{\infty} x^k \frac{1}{\sqrt{2\pi t}}e^{-\frac{x^2}{2t}}dx\\
+        &=\left.\frac{1}{k+1}x^{k+1}\cdot\frac{1}{\sqrt{2\pi t}}e^{-\frac{x^2}{2t}}\right|_{-\infty}^{\infty}+\frac{1}{t(k+1)}\int_{-\infty}^{\infty}x^{k+2}\frac{1}{\sqrt{2\pi t}}e^{-\frac{x^2}{2t}}dx\\
+        &=\frac{1}{t(k+1)}E[B_t^{k+2}]
+    \end{align*}
+    $$E[B_t^{k+2}]=t(k+1)E[B_t^k]$$
+    We know $E[B_t^0]=1$, $E[B_t^1]=0$, so we have\\
+    When $k=2j$,
+    $$E[B_t^k]=t^j\prod_{i=1}^j(2i-1)$$
+    When $k=2j-1$
+    $$E[B_t^k]=0$$
     \end{proof}
 
 % --- Question 4 --- %
 \section*{Question 4}
     \begin{proof}
-        
+        \indent
+        \textit{Stopping time}
+        \begin{enumerate}
+            \item Play until there is no money or play 500 games before stopping.
+            \item Play N games to stop,$\{\tau=N\}$
+            \item Flip a coin N times, stop at the first appearance of \textit{head, tail, head}.
+        \end{enumerate}
+        \textit{Not stopping time}
+        \begin{enumerate}
+            \item Stopping gambling when the gambler gets the maximum amount of money he can win is not a stopping time.\\
+            \textit{Explanation:} Because it needs not only the information of the present and the past, but also the information of the future.
+            \item Stopping when the gambler doubles his wager is not a stopping time.\\
+            \textit{Explanation:} Because there is a positive probability that he will never double his money.
+            \item Sold the day before the stock fell is not a stopping time.\\
+            \textit{Explanation:} Because we don’t know the future information.
+        \end{enumerate}
     \end{proof}
 
 % --- Question 5 --- %

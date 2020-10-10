@@ -9,6 +9,7 @@
 \usepackage{bm}
 \usepackage{graphicx}
 \usepackage{physics}
+\usepackage{enumitem}
 
 % --- NewCommand --- %
 % \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
@@ -55,10 +56,10 @@
     \begin{proof}
     We know that $$\vb*{y}\sim \mathcal{N}\left(\vb{X}\bm{\theta}^*, \bm{\Sigma}^*\right)$$ Then
     $$ \mathbb{P}\left(\vb{y},\vb{X}|\bm{\theta},\bm{\Sigma}^*\right)
-    =\frac{1}{\sqrt{(2\pi)^N |\bm{\Sigma}^*|^{\frac{1}{N}}}}\exp{-\frac{1}{2}\left(\vb{y}-\vb{X}\bm{\theta}\right)^T{\bm{\Sigma}^*}^{-1}\left(\vb{y}-\vb{X}\bm{\theta}\right)} $$
+    =\frac{1}{\sqrt{(2\pi)^N |\bm{\Sigma}^*|}}\exp{-\frac{1}{2}\left(\vb{y}-\vb{X}\bm{\theta}\right)^T{\bm{\Sigma}^*}^{-1}\left(\vb{y}-\vb{X}\bm{\theta}\right)} $$
     \begin{align*}
         \bm{\hat{\theta}} &= \arg{\max_{\bm{\theta}}\mathbb{P}\left(\vb{y},\vb{X}|\bm{\theta},\bm{\Sigma}^*\right)}\\
-        &=\arg{\max_{\bm{\theta}}\frac{1}{\sqrt{(2\pi)^N |\bm{\Sigma}^*|^{\frac{1}{N}}}}\exp{-\frac{1}{2}\left(\vb{y}-\vb{X}\bm{\theta}\right)^T{\bm{\Sigma}^*}^{-1}\left(\vb{y}-\vb{X}\bm{\theta}\right)}}\\
+        &=\arg{\max_{\bm{\theta}}\frac{1}{\sqrt{(2\pi)^N |\bm{\Sigma}^*|}}\exp{-\frac{1}{2}\left(\vb{y}-\vb{X}\bm{\theta}\right)^T{\bm{\Sigma}^*}^{-1}\left(\vb{y}-\vb{X}\bm{\theta}\right)}}\\
         &=\arg{\max_{\bm{\theta}}-\left(\vb{y}-\vb{X}\bm{\theta}\right)^T{\bm{\Sigma}^*}^{-1}\left(\vb{y}-\vb{X}\bm{\theta}\right)}\\
         &=\arg{\min_{\bm{\theta}}\left(\vb{y}-\vb{X}\bm{\theta}\right)^T{\bm{\Sigma}^*}^{-1}\left(\vb{y}-\vb{X}\bm{\theta}\right)}
     \end{align*}
@@ -88,15 +89,30 @@
 % --- Problem 6 ---%
 \section*{Problem 6}
     \begin{proof}
-        
+    \begin{align*}
+        \bm{\widehat{\Sigma}}
+        &=\arg{\max_{\bm{\Sigma}} \mathbb{P}\left(\vb{y},\vb{X}|\bm{\theta^*}, \bm{\Sigma}\right) }\\
+        &=\arg{\max_{\bm{\Sigma}} \frac{1}{\sqrt{(2\pi)^N |\bm{\Sigma}^*|}}\exp{-\frac{1}{2N}\left(\vb{y}-\vb{X}\bm{\theta}\right)^T{\bm{\Sigma}^*}^{-1}\left(\vb{y}-\vb{X}\bm{\theta}\right)} }\\
+        &=-\frac{N}{2}\log(2\pi)-\frac{1}{2}\log(|\bm{\Sigma}^*|)-\frac{1}{2N}\left(\vb{y}-\vb{X}\bm{\theta}\right)^T{\bm{\Sigma}^*}^{-1}\left(\vb{y}-\vb{X}\bm{\theta}\right)
+    \end{align*}
+    Taking the derivative we have:
+    $$\frac{\text{d}}{\text{d}\sigma}\log(\mathbb{P}\left(\vb{y},\vb{X}|\bm{\theta^*}, \bm{\Sigma}\right))
+    =\left({\bm{\Sigma}^*}^{-1}-\frac{1}{N}{\bm{\Sigma}^*}^{-1}\left(\vb{y}-\vb{X}\bm{\theta}\right)^T\left(\vb{y}-\vb{X}\bm{\theta}\right){\bm{\Sigma}^*}^{-1}\right)^T$$
+    Setting to zero,
+    $$\bm{\widehat{\Sigma}}=-\frac{1}{N}\left(\vb{y}-\vb{X}\bm{\theta}\right)^T\left(\vb{y}-\vb{X}\bm{\theta}\right)$$
     \end{proof}
 
 % --- Problem 7 ---%
 \section*{Problem 7}
     \begin{proof}
-        
+        \indent
+        \begin{enumerate}[label=(\alph*)]
+            \item
+            \item
+            \item
+            \item
+            \item
+        \end{enumerate}
     \end{proof}
-
-
 
 \end{document}

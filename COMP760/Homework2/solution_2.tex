@@ -10,6 +10,7 @@
 \usepackage{graphicx}
 \usepackage{physics}
 \usepackage{enumitem}
+\usepackage{listings}
 
 % --- NewCommand --- %
 % \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
@@ -71,7 +72,7 @@
 % --- Problem 3 ---%
 \section*{Problem 3}
     \begin{proof}
-        $$\bm{\hat{\theta}} \sim \mathcal{N}\left(\bm{\theta}^*,|\bm{\Sigma}^*|^{\frac{1}{N}}\left(\vb{X}^T\vb{X}\right)^{-1}\right)$$
+        $$\bm{\hat{\theta}} \sim \mathcal{N}\left(\bm{\theta}^*,|\bm{\Sigma}^*|^{\frac{1}{N}}\left(\vb{X}^T{\bm{\Sigma}^*}^{-1}\vb{X}\right)^{-1}\right)$$
     \end{proof}
 
 % --- Problem 4 ---%
@@ -83,7 +84,7 @@
 % --- Problem 5 ---%
 \section*{Problem 5}
     \begin{proof}
-        $$\vb*{\hat{y}} \sim \mathcal{N}\left(\vb{x}^T \bm{\theta}^*,\vb{x}^T |\bm{\Sigma}^*|^{\frac{1}{N}}\left(\vb{X}^T\vb{X}\right)^{-1} \vb{x} \right)$$
+        $$\vb*{\hat{y}} \sim \mathcal{N}\left(\vb{x}^T \bm{\theta}^*,|\bm{\Sigma}^*|^{\frac{1}{N}}\vb{x}^T\left(\vb{X}^T{\bm{\Sigma}^*}^{-1}\vb{X}\right)^{-1}\vb{x}\right)$$
     \end{proof}
 
 % --- Problem 6 ---%
@@ -108,10 +109,22 @@
         \indent
         \begin{enumerate}[label=(\alph*)]
             \item
+                \begin{align*}
+                \bm{\Sigma}&=\begin{bmatrix}
+                    179.6875 & 68.75\\
+                    68.75    & 487.5
+                \end{bmatrix}\\
+                \bm{\theta^*}&=\begin{bmatrix}
+                    -0.11278259\\
+                    0.99759605
+                \end{bmatrix}
+                \end{align*}
             \item
+                $$ \hat{\vb{y}}= \vb{x}^T \bm{\hat{\theta}}=149.85437495 $$
             \item
-            \item
-            \item
+                $$  $$
+            \item No. Since the parameter related to height is close to 0.
+            \item Yes. Since the parameter related to weight is close to 1.
         \end{enumerate}
     \end{proof}
 

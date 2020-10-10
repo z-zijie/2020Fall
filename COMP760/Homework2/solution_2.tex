@@ -53,25 +53,36 @@
 % --- Problem 2 ---%
 \section*{Problem 2}
     \begin{proof}
-        
+    We know that $$\vb*{y}\sim \mathcal{N}\left(\vb{X}\bm{\theta}^*, \bm{\Sigma}^*\right)$$ Then
+    $$ \mathbb{P}\left(\vb{y},\vb{X}|\bm{\theta},\bm{\Sigma}^*\right)
+    =\frac{1}{\sqrt{(2\pi)^N |\bm{\Sigma}^*|^{\frac{1}{N}}}}\exp{-\frac{1}{2}\left(\vb{y}-\vb{X}\bm{\theta}\right)^T{\bm{\Sigma}^*}^{-1}\left(\vb{y}-\vb{X}\bm{\theta}\right)} $$
+    \begin{align*}
+        \bm{\hat{\theta}} &= \arg{\max_{\bm{\theta}}\mathbb{P}\left(\vb{y},\vb{X}|\bm{\theta},\bm{\Sigma}^*\right)}\\
+        &=\arg{\max_{\bm{\theta}}\frac{1}{\sqrt{(2\pi)^N |\bm{\Sigma}^*|^{\frac{1}{N}}}}\exp{-\frac{1}{2}\left(\vb{y}-\vb{X}\bm{\theta}\right)^T{\bm{\Sigma}^*}^{-1}\left(\vb{y}-\vb{X}\bm{\theta}\right)}}\\
+        &=\arg{\max_{\bm{\theta}}-\left(\vb{y}-\vb{X}\bm{\theta}\right)^T{\bm{\Sigma}^*}^{-1}\left(\vb{y}-\vb{X}\bm{\theta}\right)}\\
+        &=\arg{\min_{\bm{\theta}}\left(\vb{y}-\vb{X}\bm{\theta}\right)^T{\bm{\Sigma}^*}^{-1}\left(\vb{y}-\vb{X}\bm{\theta}\right)}
+    \end{align*}
+    Compute the differential:
+    $$\frac{\text{d}}{\text{d}\bm{\theta}}=2\vb{X}^T {\bm{\Sigma}^*}^{-1} \vb{X}\bm{\theta}-2\vb{X}^T {\bm{\Sigma}^*}^{-1} y$$
+    $$\bm{\hat{\theta}} = \left(\vb{X}^T{\bm{\Sigma}^*}^{-1}\vb{X}\right)^{-1}\vb{X}^T {\bm{\Sigma}^*}^{-1} y$$
     \end{proof}
 
 % --- Problem 3 ---%
 \section*{Problem 3}
     \begin{proof}
-        
+        $$\bm{\hat{\theta}} \sim \mathcal{N}\left(\bm{\theta}^*,|\bm{\Sigma}^*|^{\frac{1}{N}}\left(\vb{X}^T\vb{X}\right)^{-1}\right)$$
     \end{proof}
 
 % --- Problem 4 ---%
 \section*{Problem 4}
     \begin{proof}
-        
+        $$\vb{\hat{y}}=\vb{x}^T\bm{\hat{\theta}}=\vb{x}^T\left(\vb{X}^T{\bm{\Sigma}^*}^{-1}\vb{X}\right)^{-1}\vb{X}^T{\bm{\Sigma}^*}^{-1}\vb{y}$$
     \end{proof}
 
 % --- Problem 5 ---%
 \section*{Problem 5}
     \begin{proof}
-        
+        $$\vb*{\hat{y}} \sim \mathcal{N}\left(\vb{x}^T \bm{\theta}^*,\vb{x}^T |\bm{\Sigma}^*|^{\frac{1}{N}}\left(\vb{X}^T\vb{X}\right)^{-1} \vb{x} \right)$$
     \end{proof}
 
 % --- Problem 6 ---%

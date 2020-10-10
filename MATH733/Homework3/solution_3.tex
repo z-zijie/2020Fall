@@ -24,9 +24,35 @@
     \maketitle
     \begin{enumerate}
         % === Question 1 ===
-        \item \begin{proof}
-            
+        \item 
+        \begin{enumerate}
+        \item \begin{proof} 
+            $$X\sim B(n,p) \Rightarrow P(X=k)=\binom{n}{k}p^k(1-p)^{n-k}$$
+            $$Y\sim B(m,p) \Rightarrow P(X=k)=\binom{m}{k}p^k(1-p)^{m-k}$$
+            Then \begin{align*}
+                P(X+Y=k)&=\sum_{i=0}^k P(X=i, Y=k-i)\\
+                &=\sum_{i=0}^k P(X=i)\cdot P(Y=k-i)\\
+                &=\sum_{i=0}^k \binom{n}{i}p^i(1-p)^{n-i}
+                    \cdot \binom{m}{k-i}p^{k-i}(1-p)^{m-k+i}\\
+                &=p^k(1-p)^{m+n-k}\sum_{i=0}^k \binom{n}{i}\binom{m}{k-i}\\
+                &=\binom{n+m}{k}p^k(1-p)^{m+n-k}
+            \end{align*}
+            Thus, $$X+Y \sim B(n+m,p)$$
         \end{proof}
+        \item \begin{proof}
+            $$X\sim \text{Poisson}(\lambda) \Rightarrow P(X=k)=\frac{\lambda^k}{k!}e^{-\lambda}$$
+            $$Y\sim \text{Poisson}(\mu) \Rightarrow P(Y=k)=\frac{\mu^k}{k!}e^{-\mu}$$
+            Then \begin{align*}
+                P(X+Y=k)&=\sum_{i=0}^k P(X=i, Y=k-i)\\
+                &=\sum_{i=0}^k P(X=i)\cdot P(Y=k-i)\\
+                &=\sum_{i=0}^k \frac{\lambda^i}{i!}e^{-\lambda}
+                    \cdot \frac{\mu^{k-i}}{(k-i)!}e^{-\mu}\\
+                &=e^{-(\lambda+\mu)}\sum_{i=0}^k \frac{\lambda^i}{i!}\frac{\mu^{k-i}}{(k-i)!}\\
+                &=\frac{(\lambda+\mu)^k}{k!}e^{-(\lambda+\mu)}
+            \end{align*}
+            Thus, $$X+Y \sim \text{Poisson}(\lambda+\mu)$$
+        \end{proof}
+        \end{enumerate}
 
 
         % === Question 2 ===

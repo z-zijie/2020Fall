@@ -1,0 +1,91 @@
+\documentclass{article}
+% --- Modify margins --- %
+\usepackage{geometry}
+\geometry{a4paper,scale=0.8}
+% --- Involved packages --- %
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{physics}
+
+% --- NewCommand --- %
+% \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+% --- Title information --- %
+\title{CS 760: Machine Learning - Fall 2020\\
+        {\Large \textbf{Homework 2: Linear Regression}}\\
+        {\normalsize \textbf{Due : 10/13/2020}}
+    }
+\author{Zijie Zhang}
+\date{\today}
+
+
+% --- main --- %
+
+\begin{document}
+    \maketitle
+    
+% --- Problem 1 ---%
+\section*{Problem 1}
+    \begin{proof}
+    We notice that:
+    \begin{align*}
+        \norm{\vb{y-X\bm{\theta}}}_2^2
+        &=(\vb{y-X\bm{\theta}})^T (\vb{y-X\bm{\theta}})\\
+        &=\vb{y^Ty}-2\bm{\theta}^T\vb{X}^T\vb{y}+\bm{\theta}^T\vb{X}^T\vb{X}\bm{\theta}
+    \end{align*}
+    Compute the differential:
+    \begin{align*}
+        \text{d}\tr\left(\vb{y}^T\vb{y}-2\bm{\theta}^T\vb{X}^T\vb{y}+\bm{\theta}^T\vb{X}^T\vb{X}\bm{\theta}\right)
+        &= -2\tr\left((\text{d}\bm{\theta})^T \vb{X}^T \vb{y}\right)
+            +\tr\left((\text{d}\bm{\theta})^T \vb{X}^T\vb{X}\bm{\theta}\right)
+            +\tr\left(\bm{\theta}^T \vb{X}^T\vb{X} (\text{d}\bm{\theta})\right)\\
+        &= 2\tr\left((\text{d}\bm{\theta})^T(\vb{X}^T\vb{X}\bm{\theta}-\vb{X}^T y)\right)
+    \end{align*}
+    It follows that
+    $$\frac{\text{d}}{\text{d}\bm{\theta}}=2\vb{X}^T\vb{X}\bm{\theta}-2\vb{X}^T y$$
+    Let this derivative to zero, we have
+    $$\arg{\min_\theta}=\left(\vb{X}^T\vb{X}\right)^{-1}\vb{X}^T\vb{y}$$
+    \end{proof}
+
+% --- Problem 2 ---%
+\section*{Problem 2}
+    \begin{proof}
+        
+    \end{proof}
+
+% --- Problem 3 ---%
+\section*{Problem 3}
+    \begin{proof}
+        
+    \end{proof}
+
+% --- Problem 4 ---%
+\section*{Problem 4}
+    \begin{proof}
+        
+    \end{proof}
+
+% --- Problem 5 ---%
+\section*{Problem 5}
+    \begin{proof}
+        
+    \end{proof}
+
+% --- Problem 6 ---%
+\section*{Problem 6}
+    \begin{proof}
+        
+    \end{proof}
+
+% --- Problem 7 ---%
+\section*{Problem 7}
+    \begin{proof}
+        
+    \end{proof}
+
+
+
+\end{document}

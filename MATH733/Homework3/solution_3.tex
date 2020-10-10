@@ -56,9 +56,23 @@
 
 
         % === Question 2 ===
-        \item \begin{proof}
-            
-        \end{proof}
+        \item \begin{enumerate}
+            \item \begin{proof} 
+                Let $h(x,y)=\mathbbm{1}_{\{xy\leqslant z\}}$, let $\mu,\nu$ be the probability measures with distributions $F_X$ and $F_Y$. Since for fixed $y>0$,
+                $$\int{h(x,y)\mu(dx)}=\int{\mathbbm{1}_{(-\infty,z/y]}(x)\mu(dx)}=F_X(\frac{z}{y})$$
+                If $y<0$,
+                $$\int{h(x,y)\mu(dx)}=\int{\mathbbm{1}_{(z/y,\infty]}(x)\mu(dx)}=1-F_X(\frac{z}{y})$$
+                So $$\int{h(x,y)\mu(dx)}=\frac{1}{2}+\text{sgn}{(y)}\left(F_X(\frac{z}{y})-\frac{1}{2}\right)$$
+                \begin{align*}
+                    F_{XY}(z)=P(XY\leqslant z)&=\iint{\mathbbm{1}_{\{xy\leqslant z\}}\mu(dx)\nu(dy)}\\
+                    &=\int \left(\frac{1}{2}+\text{sgn}{(y)}\left(F_X(\frac{z}{y})-\frac{1}{2}\right)\right)\nu(dy)\\
+                    &=\int \left(\frac{1}{2}+\text{sgn}{(y)}\left(F_X(\frac{z}{y})-\frac{1}{2}\right)\right)dF_Y(y)
+                \end{align*}
+            \end{proof}
+            \item \begin{proof}
+                
+            \end{proof}
+            \end{enumerate}
 
 
         % === Question 3 ===

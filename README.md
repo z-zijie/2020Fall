@@ -105,5 +105,5 @@ Related book: [Basics of Stochastic Analysis](/MATH735/Textbooks/Basics%20of%20S
 
 - [x] [Homework 1(Sep 24)](/COMP760/Homework1/CS760_hw1_Review.pdf)
   - [x] [Solution](/COMP760/Homework1/solution_1.pdf)
-- [ ] [Homework 2(Oct 13)](/COMP760/Homework2/CS760_hw2_LinReg.pdf)
-  - [ ] [Solution]
+- [x] [Homework 2(Oct 13)](/COMP760/Homework2/CS760_hw2_LinReg.pdf)
+  - [x] [Solution](/COMP760/Homework2/solution_2.pdf)

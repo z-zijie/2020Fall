@@ -93,6 +93,7 @@
                 &\leqslant\lim_{n\to\infty}P\left(|(X_n-X)(Y_n-Y)|>\frac{\varepsilon}{3}\right)+\lim_{n\to\infty}P\left(|Y(X_n-X)|>\frac{\varepsilon}{3}\right)+\lim_{n\to\infty}P\left(|X(Y_n-Y)|>\frac{\varepsilon}{3}\right)\\
                 &=0
             \end{align*}
+            $$X_n Y_n\overset{P}{\to}XY$$
         \end{proof}
 
         
@@ -141,16 +142,43 @@
                \end{align*}
             \end{proof}
             \item \begin{proof}
-                If $x_k < t$, let $x_k^t=x_k$ else, let $x_k^t=t$.
-                $$\mathbb{E}[N_x]\leqslant\mathbb{E}[N_x^t]
-                \leqslant \frac{x/t+1}{P(x\geqslant t)}<\infty$$
+                If$X_i$ are not integer, assume$X_i \in \mathbb{R}$.
+                If $x_k < t$, let $x_k(t)=x_k$ else, let $x_k(t)=t$.
+                Here we let $$N_x(t) = \sup_n{\{x_1(t)+x_2(t)+\cdots+x_n(t)\leqslant x\}}$$
+                $$\mathbb{E}[N_x]\leqslant\mathbb{E}[N_x(t)]
+                \leqslant \frac{\frac{x}{t}+1}{P(X\geqslant t)}<\infty$$
             \end{proof}
             \end{enumerate}
 
 
         % === Question 6 ===
         \item \begin{proof}
-            
+            Consider $X_1\sim \text{Cauchy(0,n)}$, $X_2\sim \text{Cauchy(0,1)}$ 
+            \begin{align*}
+                f_{X_1,X_2}(x_1,x_2)&=\frac{1}{n\pi^2\left(1+\left(\frac{x_1}{n}\right)^2\right)(1+x_2^2)}
+            \end{align*}
+            \begin{align*}
+                f_{X_1+X_2,X_2}(x_1+x_2,x_2)&=\frac{1}{n\pi^2\left(1+\left(\frac{x_1+x_2}{n}\right)^2\right)(1+x_2^2)}
+            \end{align*}
+            \begin{align*}
+                f_{X_1+X_2}(x_1+x_2)&=\int f_{X_1+X_2,X_2}(x_1+x_2,x_2) \text{d}x_2\\
+                &=\int\frac{1}{n\pi^2\left(1+\left(\frac{x_1+x_2}{n}\right)^2\right)(1+x_2^2)}\\
+                &=\int\frac{n}{\pi^2\left(n^2+\left(x_1+x_2\right)^2\right)(1+x_2^2)}\\
+                &=\frac{1}{(n+1)\pi\left(1+\left(\frac{X_1+X_2}{n+1}\right)\right)}
+            \end{align*}
+            This means Cauchy distribution is additive.
+            \begin{align*}
+                S_n&=X_1+X_2+\cdots+X_n\sim\text{Cauchy}(0,n)\\
+                P(S_n<x)&=\frac{1}{\pi}\arctan(\frac{x}{n})+\frac{1}{2}\\
+                P(S_n<nx) &=\frac{1}{\pi}\arctan(x)+\frac{1}{2}\\
+                &=P(X_1<x)
+            \end{align*}
+            So, $$\frac{S_n}{n}\sim X_1$$
+            Which means
+            $$\frac{S_n}{c_n}=\frac{S_n}{n}\frac{n}{c_n}\sim X_1\frac{n}{c_n}$$
+            For all $x$,
+            $$\lim_{n\to+\infty}\frac{S_n(x)}{c_n}=\lim_{n\to+\infty}\frac{S_n(x)}{n}\frac{n}{c_n}=0$$
+            So, $$\frac{S_n}{c_n}\to 0 \Rightarrow \frac{S_n}{c_n}\overset{P}{\to}0$$
         \end{proof}
     
     \end{enumerate}

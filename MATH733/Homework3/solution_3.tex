@@ -60,38 +60,92 @@
             \item \begin{proof} 
                 Let $h(x,y)=\mathbbm{1}_{\{xy\leqslant z\}}$, let $\mu,\nu$ be the probability measures with distributions $F_X$ and $F_Y$. Since for fixed $y>0$,
                 $$\int{h(x,y)\mu(dx)}=\int{\mathbbm{1}_{(-\infty,z/y]}(x)\mu(dx)}=F_X(\frac{z}{y})$$
-                If $y<0$,
-                $$\int{h(x,y)\mu(dx)}=\int{\mathbbm{1}_{(z/y,\infty]}(x)\mu(dx)}=1-F_X(\frac{z}{y})$$
-                So $$\int{h(x,y)\mu(dx)}=\frac{1}{2}+\text{sgn}{(y)}\left(F_X(\frac{z}{y})-\frac{1}{2}\right)$$
+                
+                So
                 \begin{align*}
                     F_{XY}(z)=P(XY\leqslant z)&=\iint{\mathbbm{1}_{\{xy\leqslant z\}}\mu(dx)\nu(dy)}\\
-                    &=\int \left(\frac{1}{2}+\text{sgn}{(y)}\left(F_X(\frac{z}{y})-\frac{1}{2}\right)\right)\nu(dy)\\
-                    &=\int \left(\frac{1}{2}+\text{sgn}{(y)}\left(F_X(\frac{z}{y})-\frac{1}{2}\right)\right)dF_Y(y)
+                    &=\int F_X(\frac{z}{y})dF_Y(y)
                 \end{align*}
             \end{proof}
             \item \begin{proof}
-                
+                Absolutely continuous means every set of measure zeros is probability zero. Consider
+                $$P(XY)=P(X)P(Y)$$
+                $$P(XY=x_1y_1)=P(X=x_1)P(Y=y_1)=0$$
+                Then $XY$ is absolutely continuous with p.d.f
+                $$f_{XY}=\int f_{X}\left(\frac{x}{t}\right)f_{Y}(t) \text{d}t$$
             \end{proof}
             \end{enumerate}
 
 
         % === Question 3 ===
         \item \begin{proof}
-            
+            \begin{align*}
+                &\lim_{n\to\infty}P\left(|X_n+Y_n-(X+Y)|> \varepsilon\right)\\
+                &\leqslant \lim_{n\to\infty}P\left(|X_n-X|>\frac{\varepsilon}{2}\right)+\lim_{n\to\infty}P\left(|Y_n-Y|>\frac{\varepsilon}{2}\right)\\
+                &=0
+            \end{align*}
+            Since $X_n \overset{p}{\to} X$ and $Y_n \overset{p}{\to} Y$.
+            So, $$X_n+Y_n \overset{p}{\to} X+Y$$
+
+            \begin{align*}
+                &\lim_{n\to\infty} P\left(|X_nY_n-XY|>\varepsilon\right)\\
+                &=\lim_{n\to\infty} P\left(|(X_n-X)(Y_n-Y)+Y(X_n-X)+X(Y_n-Y)|>\varepsilon\right)\\
+                &\leqslant\lim_{n\to\infty}P\left(|(X_n-X)(Y_n-Y)|>\frac{\varepsilon}{3}\right)+\lim_{n\to\infty}P\left(|Y(X_n-X)|>\frac{\varepsilon}{3}\right)+\lim_{n\to\infty}P\left(|X(Y_n-Y)|>\frac{\varepsilon}{3}\right)\\
+                &=0
+            \end{align*}
         \end{proof}
 
         
 
         % === Question 4 ===
         \item \begin{proof}
-            
+            Consider $$x_i \sim U[0,1] \forall i \text{ and i.i.d}$$
+            \begin{align*}
+                &\lim_{n\to\infty}{\int_{0}^{1}{ \int_{0}^{1}{ \cdots \int_{0}^{1}}}} n\left(f\left(\frac{1}{n}(x_1+x_2+\cdots+x_n)\right)-f\left(\frac{1}{2}\right)\right)\text{d}x_1\text{d}x_2\cdots\text{d}x_n\\
+                &=\lim_{n\to\infty}\mathbb{E}\left[n\left(f\left(\frac{1}{n}(x_1+x_2+\cdots+x_n)\right)-f\left(\frac{1}{2}\right)\right)\right]\\
+                &=\lim_{n\to\infty} n\cdot\mathbb{E}\left[f\left(\frac{1}{n}(x_1+x_2+\cdots+x_n)\right)-f\left(\frac{1}{2}\right)\right]\\
+                &f \text{ is continuous differentiable} \Leftrightarrow \mathbb{E}\left[f\left(\frac{x_1+x_2+\cdots+x_n}{n}\right)\right]=f\left(\mathbb{E}\left[\frac{x_1+x_2+\cdots+x_n}{n}\right]\right)\\
+                &=\lim_{n\to\infty} n\cdot \left(f\left(\mathbb{E}\left[\frac{x_1+x_2+\cdots+x_n}{n}\right]\right)-f\left(\frac{1}{2}\right)\right)\\
+                &\text{Since } \mathbb{E}\left[\frac{x_1+x_2+\cdots+x_n}{n}\right]=\mathbb{E}\left[x_1\right]=\int_{0}^1 t\text{d}t=\frac{1}{2}\\
+                &\text{We have}\\
+                &=\lim_{n\to\infty} n \cdot 0=0
+            \end{align*}
         \end{proof}
 
 
         % === Question 5 ===
-        \item \begin{proof}
-
-        \end{proof}
+        \item \begin{enumerate}
+            \item \begin{proof} 
+                Let $$S_n=x_1+x_2+\cdots+x_n$$
+                then $$\mathbb{E}[\mathbbm{1}_{\{S_k\leqslant x\}}]
+                =P(S_k\leqslant x)
+                =P(x_1+x_2+\cdots x_k<k)
+                =F^{(k)}(x)$$
+                Let $$N_x=\sum_{k=1}^{\infty}\mathbbm{1}_{\{S_k\leqslant x\}}$$
+                It gives
+                $$\mathbb{E}[N_x]=\sum_{n=1}^{\infty}\mathbb{E}[\mathbbm{1}_{\{S_n\leqslant x\}}]=\sum_{n=1}^{\infty}F^{(n)}(x)$$
+            \end{proof}
+            \item \begin{proof}
+            Let $n=\lceil x \rceil$
+               \begin{align*}
+                   P(N_x=N)&=P(S_N \leqslant x <S_{N+1})\\
+                   &\leqslant P(S_N \leqslant n)\\
+                   &=\binom{N}{N-n}F^{(N-n)}(0)
+               \end{align*}
+               Consider the expectation,
+               \begin{align*}
+                   \mathbb{E}[N_x]&=\sum_{N=1}^{\infty}NP(N_x=N)\\
+                   &\leqslant \sum_{N=1}^\infty N\binom{N}{N-n}F^{(N-n)}(0)\\
+                   &\leqslant \sum_{N=1}^{\infty}N\binom{N}{n}F^{(N-n)}(0)\\
+                   &<\infty
+               \end{align*}
+            \end{proof}
+            \item \begin{proof}
+                If $x_k < t$, let $x_k^t=x_k$ else, let $x_k^t=t$.
+                $$\mathbb{E}[N_x]\leqslant\mathbb{E}[N_x^t]
+                \leqslant \frac{x/t+1}{P(x\geqslant t)}<\infty$$
+            \end{proof}
+            \end{enumerate}
 
 
         % === Question 6 ===

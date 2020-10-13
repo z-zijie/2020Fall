@@ -65,16 +65,16 @@ Related book: [Basics of Stochastic Analysis](/MATH735/Textbooks/Basics%20of%20S
   - [x] Video
   - [x] Notes
   - [x] Reading
-- [ ] [Lecture 4](/COMP726/Handwritten%20notes/CS%20726%20Lecture%203%20&%204.pdf)
-  - [ ] video
-  - [ ] Notes
-- [ ] [Lecture 5](/COMP726/Handwritten%20notes/CS%20726_%20Lecture%205.pdf)
-  - [ ] video
-  - [ ] Notes
-- [ ] [Lecture 6](/COMP726/Handwritten%20notes/CS%20726_%20Lecture%205%20&%206.pdf)
-  - [ ] video
-  - [ ] Notes
-- [ ] [Lecture 7](/COMP726/Handwritten%20notes/CS%20726%20Lecture%207.pdf)
+- [x] [Lecture 4](/COMP726/Handwritten%20notes/CS%20726%20Lecture%203%20&%204.pdf)
+  - [x] video
+  - [x] Notes
+- [x] [Lecture 5](/COMP726/Handwritten%20notes/CS%20726_%20Lecture%205.pdf)
+  - [x] video
+  - [x] Notes
+- [x] [Lecture 6](/COMP726/Handwritten%20notes/CS%20726_%20Lecture%205%20&%206.pdf)
+  - [x] video
+  - [x] Notes
+- [x] [Lecture 7](/COMP726/Handwritten%20notes/CS%20726%20Lecture%207.pdf)
 
 - - - -
 

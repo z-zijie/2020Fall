@@ -80,25 +80,45 @@
 % --- Question 5 --- %
 \section*{Question 5}
     
-    \textit{($L_p$ martingale convergence for $p>1$ in discrete time)}\\
+    \textit{($L^p$ martingale convergence for $p>1$ in discrete time)}\\
     Show that if $\{M_n\}$ is a martingale that satisfies
     $$\mathbb{E}\left[\left|M_n\right|^p\right] \leqslant B < \infty$$
     for some $p>1$ and for all $n\geqslant 0$, then there exists a random variable $M_\infty$ with $\mathbb{E}\left[\left| M_\infty\right|^p\right]\leqslant B$ such that
     $$\mathbb{P}\left(\lim_{n\to \infty}M_n = M_\infty\right)=1 \text{ and } \lim_{n\to \infty}||M_n-M_\infty||_p=0$$
     \begin{proof}
-        
+    By Jensen's inequality,
+    $$f(x)=x^p \text{ is a convex function for } p>1$$
+    It gives $f(\mathbb{E}[|M_n|])\leqslant \mathbb{E}[f(|M_n|)] \Rightarrow \mathbb{E}[|M_n|]^p \leqslant \mathbb{E}[|M_n|^p]\leqslant B <\infty$.\\
+    By $L^1$ martingale convergence Theorem, there exists $M_\infty$ bounded such that
+    $$\mathbb{P}\left(\lim_{n\to \infty}M_n = M_\infty\right)=1 \text{ and } \lim_{n\to \infty}||M_n-M_\infty||_p=0$$
+    By fatou's Lemma,$\mathbb{E}[|M_\infty|^p]$ is bounded, because
+    $$\mathbb{E}[|M_\infty|^p]=\mathbb{E}[\lim_{n\to\infty}|M_n|^p]\leqslant \liminf_{n\to \infty}\mathbb{E}[|M_n|^p]\leqslant B<\infty$$
+    By Doob's $L^p$ maximal inequality, it gives
+    $$\mathbb{E}[|M_n^*|^p]^{\frac{1}{p}}\leqslant \frac{p}{1-p}\mathbb{E}[|M_n|^p]^{\frac{1}{p}}\leqslant\frac{p}{p-1}B^{\frac{1}{p}}<\infty$$
+    Then $\mathbb{E}[|M_n^*|^p]^{\frac{1}{p}} \to \text{a finite number}$.
+    Let $$\lim_{n\to \infty}||M_n^*||_p =||M_\infty^*||_p<\infty$$
+    Thus,
+    $$\lim_{n\to\infty} ||M_n-M_\infty||_p=||\lim_{n\to\infty}M_n - M_\infty||_p=0$$
     \end{proof}
 
 % --- Question 6 --- %
 \section*{Question 6}
     \begin{proof}
-
+    Assume that $M_t$ is a submartingale.
+    By Theorem 3.6, we know
+    $$\mathbb{E}[M_{\tau \wedge T|\mathcal{F}_s}]\geqslant M_{\tau\wedge T \wedge s}$$
+    We know $M_{\tau\wedge T \wedge s}=M_{\tau \wedge s}$, since $s<T$. Thus
+    $$\mathbb{E}[M_{\tau \wedge T|\mathcal{F}_s}]\geqslant M_{\tau \wedge s}$$
+    Hence, $M_{\tau \wedge s}$ is also a submartingale. In Ex3.2, we know $B$ is a standard Brownian motion and $\tau=\inf{t\geqslant 0: B_t=1}$. By Stopping Time Theorem, we have $\mathbb{E}[B_{\tau\wedge t}]=\mathbb{E}[B_0]=0$.\\
+    However,
+    $$\mathbb{E}[B_\tau]=-P(B_\tau=-1)=-1 \not=0$$
+    So, Theorem3.6 cannot hold without the truncation by T.
     \end{proof}
 
 % --- Question 7 --- %
 \section*{Question 7}
     \begin{proof}
-    Consider the "1D-symmetric random walk" with
+    Consider the \textit{1D-symmetric random walk} with
     $$\forall i\in \mathbb{N},\ P(X_i = 1) = P(X_i = -1) = \frac{1}{2}$$
     Set $$S_n = \sum_{i=1}^n X_k$$the sum of first n-th terms of $X_i$, it is a martingale.\\
     Let $\sigma$ be the time arrive position $Y$, and let $\tau=\sigma+1$. Here $\sigma$ is a stopping time.\\

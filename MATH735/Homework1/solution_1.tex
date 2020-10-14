@@ -98,6 +98,17 @@
 % --- Question 7 --- %
 \section*{Question 7}
     \begin{proof}
+    Consider the "1D-symmetric random walk" with
+    $$\forall i\in \mathbb{N},\ P(X_i = 1) = P(X_i = -1) = \frac{1}{2}$$
+    Set $$S_n = \sum_{i=1}^n X_k$$the sum of first n-th terms of $X_i$, it is a martingale.\\
+    Let $\sigma$ be the time arrive position $Y$, and let $\tau=\sigma+1$. Here $\sigma$ is a stopping time.\\
+    If $\tau$ is also a stopping time,
+    $$\mathbb{E}[S_\tau|\mathcal{F}_\sigma]=S_\sigma$$
+    Then, we have
+    $$\mathbb{E}[S_\tau]=\mathbb{E}[S_\sigma]=\mathbb{E}[S_{\sigma-1}]=\cdots=0$$
+    However,
+    $$\mathbb{E}[S_\tau]=Y\not=0$$
 
+    
     \end{proof}
 \end{document}

@@ -47,7 +47,7 @@
 Related book: [Basics of Stochastic Analysis](/MATH735/Textbooks/Basics%20of%20Stochastic%20Analysis.pdf)
 
 - [x] [Homework 1 (due Oct 14)](/MATH735/Homework1)
-  - [ ] [Solution](/MATH735/Homework1/solution_1.pdf)
+  - [x] [Solution](/MATH735/Homework1/solution_1.pdf)
 
 ## COMP 726
 

@@ -89,16 +89,12 @@
     By Jensen's inequality,
     $$f(x)=x^p \text{ is a convex function for } p>1$$
     It gives $f(\mathbb{E}[|M_n|])\leqslant \mathbb{E}[f(|M_n|)] \Rightarrow \mathbb{E}[|M_n|]^p \leqslant \mathbb{E}[|M_n|^p]\leqslant B <\infty$.\\
-    By $L^1$ martingale convergence Theorem, there exists $M_\infty$ bounded such that
-    $$\mathbb{P}\left(\lim_{n\to \infty}M_n = M_\infty\right)=1 \text{ and } \lim_{n\to \infty}||M_n-M_\infty||_p=0$$
-    By fatou's Lemma,$\mathbb{E}[|M_\infty|^p]$ is bounded, because
-    $$\mathbb{E}[|M_\infty|^p]=\mathbb{E}[\lim_{n\to\infty}|M_n|^p]\leqslant \liminf_{n\to \infty}\mathbb{E}[|M_n|^p]\leqslant B<\infty$$
-    By Doob's $L^p$ maximal inequality, it gives
-    $$\mathbb{E}[|M_n^*|^p]^{\frac{1}{p}}\leqslant \frac{p}{1-p}\mathbb{E}[|M_n|^p]^{\frac{1}{p}}\leqslant\frac{p}{p-1}B^{\frac{1}{p}}<\infty$$
-    Then $\mathbb{E}[|M_n^*|^p]^{\frac{1}{p}} \to \text{a finite number}$.
-    Let $$\lim_{n\to \infty}||M_n^*||_p =||M_\infty^*||_p<\infty$$
-    Thus,
-    $$\lim_{n\to\infty} ||M_n-M_\infty||_p=||\lim_{n\to\infty}M_n - M_\infty||_p=0$$
+    We need prove
+    $$\mathbb{P}\left(\liminf_{n\to\infty}{M_n}\leqslant a <b\leqslant \limsup_{n\to\infty}{M_n}\right)=0, \text{ for any } a<b$$
+    By Doob's maximal inequality, we know
+    $$\mathbb{P}\left(\liminf_{n\to\infty}{M_n}\leqslant a <b\leqslant \limsup_{n\to\infty}{M_n}\right) \leqslant \mathbb{P}\left(\sup_{m\leqslant k <\infty}|M_k-M_m|\geqslant \varepsilon\right) \leqslant \mathbb{E}[M_\infty-M_n]$$
+    This set will converge to 0.\\
+    $$\mathbb{E}[|M_n|^p]\leqslant B <\infty$$ shows that $$||M_\infty-M_n||_2\to 0$$
     \end{proof}
 
 % --- Question 6 --- %

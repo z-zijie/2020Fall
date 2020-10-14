@@ -25,8 +25,8 @@
   - [x] [Solution](/MATH733/Homework1/solution_1.pdf)
 - [x] [Homework 2 (Sep 27 @ 10pm)](/MATH733/Homework2/hw_2.pdf)
   - [x] [Solution](/MATH733/Homework2/solution_2.pdf)
-- [ ] [Homework 3 (Oct 11 @ 10pm)](/MATH733/Homework3/hw_3.pdf)
-  - [ ] [Solution](/MATH733/Homework3/solution_3.pdf)
+- [x] [Homework 3 (Oct 11 @ 10pm)](/MATH733/Homework3/hw_3.pdf)
+  - [x] [Solution](/MATH733/Homework3/solution_3.pdf)
 
 ## MATH 735
 
@@ -88,28 +88,25 @@ Related book: [Basics of Stochastic Analysis](/MATH735/Textbooks/Basics%20of%20S
   - [x] [Solution](/COMP726/Homework1/solution_1.pdf)
 - [x] [Homework 2(Oct 05)](/COMP726/Homework2/CS_726_HW_2_Fall_2020.pdf)
   - [x] [Solution](/COMP726/Homework2/solution_2.pdf)
-- [ ] [Homework 3(Oct 21)](/COMP726/Homework3/CS_726_HW_3_F20.pdf)
+- [x] [Homework 3(Oct 21)](/COMP726/Homework3/CS_726_HW_3_F20.pdf)
   - [ ] [Solution]
 
 ## COMP 760
-
-- [x] 9/8/20, Lecture / recording_1
-- [x] 9/10/20, Lecture / recording_2
-- [ ] 9/15/20, Lecture / recording_3
-- [ ] 9/17/20, Lecture / recording_4
-- [ ] 9/22/20, Lecture / recording_5
-
-- - - -
 
 - [x] Topic 1: Overview
 - [x] Topic 2: Review of Linear Algebra
 - [x] Topic 3: Review of Probability
 - [x] Topic 4: Review of Optimization
-- [ ] Topic 5: Linear Regression
+- [x] Topic 5: Linear Regression
+- [ ] Topic 6: Logistic Regression
+- [ ] Topic 7: Cross-Validation
+- [ ] Topic 8: Decision Trees
 
 - - - -
 
-- [x] [Homework 1(Sep 24)](/COMP760/Homework1/CS760_hw1_Review.pdf)
+- [x] [Homework 1: Review(Sep 24)](/COMP760/Homework1/CS760_hw1_Review.pdf)
   - [x] [Solution](/COMP760/Homework1/solution_1.pdf)
-- [x] [Homework 2(Oct 13)](/COMP760/Homework2/CS760_hw2_LinReg.pdf)
+- [x] [Homework 2: Linear Regression(Oct 13)](/COMP760/Homework2/CS760_hw2_LinReg.pdf)
   - [x] [Solution](/COMP760/Homework2/solution_2.pdf)
+- [x] [Homework 3: Logistic Regression(Oct 22)](/COMP760/Homework3)
+  - [ ] [Solution]

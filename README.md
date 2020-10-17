@@ -2,7 +2,7 @@
 
 - [MATH 733](#math-733)
 - [MATH 735](#math-735)
-- [COMP 726](#comp-726)
+- [COMP 726(DROPED)](#comp-726(droped))
 - [COMP 760](#comp-760)
 ![Schedule](Schedule.PNG)
 
@@ -49,7 +49,7 @@ Related book: [Basics of Stochastic Analysis](/MATH735/Textbooks/Basics%20of%20S
 - [x] [Homework 1 (due Oct 14)](/MATH735/Homework1)
   - [x] [Solution](/MATH735/Homework1/solution_1.pdf)
 
-## COMP 726
+## COMP 726(DROPED)
 
 **Midterm: Friday, October 16, 7-9pm CT.**
 
@@ -80,7 +80,6 @@ Related book: [Basics of Stochastic Analysis](/MATH735/Textbooks/Basics%20of%20S
 - [ ] [Lecture 10](/COMP726/Handwritten%20notes/CS%20726%20Lecture%209%20%26%2010-1.pdf)
 - [ ] [Lecture 11](/COMP726/Handwritten%20notes/CS%20726%20Lecture%2011.pdf)
 - [ ] [Lecture 12](/COMP726/Handwritten%20notes/CS%20726%20Lecture%2012.pdf)
-
 
 - - - -
 

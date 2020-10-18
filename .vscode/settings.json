@@ -1,3 +1,4 @@
 {
-    "editor.wordWrap": "on"
+    "editor.wordWrap": "on",
+    "python.pythonPath": "C:\\Users\\ZIJIE\\.conda\\envs\\TensorFlow\\python.exe"
 }

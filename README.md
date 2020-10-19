@@ -98,7 +98,7 @@ Related book: [Basics of Stochastic Analysis](/MATH735/Textbooks/Basics%20of%20S
 - [x] Topic 3: Review of Probability
 - [x] Topic 4: Review of Optimization
 - [x] Topic 5: Linear Regression
-- [ ] Topic 6: Logistic Regression
+- [x] Topic 6: Logistic Regression
 - [ ] Topic 7: Cross-Validation
 - [ ] Topic 8: Decision Trees
 

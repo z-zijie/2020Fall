@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import math
+import scipy.stats as st
 
 #import data
 data = pd.read_csv('titanic_data.csv')
@@ -65,3 +66,39 @@ epsilon = 1e-12
 # fit
 theta = GradientAscent(theta, X, epsilon)
 print("l(theta) = ", l(theta, X))
+
+# asymptotic
+def fisher(theta, X):
+    return -hessian(theta, X)
+Mean = theta
+Sigma = np.linalg.inv(fisher(theta, X))/N
+print("mean = ", Mean)
+print("sigma = ", Sigma)
+
+# Example
+x = np.array([1,3,0,22,0,3,7.25])
+omega = np.dot(np.asmatrix(theta), np.asmatrix(x).T).tolist()[0][0]
+print('omega = ', omega)
+
+# derive tau
+alpha = 0.05
+std_omega = math.sqrt(np.dot(np.dot(np.asmatrix(x), np.linalg.inv(fisher(theta, X))),np.asmatrix(x).T).tolist()[0][0]/N)
+tau = st.norm.interval(1-alpha, loc = omega, scale = std_omega)
+print('tau = ', tau[1] - omega)
+print(tau)
+
+# Learning Significant Features
+df = 1
+st.chi2.ppf(1-alpha, df)
+Sigma = np.linalg.inv(fisher(theta, X))/N
+for j in range(D):
+    v = (Sigma[j,j])
+    print(j,theta[j]*theta[j]/v)
+print('alpha =', alpha, ',', st.chi2.ppf(1-alpha, df))
+
+# Example
+x = np.array([1,3,1,22,0,3,7.25])
+omega = np.dot(np.asmatrix(theta), np.asmatrix(x).T).tolist()[0][0]
+y_ = 1/(1+math.exp(-omega))
+print('omega = ', omega)
+print('y_ = ', y_)

@@ -11,6 +11,33 @@
 \usepackage{physics}
 \usepackage{enumitem}
 \usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
 
 % --- NewCommand --- %
 % \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
@@ -46,25 +73,67 @@
                                 0.00278568
                             ]$
         \item $\ell(\hat{\theta})=-390.465964754707$
+        \item By \textbf{Theorem 6.2}, as $N\to\infty$,
+            $$\hat{\theta} \overset{d}{\longrightarrow} 
+                \mathcal{N}\left(\theta^*, \frac{1}{N}\mathbf{I}_{\theta^*}^{-1}\right)$$
+            where $\mathbf{I}_{\theta^*}:=-\nabla^2 \ell(\theta^*)$
+            $$\hat{\theta} \overset{d}{\longrightarrow} 
+            \mathcal{N}\left(\theta^*, \frac{1}{N}\left(-\nabla^2 \ell(\theta^*)\right)^{-1}\right)$$
     \end{enumerate}
     \end{proof}
 
 % --- Problem 2 ---%
 \section*{Problem 2}
     \begin{proof}
-    
+    \indent
+    \begin{enumerate}[label=(\alph*)]
+        \item $$\hat{\omega}=\mathbf{\hat{\theta}}^T \mathbf{x}$$
+        \item $$\hat{\omega} \overset{d}{\longrightarrow}
+                \mathcal{N}\left(\mathbf{\hat{\theta^*}}^T \mathbf{x},
+                \frac{1}{N}\mathbf{x^T}\mathbf{I_{\theta^*}^{-1}}\mathbf{x}\right)$$
+    \end{enumerate}
     \end{proof}
-
+\pagebreak
 % --- Problem 3 ---%
 \section*{Problem 3}
-    \begin{proof}
-        
+\begin{proof}
+    \indent
+    \begin{enumerate}[label=(\alph*)]
+        \item $$\mathbf{x}=[1,
+                            3,
+                            0,
+                            22,
+                            0,
+                            3,
+                            7.25]$$
+            $$\hat{\omega} = -2.2487468892027604$$
+        I wouldn't, $\hat{\omega} < 0$, $\hat{y} = 0.0954596285185124 < \frac{1}{2}$.\\
+        Because I am single and have family on board.
+        On the other hand, women and children first, my rescue priority is relatively low.\\
+        The lower passenger class are less likely to survive, and the first class have a greater chance of surviving.
+        \item $$\tau = 0.024518795784839398$$
+        \item The 95\% confidence interval is 
+            $$(-2.2732656849876, -2.224228093417921)$$
+            The entire interval is to the left of 0. So, the answer is fairly certain.
+    \end{enumerate}
     \end{proof}
 
 % --- Problem 4 ---%
 \section*{Problem 4}
     \begin{proof}
-        
+    \indent
+    \begin{enumerate}[label=(\alph*)]
+        \item  The $j$th feature is significant if
+                $$\hat{\theta}_j^2 > \nu_j^2 \Phi^{-1}(\alpha)$$
+        \item Every feature is significant if $\alpha = 0.05$.
+        \item If I change to female, $\hat{y} = 0.6244586486812256 > \frac{1}{2}$. I will survive.
+    \end{enumerate}
     \end{proof}
-
+\pagebreak
+\appendix
+\section*{code}
+\lstinputlisting[language=Octave]{code.py}
+\pagebreak
+\section*{code result}
+\lstinputlisting[language=Octave]{code_result.txt}
 \end{document}

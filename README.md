@@ -1,9 +1,10 @@
 # 2020 Fall Progress
 
-- [MATH 733](#math-733)
-- [MATH 735](#math-735)
-- [COMP 726(DROPED)](#comp-726(droped))
-- [COMP 760](#comp-760)
+- [2020 Fall Progress](#2020-fall-progress)
+  - [MATH 733](#math-733)
+  - [MATH 735](#math-735)
+  - [COMP 726(DROPED)](#comp-726droped)
+  - [COMP 760](#comp-760)
 ![Schedule](Schedule.PNG)
 
 ## MATH 733
@@ -108,4 +109,4 @@ Related book: [Basics of Stochastic Analysis](/MATH735/Textbooks/Basics%20of%20S
 - [x] [Homework 2: Linear Regression(Oct 13)](/COMP760/Homework2/CS760_hw2_LinReg.pdf)
   - [x] [Solution](/COMP760/Homework2/solution_2.pdf)
 - [x] [Homework 3: Logistic Regression(Oct 22)](/COMP760/Homework3)
-  - [ ] [Solution]
+  - [x] [Solution](/COMP760/Homework3/solution_3.pdf)

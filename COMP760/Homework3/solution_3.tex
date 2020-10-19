@@ -125,7 +125,18 @@
     \begin{enumerate}[label=(\alph*)]
         \item  The $j$th feature is significant if
                 $$\hat{\theta}_j^2 > \nu_j^2 \Phi^{-1}(\alpha)$$
-        \item Every feature is significant if $\alpha = 0.05$.
+        \item \begin{lstlisting}
+0 25.44164930795299
+1 64.99221714290489
+2 189.2765279839097
+3 31.68956969534484
+4 13.173407762230326
+5 0.8066025744790511
+6 1.3591762929269946
+alpha = 0.05 , 3.841458820694124
+\end{lstlisting}
+    \textbf{Passenger Class},\textbf{Gender}, \textbf{Age}, \textbf{Siblings/Spouses} are significant features.
+
         \item If I change to female, $\hat{y} = 0.6244586486812256 > \frac{1}{2}$. I will survive.
     \end{enumerate}
     \end{proof}

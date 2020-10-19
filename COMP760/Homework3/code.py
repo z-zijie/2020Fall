@@ -90,7 +90,7 @@ print(tau)
 # Learning Significant Features
 df = 1
 st.chi2.ppf(1-alpha, df)
-Sigma = np.linalg.inv(fisher(theta, X))/N
+Sigma = np.linalg.inv(fisher(theta, X))
 for j in range(D):
     v = (Sigma[j,j])
     print(j,theta[j]*theta[j]/v)

@@ -1,0 +1,21 @@
+Homework 2
+
+NOTE please submit only one file!!!  If you take photos please combine them into one single file. Thanks.
+
+1) In Timo’s notes, there are two ways to think of the quadratic covariation [X,Y]  either (2.13) as a limit, or (2.14) via quadratic variation. In the video lecture, we computed [X,Y] where X,Y are two independent Brownian motions using (2.14).  Please re-prove this result using (2.13).
+
+2) Read Lemma A.10 and Corollary A.11 in Timo’s notes (including proofs, but no need to write anything down). Then, use it to compute the quadratic variations [N] and [M] where N is Poisson process and M is compensated Poisson process. (Note the method we used to compute quadratic variation of BM in the lecture could in principle be used for Poisson, but it would be quite complicated)
+
+3) Prove Proposition 3.34(b) in Timo’s notes.  You could of course copy the proof there, but make sure you understand.
+
+4) In Lecture 5.5 “Ito formula”, we only discussed part A_n and B_n in the proof of Ito formula.  Show that the part C_n converges to 0.
+
+ 
+
+For the rest of the homework please see the attachments which are exercises from Chapter 3, 4 of Oksendal’s book
+
+5)  3.1,  3.3,  3.4,
+
+6)  3.7 - Ignore the questions (a)(b)(c) there. Just prove (3.3.8) there for any n.  If you’re not able to prove it for any n, at least prove it for n=1,2,3.
+
+7)  4.1,  4.11

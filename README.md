@@ -103,6 +103,7 @@ Related book: [Basics of Stochastic Analysis](/MATH735/Textbooks/Basics%20of%20S
 - [x] Topic 6: Logistic Regression
 - [ ] Topic 7: Cross-Validation
 - [ ] Topic 8: Decision Trees
+- [ ] Topic 9: Nearest Neighbors
 
 - - - -
 

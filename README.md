@@ -18,9 +18,9 @@
 - [x] 9/10/20 1st part (measures on R)
 - [x] 9/10/20 2nd part (random variables and distributions)
 - [x] 9/15/20 1st part (properties of random variables)
-- [ ] 9/15/20 2nd (integration with respect to a probability measure)
-- [ ] 9/17/20 1st part (inequalities, limits and expectation)
-- [ ] 9/17/20 2nd part (change of variables formula, variance)
+- [x] 9/15/20 2nd (integration with respect to a probability measure)
+- [x] 9/17/20 1st part (inequalities, limits and expectation)
+- [x] 9/17/20 2nd part (change of variables formula, variance)
 
 - [x] [Homework 1 (Sep 13 @ 10pm)](/MATH733/Homework1/hw_1.pdf)
   - [x] [Solution](/MATH733/Homework1/solution_1.pdf)
@@ -103,6 +103,7 @@ Related book: [Basics of Stochastic Analysis](/MATH735/Textbooks/Basics%20of%20S
 - [x] Topic 6: Logistic Regression
 - [ ] Topic 7: Cross-Validation
 - [ ] Topic 8: Decision Trees
+- [ ] Topic 9: Nearest Neighbors
 
 - - - -
 

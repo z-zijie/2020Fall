@@ -28,6 +28,8 @@
   - [x] [Solution](/MATH733/Homework2/solution_2.pdf)
 - [x] [Homework 3 (Oct 11 @ 10pm)](/MATH733/Homework3/hw_3.pdf)
   - [x] [Solution](/MATH733/Homework3/solution_3.pdf)
+- [x] [Homework 4 (Nov 08 @ 10pm)](/MATH733/Homework4/hw_4.pdf)
+  - [ ] [Solution]
 
 ## MATH 735
 

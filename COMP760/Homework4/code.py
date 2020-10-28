@@ -156,3 +156,61 @@ def PrintTree(Tree, indent = ''):
         PrintTree(sub, indent)
     return
 PrintTree(T)
+
+
+# Prediction
+def Predict(x, Tree, j = -1):
+    x = One_Hot_Encode(x, j)
+#     print(x)
+    while Tree.feature_index >= 0:
+        index = Tree.feature_index
+        Next = x[index].index(1)
+        Tree = Tree.sub[Next]
+    return Tree.values
+
+# K-Fold Cross-Validation
+
+# split all data into K subsets, return kth subset (testing, training)
+def Split_Data(K, dataset, label, kth):
+    # generate divide list
+    sample_num, feature_num = dataset.shape
+    divide = np.linspace(0, sample_num, K+1).tolist()
+    for i in range(len(divide)):
+        divide[i] = round(divide[i])
+    # get the kth testing subsets
+    testing_data = dataset[divide[kth]:divide[kth+1]]
+    testing_label = label[divide[kth]:divide[kth+1]]
+    # get the kth training subsets                                
+    training_data = [dataset[divide[i]:divide[i+1]] for i in range(K) if i != kth]
+    training_label = [label[divide[i]:divide[i+1]] for i in range(K) if i != kth]
+    training_data = np.concatenate(training_data)
+    training_label = np.concatenate(training_label)
+    return testing_data, testing_label, training_data, training_label
+
+# testing_data, testing_label, training_data, training_label = Split_Data(5, Data, Y, 0)
+
+
+def Cross_Validation(K, dataset, label):
+    predict = []
+    for k in range(K):
+        testing_data, testing_label, training_data, training_label = Split_Data(K, dataset, label, k)
+        DATA = []
+        for x in training_data:
+            DATA.append(One_Hot_Encode(x))
+        T = ID3(DATA, training_label, depth = 0)
+        predict = predict + [Predict(testing_data[i], T) for i in range(len(testing_data))]
+    
+    ans = [predict[i] == label[i] for i in range(len(label))]
+    accuracy = sum(ans)/len(ans)
+    return accuracy
+
+print('Accuracy =', Cross_Validation(10, Data, Y))
+
+# My own feature vector x
+DATA = []
+for x in Data:
+    DATA.append(One_Hot_Encode(x))
+T = ID3(DATA, Y, depth = 0)
+x = np.array([1, 1, 22, 1, 0, 71.2833])
+print('Survived =',Predict(x, T) == 1)
+

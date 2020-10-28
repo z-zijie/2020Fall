@@ -1,0 +1,132 @@
+\documentclass{article}
+% --- Modify margins --- %
+\usepackage{geometry}
+\geometry{a4paper,scale=0.8}
+% --- Involved packages --- %
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{physics}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    % backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\sffamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    % numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+% --- NewCommand --- %
+% \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\urlstyle{same}
+
+
+
+
+% --- Title information --- %
+\title{CS 760: Machine Learning - Fall 2020\\
+        {\Large \textbf{Homework 4: Decision Trees}}\\
+        {\normalsize \textbf{Due : 10/29/2020}}
+    }
+\author{Zijie Zhang}
+\date{\today}
+
+
+% --- main --- %
+
+\begin{document}
+    \maketitle
+    
+\begin{center}
+    \Large
+    All the code involved is in this \href{https://github.com/z-zijie/2020Fall/tree/master/COMP760/Homework4}{GitHub repository}.\\
+    \url{https://github.com/z-zijie/2020Fall/tree/master/COMP760/Homework4}\\
+    All the code is in this \href{https://github.com/z-zijie/2020Fall/blob/master/COMP760/Homework4/code.py}{python file}.\\
+    \large
+    \url{https://github.com/z-zijie/2020Fall/blob/master/COMP760/Homework4/code.py}
+\end{center}
+
+% --- Problem 1 ---%
+\section*{Problem 1}
+    \begin{itemize}
+        \item \textbf{Pclass:}\\
+        1 $\to$ [1, 0, 0];\\
+        2 $\to$ [0, 1, 0];\\
+        3 $\to$ [0, 0, 1].
+        \item \textbf{Sex:}\\
+        0 $\to$ [1, 0];\\
+        1 $\to$ [0, 1].
+        \item \textbf{Age:} Binning in [0, 20.25, 40.5, 60.75, 81] then convert to \textbf{One-Hot}.
+        \item \textbf{Siblings/Spouses Aboard:} Convert to One-Hot like \textbf{Sex}.
+        \item \textbf{Parents/Children Aboard:} Convert to One-Hot like \textbf{Sex}.
+        \item \textbf{Fare:} Binning in [0,10,20,30,40,50,70,115,160,205,250,295,340,385,430,475,520] then convert to \textbf{One-Hot}.
+    \end{itemize}
+    \textbf{Explanation:}
+    \begin{enumerate}
+        \item Pclass, Sex, Siblings/Spouses Aboard and Parents/Children Aboard are \textbf{CATEGORICAL FEATURES}, so we can directly encode them One-Hot.
+        \item Age and Fare are \textbf{NUMERICAL FEATURES}, we should binning them first. It is worth noticing that the distribution of \textit{Fare} is \textbf{skewed distribution}, we can't binning it uniformly.
+    \end{enumerate}
+
+% --- Problem 2 ---%
+\section*{Problem 2}
+    \begin{center}
+        Please check the relevant \href{https://github.com/z-zijie/2020Fall/blob/master/COMP760/Homework4/code.py}{code} in the file.
+    \end{center}
+\pagebreak
+
+% --- Problem 3 ---%
+\section*{Problem 3}
+    \begin{center}
+        Please check the relevant \href{https://github.com/z-zijie/2020Fall/blob/master/COMP760/Homework4/code.py}{code} in the file.
+    \end{center}
+    \textbf{Stopping criteria} are
+    \begin{enumerate}
+        \item \textbf{If the entropy of the response y in the current subset of data is close to zero.}
+        \item \textbf{If the current subset of data contains too few samples. (less than 5\% of the total data)}
+        \item \textbf{If the depth of the Tree greater than the number of features.}
+    \end{enumerate}\
+
+% --- Problem 4 ---%
+\section*{Problem 4}
+    \begin{center}
+        Please check the relevant \href{https://github.com/z-zijie/2020Fall/blob/master/COMP760/Homework4/code.py}{code} and output in the file.
+    \end{center}
+    \lstinputlisting{P4.txt}
+
+\end{document}

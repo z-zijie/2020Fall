@@ -14,6 +14,7 @@
 \usepackage{xcolor}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
+\usepackage{appendix}
 
 \renewcommand{\familydefault}{\sfdefault}
 
@@ -81,7 +82,7 @@
     \large
     \url{https://github.com/z-zijie/2020Fall/blob/master/COMP760/Homework4/code.py}
 \end{center}
-
+\large
 % --- Problem 1 ---%
 \section*{Problem 1}
     \begin{itemize}
@@ -102,13 +103,14 @@
         \item Pclass, Sex, Siblings/Spouses Aboard and Parents/Children Aboard are \textbf{CATEGORICAL FEATURES}, so we can directly encode them One-Hot.
         \item Age and Fare are \textbf{NUMERICAL FEATURES}, we should binning them first. It is worth noticing that the distribution of \textit{Fare} is \textbf{skewed distribution}, we can't binning it uniformly.
     \end{enumerate}
+\pagebreak
 
 % --- Problem 2 ---%
 \section*{Problem 2}
     \begin{center}
         Please check the relevant \href{https://github.com/z-zijie/2020Fall/blob/master/COMP760/Homework4/code.py}{code} in the file.
     \end{center}
-\pagebreak
+
 
 % --- Problem 3 ---%
 \section*{Problem 3}
@@ -127,10 +129,12 @@
     \begin{center}
         Please check the relevant \href{https://github.com/z-zijie/2020Fall/blob/master/COMP760/Homework4/code.py}{code} and \href{https://github.com/z-zijie/2020Fall/blob/master/COMP760/Homework4/P4.txt}{output} in the file.
     \end{center}
+    \hyperref[sec:P5]{JUMP to \textbf{Problem 5}}
     \lstinputlisting{P4.txt}
 
 % --- Problem 5 ---%
 \section*{Problem 5}
+\label{sec:P5}
     \begin{center}
         Please check the relevant \href{https://github.com/z-zijie/2020Fall/blob/master/COMP760/Homework4/code.py}{code} in the file.
     \end{center}
@@ -152,8 +156,10 @@
         Please check the relevant \href{https://github.com/z-zijie/2020Fall/blob/master/COMP760/Homework4/code.py}{code} and \href{https://github.com/z-zijie/2020Fall/blob/master/COMP760/Homework4/P7.txt}{output} in the file.
     \end{center}
     \begin{enumerate}
-        \item \lstinputlisting{P7.txt}
+        \item \hyperref[sec:P7b]{JUMP to \textbf{Problem 7b}}
+        \lstinputlisting{P7.txt}
         \item \textbf{Accuracy = 0.8027057497181511}
+            \label{sec:P7b}
         \item My own feature vector \textbf{x = [1, 1, 22, 1, 0, 71.2833]}\\
         Predicted result = \textbf{YES}.
     \end{enumerate}
@@ -164,13 +170,28 @@
         Please check the relevant \href{https://github.com/z-zijie/2020Fall/blob/master/COMP760/Homework4/code.py}{code} and \href{https://github.com/z-zijie/2020Fall/blob/master/COMP760/Homework4/P8.txt}{output} in the file.
     \end{center}
     \begin{enumerate}
-        \item \lstinputlisting{P8.txt}
+        \item \hyperref[sec:P8b]{JUMP to \textbf{Problem 8b}}
+        \lstinputlisting{P8.txt}
         \item \textbf{Accuracy = 0.8218714768883878}
+            \label{sec:P8b}
         \item My own feature vector \textbf{x = [1, 1, 22, 1, 0, 71.2833]}\\
         Predicted result = \textbf{YES}.
     \end{enumerate}
+\pagebreak
 
 % --- Problem 9 ---%
 \section*{Problem 9}
-
+% \label{sec:P9}
+I prefer to use \textbf{Decision Tree}, because this method has higher data utilization than logistic regression.\\
+Logistic regression essentially uses only the most influential features. And there is no evidence that survival has a linear relationship with these features.\\
+On the other hand, the data type of each feature is different, and the distribution is also different. Decision tree can be adapted to local conditions by One-Hot encoding instead of just focusing on the size of the data.\\
+% \hyperref[sec:appendix]{JUMP to \textbf{Appendix}}
+% \hyperref[sec:P9]{JUMP to \textbf{Problem 9}}
+\pagebreak
+\appendix
+\begin{center}
+    CODE
+    \label{sec:appendix}
+\end{center}
+\lstinputlisting[language=Python]{code.py}
 \end{document}

@@ -141,21 +141,21 @@ def ID3(dataset, label, depth = 0, epsilon = 1e-2, alpha = 0.05, Feature_name = 
     return node
 T = ID3(DATA, Y, depth = 0)
 
-# Display the Tree
-def PrintTree(Tree, indent = ''):
-    if Tree.feature_index < 0:
-        if Tree.values == 1:
-            prediction = 'True'
-        else:
-            prediction = 'False'
-        print(indent+'|'+prediction+'|*')
-        return
-    print(indent+'|-'+Tree.feature_name+'-|')
-    indent = ' ' * (3+len(indent+Tree.feature_name))
-    for sub in Tree.sub:
-        PrintTree(sub, indent)
-    return
-PrintTree(T)
+# # Display the Tree
+# def PrintTree(Tree, indent = ''):
+#     if Tree.feature_index < 0:
+#         if Tree.values == 1:
+#             prediction = 'True'
+#         else:
+#             prediction = 'False'
+#         print(indent+'|'+prediction+'|*')
+#         return
+#     print(indent+'|-'+Tree.feature_name+'-|')
+#     indent = ' ' * (3+len(indent+Tree.feature_name))
+#     for sub in Tree.sub:
+#         PrintTree(sub, indent)
+#     return
+# PrintTree(T)
 
 
 # Prediction
@@ -214,3 +214,130 @@ T = ID3(DATA, Y, depth = 0)
 x = np.array([1, 1, 22, 1, 0, 71.2833])
 print('Survived =',Predict(x, T) == 1)
 
+# Random Forest
+import random
+# Random Subset
+def Random_subset(dataset, label, alpha = 0.8):
+    # random select index saved in sampling
+    index = range(len(dataset))
+    sampling = random.choices(index, k=round(alpha*len(index)))
+    sampling.sort()
+    random_dataset = [dataset[i] for i in sampling]
+    random_label = [label[i] for i in sampling]
+    return random_dataset, random_label
+
+# random_dataset, random_label = Random_subset(DATA, Y)
+
+def Random_Forest(dataset, label, N, alpha = 0.8):
+    Forest = []
+    for n in range(N):
+        random_dataset, random_label = Random_subset(dataset, label, alpha)
+        Tree = ID3(random_dataset, random_label, depth = 0)
+        Forest.append(Tree)
+    return Forest
+
+N = 5
+forest = Random_Forest(DATA, Y, N)
+
+# # Display the Tree
+# for i in range(N):
+#     print('---- ----', i, '---- ----')
+#     PrintTree(forest[i])
+
+# Random Forest Predict
+def Random_forest_Predict(x, forest):
+    p = [Predict(x, T) for T in forest]
+    if 2*sum(p) >= len(p):
+        return 1
+    return 0
+
+# Random_forest_Predict(x, forest)
+
+# Random Forest Cross_Validation
+def Random_forest_Cross_Validation(K, dataset, label, N):
+    predict = []
+    for k in range(K):
+        testing_data, testing_label, training_data, training_label = Split_Data(K, dataset, label, k)
+        DATA = []
+        for x in training_data:
+            DATA.append(One_Hot_Encode(x))
+        # generate random forest
+        forest = Random_Forest(DATA, training_label, N)
+        predict = predict + [Random_forest_Predict(testing_data[i], forest) for i in range(len(testing_data))]
+    
+    ans = [predict[i] == label[i] for i in range(len(label))]
+    accuracy = sum(ans)/len(ans)
+    return accuracy
+
+N = 5
+print('Random_forest Accuracy =', Random_forest_Cross_Validation(10, Data, Y, N))
+
+# My own feature vector x
+x = np.array([1, 1, 22, 1, 0, 71.2833])
+print('Survived =', Random_forest_Predict(x, forest) == 1)
+
+
+
+# Random Forest - 6 Trees - excluding one feature
+
+# Exclude jth feature
+def Exclude_feature(j, dataset, label):
+    part_dataset = [np.delete(x, j) for x in dataset] 
+    return part_dataset, label
+
+# j = 1
+# part_dataset, part_label = Exclude_feature(j, DATA, Y)
+
+def Random_Forest_Exclude_feature(dataset, label):
+    Forest = []
+    for j in range(6):
+        part_dataset, part_label = Exclude_feature(j, DATA, Y)
+        feature_name = ['Pclass', 'Sex', 'Age', 'Siblings/Spouses Aboard', 'Parents/Children Aboard', 'Fare']
+        feature_name.pop(j)
+#         print(feature_name)
+        Tree = ID3(part_dataset, part_label, depth = 0, Feature_name = feature_name)
+        Forest.append(Tree)
+    return Forest
+
+forest = Random_Forest_Exclude_feature(DATA, Y)
+
+# Random Forest Exclude feature Predict
+def Random_forest_Exclude_feature_Predict(x, forest):
+    p = []
+    for j in range(len(forest)):
+        T = forest[j]
+        p.append(Predict(x, T, j))
+#     print(p)
+    if 2*sum(p) >= len(p):
+        return 1
+    return 0
+
+# x = Data[0]
+# Random_forest_Exclude_feature_Predict(x, forest)
+
+# # Display the Tree
+# N = 6
+# for i in range(N):
+#     print('---- ----', i, '---- ----')
+#     PrintTree(forest[i])
+
+# Random Forest Exclude_feature Cross_Validation
+def Random_forest_Exclude_feature_Cross_Validation(K, dataset, label):
+    predict = []
+    for k in range(K):
+        testing_data, testing_label, training_data, training_label = Split_Data(K, dataset, label, k)
+        DATA = []
+        for x in training_data:
+            DATA.append(One_Hot_Encode(x))
+        # generate random forest
+        forest = Random_Forest_Exclude_feature(DATA, Y)
+        predict = predict + [Random_forest_Exclude_feature_Predict(testing_data[i], forest) for i in range(len(testing_data))]
+    
+    ans = [predict[i] == label[i] for i in range(len(label))]
+    accuracy = sum(ans)/len(ans)
+    return accuracy
+
+print('Random_forest_Exclude_feature Accuracy =',Random_forest_Exclude_feature_Cross_Validation(10, Data, Y))
+# My own feature vector x
+x = np.array([1, 1, 22, 1, 0, 71.2833])
+print('Survived =', Random_forest_Exclude_feature_Predict(x, forest) == 1)

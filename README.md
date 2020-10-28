@@ -113,3 +113,5 @@ Related book: [Basics of Stochastic Analysis](/MATH735/Textbooks/Basics%20of%20S
   - [x] [Solution](/COMP760/Homework2/solution_2.pdf)
 - [x] [Homework 3: Logistic Regression(Oct 22)](/COMP760/Homework3)
   - [x] [Solution](/COMP760/Homework3/solution_3.pdf)
+- [x] [Homework 4: Decision Trees(Oct 29)](/COMP760/Homework4)
+  - [x] [Solution](/COMP760/Homework4/solution_4.pdf)

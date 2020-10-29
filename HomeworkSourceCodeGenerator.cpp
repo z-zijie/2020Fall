@@ -6,27 +6,36 @@ using namespace std;
 int main()
 {
     cout << "This application was developed to quickly generate tex templates for Homework." << endl;
+
     cout << "PLEASE ENTER the \"FILENAME\": ";
     string filename;
-    // cin >> filename;
+    getline(cin, filename);
+
+    cout << "PLEASE ENTER the \"COURSE NAME\": ";
+    string course_name;
+    getline(cin, course_name);
+
     cout << "PLEASE ENTER the \"Title\": ";
     string title;
-    // cin >> title;
+    getline(cin, title);
+
     cout << "PLEASE ENTER the \"Due Date\": ";
     string Due;
-    // cin >> Due;
+    getline(cin, Due);
 
     // Print the brief description
-    // cout << "==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ====" << endl;
-    // cout << endl << "Here is the brief description for the LATEX template:" << endl;
-    // cout << "TITLE: " << title << endl;
-    // cout << "DUE: " << Due << endl;
-    // cout << "---- ----- ----- ----- ----- ----- ----- ----- -----" << endl;
-    // cout << "The file \"" << filename << ".tex\" was located in the same directory as this program." << endl;
+    cout << "==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ====" << endl;
+    cout << endl << "Here is the brief description for the LATEX template:" << endl;
+    cout << "FILENAME: " << filename << endl;
+    cout << "COURSE NAME: " << course_name << endl;
+    cout << "TITLE: " << title << endl;
+    cout << "DUE: " << Due << endl;
+    cout << "---- ----- ----- ----- ----- ----- ----- ----- -----" << endl;
+    cout << "The file \"" << filename << ".tex\" was located in the same directory as this program." << endl;
 
-    //Generate the .tex file
-    // ofstream outfile (filename+".tex");
-    ofstream outfile("text.tex");
+    // Generate the .tex file
+    ofstream outfile (filename+".tex");
+
     string init_code;
     init_code = "\\documentclass{article}\n";
     init_code += "% --- Modify margins --- %\n";
@@ -70,7 +79,7 @@ int main()
     init_code += "\tshowspaces=false,\n";
     init_code += "\tshowstringspaces=false,\n";
     init_code += "\tshowtabs=false,\n";
-    init_code += "\ttabsize=\n";
+    init_code += "\ttabsize=2\n";
     init_code += "}\n";
 
     init_code += "\n";
@@ -90,9 +99,15 @@ int main()
 
     string title_information;
     title_information += "% --- Title information --- %\n";
-    title_information += "\\title{CS 760: Machine Learning - Fall 2020\\\\\n";
-    title_information += "\t\t{\\Large \\textbf{Homework 4: Decision Trees}}\\\\\n";
-    title_information += "\t\t{\\normalsize \\textbf{Due : 10/29/2020}}\n";
+    title_information += "\\title{";
+    title_information += course_name;
+    title_information += " - Fall 2020\\\\\n";
+    title_information += "\t\t{\\Large \\textbf{";
+    title_information += title;
+    title_information += "}}\\\\\n";
+    title_information += "\t\t{\\normalsize \\textbf{Due : ";
+    title_information += Due;
+    title_information += "}}\n";
     title_information += "\t}\n";
     title_information += "\\author{Zijie Zhang}\n";
     title_information += "\\date{\\today}\n\n\n";

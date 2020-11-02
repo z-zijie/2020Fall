@@ -1,0 +1,133 @@
+\documentclass{article}
+% --- Modify margins --- %
+\usepackage{geometry}
+\geometry{a4paper,scale=0.8}
+% --- Involved packages --- %
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{physics}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{appendix}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	% backgroundcolor=\color{backcolour},
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\sffamily\footnotesize,
+	breakatwhitespace=false,
+	breaklines=true,
+	captionpos=b,
+	keepspaces=true,
+	% numbers=left,
+	numbersep=5pt,
+	showspaces=false,
+	showstringspaces=false,
+	showtabs=false,
+	tabsize=2
+}
+
+\lstset{style=mystyle}
+
+% --- NewCommand --- %
+% \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,
+	urlcolor=cyan,
+}
+
+\urlstyle{same}
+
+
+
+
+
+
+% --- Title information --- %
+\title{MATH 735 - Fall 2020\\
+		{\Large \textbf{Homework 2}}\\
+		{\normalsize \textbf{Due : 11/04, 2020}}
+	}
+\author{Zijie Zhang}
+\date{\today}
+
+
+
+% --- main --- %
+\begin{document}
+	\maketitle
+
+	% Problem 1
+	\section*{Problem 1}
+	$X,Y$ are two independent Brownian motions, compute $[X,Y]$.
+	\begin{proof}
+		By (2.13) in \textit{Timo’s notes}.
+		$$[X,Y]_t = \lim_{|\pi|\to 0}\sum_i(X_{t_{i+1}} - X_{t_{i}})(Y_{t_{i+1}}-Y_{t_{i}})$$
+		We need prove $\mathbb{E}\left[\sum_{i}(X_{t_{i+1}} - X_{t_{i}})(Y_{t_{i+1}}-Y_{t_{i}})\right] \to 0$
+		which is 
+		$$\sum_i \mathbb{E}\left[X_{t_{i+1}}Y_{t_{i+1}}\right] 
+		+ \sum_i \mathbb{E}\left[X_{t_{i}}Y_{t_{i}}\right]
+		- \sum_i \mathbb{E}\left[X_{t_{i}}Y_{t_{i+1}}\right]
+		- \sum_i \mathbb{E}\left[X_{t_{i+1}}Y_{t_{i}}\right] \to 0$$
+		By the independence of $X$ and $Y$, all the expectations above are 0.
+		So $$[X, Y] = 0 \text{ if } X ,Y \text{ are two independent Brownian motions}$$
+	\end{proof}
+
+	% Problem 2
+	\section*{Problem 2}
+	Compute the quadratic variations [N] and [M] where N is Poisson process and M is compensated Poisson process.
+	\begin{enumerate}
+		\item \begin{align*}
+			[N]_t &= \sum_{0 \leqslant s \leqslant t}\left(\nabla N_s\right)^2 = N_t\\
+			[N] &= N
+		\end{align*}
+		\item $$M = N - \lambda t$$
+		By Lemma A.10 and Lemma A.11, we know that $[f](T) = 0$ if $f$ is continuous. So we have
+		$$(\nabla(N_s - \lambda s))^2 = (\nabla N_s)^2$$
+		Thus, $$[M] = N$$
+	\end{enumerate}
+
+	% Problem 3
+\section*{Problem 3}
+Suppose $M$ is a right-continuous square-integrable martingale with stationary independent increments: for all $s, t \geqslant 0, M_{s+t}-M_s$ is independent of $\mathcal{F}_s$ and has the same distribution as $M_t-M_0$. Then $\langle M \rangle_t = t \cdot E[M_1^2 - M_0^2] $
+\begin{proof}
+	The deterministic, continuous function $t \to t \cdot E[M_1^2 - M_0^2]$ is predictable. For any $t>0$ and integer $k$
+	$$E[M_{kt}^2 - M_0^2] = \sum_{j=0}^{k-1}E[M_{(j+1)t}^2 - M_{jt}^2] = \sum_{j=0}^{k-1}E[(M_{(j+1)t} - M_{jt})^2] = kE[(M_t - M_0)^2] = kE[M_t^2 - M_0^2]$$
+	Using this twice, for any rational $k/n$,
+	$$E[M_{k/n}^2 - M_0^2] = kE[M_{1/n}^2 - M_0^2] = (k/n)E[M_1^2 - M_0^2]$$
+	Given an irrational $t>0$, pick rationals $q_n \to t$. Fix $T\geqslant q_m$. By right-continuity of paths, $M_{q_m} \to M_{t}$ almost surely. Uniformly integrability of $\{M_{q_m}^2\}$ follows by the submartingale property
+	$$0\leqslant M_{q_m}^2 \leqslant E[M_{T}^2|\mathcal{F}_{q_m}]$$
+	and Lemma B.16. Uniformly integrability gives convergence of expectations $E[M_{q_m}^2] \to E[M_{t}^2]$. Applying this above gives $$E[M_t^2 - M_0] = tE[M_1^2-M_0^2]$$
+	Now we can check the martingale property.\begin{align*}
+		E[M_t^2|\mathcal{F}_{s}] &= M_s^2+E[M_t^2-M_s^2|\mathcal{F}_{s}]\\
+		& = M_s^2 + E[(M_t-M_s)^2|\mathcal{F}_s]\\
+		& = M_s^2 + E[(M_{t-s} - M_0)^2]\\
+		& = M_s^2 + E[M_{t-s}^2 - M_0^2]\\
+		& = M_s^2 + (t-s)E[M_1^2-M_0^2]
+	\end{align*}
+\end{proof}
+
+% Problem 4
+\section*{Problem 4}
+
+
+\end{document}

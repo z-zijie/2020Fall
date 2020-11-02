@@ -43,7 +43,7 @@
 - [x] [3.2 Martingales and basic examples](/MATH735/3-02%20Martingale%20theory%20and%20basic%20examples.pdf)
 - [x] [3.3 Martingale inequality - Doob's maximal inequality](/MATH735/3-03%20Martingale%20inequality%20(Doob%20max%20inequality).pdf)
 - [x] [3.4 Martingale stopping time theorem](/MATH735/3-04%20Martingale%20stopping%20time%20theorem.pdf)
-- [ ] [3.5 Martingale convergence theorem](/MATH735/3-05%20Martingale%20convergence%20theorem.pdf)
+- [x] [3.5 Martingale convergence theorem](/MATH735/3-05%20Martingale%20convergence%20theorem.pdf)
 - [ ] [3.6 Some applications of martingale theory](/MATH735/3-06%20Some%20applications%20of%20martingale%20theory.pdf)
 - [ ] [4.1 Local semi-martingales and Quadratic variation](/MATH735/4-01%20Local%20_%20semi-martingales%20and%20Quadratic%20variation.pdf)
 - [ ] [4.2 Quadratic variation continued](/MATH735/4-02%20Quadratic%20variation%20continued.pdf)

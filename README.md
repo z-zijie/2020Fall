@@ -45,7 +45,7 @@
 - [x] [3.4 Martingale stopping time theorem](/MATH735/3-04%20Martingale%20stopping%20time%20theorem.pdf)
 - [x] [3.5 Martingale convergence theorem](/MATH735/3-05%20Martingale%20convergence%20theorem.pdf)
 - [ ] [3.6 Some applications of martingale theory](/MATH735/3-06%20Some%20applications%20of%20martingale%20theory.pdf)
-- [ ] [4.1 Local semi-martingales and Quadratic variation](/MATH735/4-01%20Local%20_%20semi-martingales%20and%20Quadratic%20variation.pdf)
+- [x] [4.1 Local semi-martingales and Quadratic variation](/MATH735/4-01%20Local%20_%20semi-martingales%20and%20Quadratic%20variation.pdf)
 - [ ] [4.2 Quadratic variation continued](/MATH735/4-02%20Quadratic%20variation%20continued.pdf)
 - [ ] [5.1 Ito integral](/MATH735/5-01%20Ito%20integral.pdf)
 - [ ] [5.2 Ito integral continued](/MATH735/5-02%20Ito%20integral%20continued.pdf)

@@ -47,7 +47,7 @@
 - [ ] [3.6 Some applications of martingale theory](/MATH735/3-06%20Some%20applications%20of%20martingale%20theory.pdf)
 - [x] [4.1 Local semi-martingales and Quadratic variation](/MATH735/4-01%20Local%20_%20semi-martingales%20and%20Quadratic%20variation.pdf)
 - [ ] [4.2 Quadratic variation continued](/MATH735/4-02%20Quadratic%20variation%20continued.pdf)
-- [ ] [5.1 Ito integral](/MATH735/5-01%20Ito%20integral.pdf)
+- [x] [5.1 Ito integral](/MATH735/5-01%20Ito%20integral.pdf)
 - [ ] [5.2 Ito integral continued](/MATH735/5-02%20Ito%20integral%20continued.pdf)
 - [ ] [5.3 An explicit calculation of Ito integral](/MATH735/5-03%20An%20explicit%20calculation%20of%20Ito%20integral.pdf)
 - [ ] [5.4 Ito integral - some extensions](/MATH735/5-04%20Ito%20integral%20-%20some%20extensions.pdf)

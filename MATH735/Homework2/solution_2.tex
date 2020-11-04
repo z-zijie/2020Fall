@@ -97,12 +97,12 @@
 	Compute the quadratic variations [N] and [M] where N is Poisson process and M is compensated Poisson process.
 	\begin{enumerate}
 		\item \begin{align*}
-			[N]_t &= \sum_{0 \leqslant s \leqslant t}\left(\nabla N_s\right)^2 = N_t\\
+			[N]_t &= \sum_{0 \leqslant s \leqslant t}\left(\Delta N_s\right)^2 = N_t\\
 			[N] &= N
 		\end{align*}
 		\item $$M = N - \lambda t$$
 		By Lemma A.10 and Lemma A.11, we know that $[f](T) = 0$ if $f$ is continuous. So we have
-		$$(\nabla(N_s - \lambda s))^2 = (\nabla N_s)^2$$
+		$$(\Delta(N_s - \lambda s))^2 = (\Delta N_s)^2$$
 		Thus, $$[M] = N$$
 	\end{enumerate}
 
@@ -128,6 +128,138 @@ Suppose $M$ is a right-continuous square-integrable martingale with stationary i
 
 % Problem 4
 \section*{Problem 4}
+	\begin{align*}
+		C_n \leqslant \sum_{i=1}^n (B_{t_{i}}-B_{t_{i-1}})^2 h(B_{t_{i-1}}, B_{t_{i}})
+	\end{align*}
+	We need prove $(B_{t_{i}}-B_{t_{i-1}})^2$ converges to 0.
+	\begin{align*}
+		E[(B_{t_{i}}-B_{t_{i-1}})^2] &= \Delta t \to 0\\
+		E[(B_{t_{i}}-B_{t_{i-1}})^4] &= 3(\Delta t)^2 \to 0
+	\end{align*}
+	So, $(B_{t_{i}}-B_{t_{i-1}})^2$ converges to 0. Thus $C_n \to 0$.
 
+% Problem 5
+\section*{Exercise 3.1}
+	By the definition of It\^{o} integral. Consider a partation $\pi: 0 = t_0 < t_1 < \cdots < t_n = t$.
+	$$tB_t = \sum_{j} s_j \Delta B_j + \sum_{j} B_j \Delta s_j$$
+	$$\lim_{|\pi|\to 0} \sum_{j} s_j \Delta B_j = \int_0^t sdB_s$$
+	$$\lim_{|\pi|\to 0} \sum_{j} B_j \Delta s_j = \int_0^t B_sds$$
+	From the definition,
+	$$\int_0^t sdB_s = tB_t - \int_0^t B_sds$$
 
+\section*{Exercise 3.3}
+	\begin{enumerate}
+		\item \begin{align*}
+			\mathbb{E}\left[X_t|\mathcal{H}_s\right]
+			& = \mathbb{E}\left[\mathbb{E}[X_t|\mathcal{N}_s]|\mathcal{H}_s\right]\\
+			& = \mathbb{E}\left[X_s|\mathcal{H}_s\right]\\
+			& = X_s
+		\end{align*}
+		\item $$\mathbb{E}[X_t] = \mathbb{E}\left[\mathbb{E}[X_t|\mathcal{H}_0]\right] = \mathbb{E}[X_0]$$
+		\item The probability of winning or losing in gambling is 1/2. If win $X_t = t$, if loss $X_t = -t$. Consider the expectation,
+		$$\mathbb{E}[X_t] = 0$$
+		$$\mathbb{E}[X_t|\mathcal{H}_s] = t , X_s \geqslant 0$$
+		$$\mathbb{E}[X_t|\mathcal{H}_s] = -t , X_s < 0$$
+		Thus, $X_t$ is not a martingale.
+	\end{enumerate}
+
+\section*{Exercise 3.4}
+	\begin{enumerate}
+		\item No. Because the expectation $$\mathbb{E}[X_t|\mathcal{H}_s] = X_s + 4(t-s)$$
+		\item No. Because the expectation \begin{align*}
+			\mathbb{E}[X_t|\mathcal{H}_s]
+			& = \mathbb{E}[B_t^2|\mathcal{H}_s]\\
+			& = \mathbb{E}\left[B_s^2 + B_t^2 - B_s^2|\mathcal{H}_s\right]\\
+			& = B_s^2 + \mathbb{E}[B_t^2 - B_s^2|\mathcal{H}_s]\\
+			& = B_s^2 + \mathbb{E}\left[2B_s(B_t - B_s) + (B_t-B_s)^2|\mathcal{H}_s\right]\\
+			& = B_s^2 + 2B_s\mathbb{E}\left[B_t - B_s|\mathcal{H}_s\right] + \mathbb{E}\left[(B_t-B_s)^2|\mathcal{H}_s\right]\\
+			& = X_t + (t-s)
+		\end{align*}
+		\item Yes. \begin{align*}
+			\mathbb{E}[X_t|\mathcal{H}_s]
+			& = \mathbb{E}\left[t^2B_t - 2\int_0^t sB_sds|\mathcal{H}_s\right]\\
+			& = \mathbb{E}\left[(t^2-s^2)B_s + t^2(B_t-B_s) - 2\int_s^t uB_udu|\mathcal{H}_s\right] + X_s\\
+			& = X_s + (t^2-s^2)B_s - 2\int_s^t u\left(B_s+\mathbb{E}\left[B_u-B_s|\mathcal{H}_s\right]\right)du\\
+			& = X_s + (t^2-s^2)B_s - 2B_s\int_s^t udu\\
+			& = X_s
+		\end{align*}
+		\item Yes. \begin{align*}
+			\mathbb{E}[X_t|\mathcal{H}_s]
+			& = \mathbb{E}[B_1(t)B_2(t)|\mathcal{H}_s]\\
+			& = \mathbb{E}[\left(B_1(s)+(B_1(t)-B_1(s))(B_2(s)+(B_2(t)-B_2(s)))\right)|\mathcal{H}_s]\\
+			& = B_1(s)B_2(s) 
+				+ B_1(s)\mathbb{E}[B_2(t)-B_2(s)|\mathcal{H}_s]
+				+ B_2(s)\mathbb{E}[B_1(t)-B_1(s)|\mathcal{H}_s]
+				+ \mathbb{E}[B_1(t)-B_1(s)|\mathcal{H}_s]\mathbb{E}[B_2(t)-B_2(s)|\mathcal{H}_s]\\
+			& = B_1(s)B_2(s)\\
+			& = X_s
+		\end{align*}
+	\end{enumerate}
+
+\section*{Exercise 3.7}
+	\begin{proof}
+	\begin{enumerate}
+		\item When n = 1
+			$$I_1(t) = \int_0^t I_0(s)dB_s = B_t = t^{\frac{1}{2}}h_1\left(\frac{B_t}{\sqrt{t}}\right)$$
+		\item When n = 2
+			$$I_2(t) = 2\int_0^t I_1(s)dB_s = 2\int_0^t B_s dB_s = B_t^2 - t = t^{\frac{2}{2}}h_2\left(\frac{B_t}{\sqrt{t}}\right)$$
+		\item When n = 3
+			$$I_3(t) = 3\int_0^t I_2(s)dB_s = 3\int_0^t (B_s^2 - s)dB_s = B_t^3 - 3tB_t = t^{\frac{3}{2}}h_3\left(\frac{B_t}{\sqrt{t}}\right)$$
+		\item For all n, let
+		$$H_{n}(x) = \frac{t^{\frac{n}{2}}}{n!}h_n\left(\frac{x}{\sqrt{t}}\right)$$
+		\begin{align*}
+			H_{n+1}(x) &= \frac{t^{\frac{n+1}{2}}}{(n+1)!}h_{n+1}\left(\frac{x}{\sqrt{t}}\right)\\
+			&=\frac{t^{\frac{n+1}{2}}}{(n+1)!}\left[\frac{x}{\sqrt{t}}h_n\left(\frac{x}{\sqrt{t}}\right) - nh_{n-1}\left(\frac{x}{\sqrt{t}}\right)\right]\\
+			&=\frac{x}{n+1}H_n(x) - \frac{t}{n+1}H_{n-1}(x) 
+		\end{align*}
+		By the properties of Hermite polynomials,
+		$$H_n'(x) = H_{n-1}(x) = -\frac{1}{2}H_{n-2}(x)$$
+		Then we have $$dH_{n+1}(B_t) = H_n(B_t)dB_t$$
+		That means$$H_{n+1}(B_t) = \int_0^t H_n(B_t)dB_t$$
+		$$\frac{t^{\frac{n+1}{2}}}{(n+1)!}h_{n+1}\left(\frac{B_t}{\sqrt{t}}\right) = \int_0^t \frac{t^{\frac{n}{2}}}{n!}h_{n}\left(\frac{B_t}{\sqrt{t}}\right)dB_t$$
+	\end{enumerate}
+	\end{proof}
+
+\section*{Exercise 4.1}
+	\begin{enumerate}
+		\item $g(t,x) = x^2$ then $dB_t^2 = 2B_tdB_t+dt$.\\
+			$u = 1, v = 2B_t$.
+		\item $g(t,x) = 2+t+e^x$ then $dX_t = dt + e^{B_t}dB_t + \frac{1}{2}e^{B_t}dt = (1+\frac{1}{2}e^{B_t})dt + e^{B_t}dB_t$.\\
+			$u = 1+e^{B_t}, v = e^{B_t}$.
+		\item $g(t,x_1,x_2) = x_1^2 + x_2^2$ then $dX_t = 2dt + 2B_1dB_1(t) + 2B_2dB_2(t)$.\\
+			$u = 2, v = \begin{bmatrix}
+				2B_1 \\
+				2B_2
+			\end{bmatrix}$.
+		\item $dX_t = (dt, dB_t)$.
+		\item $dX_t = (dB_1(t)+dB_2(t)+dB_3(t), 2B_2(t)dB_t(2)+2dt-B_1(t)dB_3(t)-B_3(t)dB_1(t))$.
+	\end{enumerate}
+
+\section*{Exercise 4.11}
+	\begin{enumerate}
+		\item \begin{align*}
+			dX_t
+			& = \frac{1}{2}e^{\frac{1}{2}t}\cos{(B_t)}dt - e^{\frac{1}{2}t}\sin{(B_t)}dB_t - \frac{1}{2}e^{\frac{1}{2}t}\cos{(B_t)}dt\\
+			& = -e^{\frac{1}{2}t}\sin{(B_t)}dB_t
+		\end{align*}
+		So, this is martingale.
+		\item $$dX_t = e^{\frac{1}{2}t}\cos{(B_t)}$$
+		So, this is martingale.
+		\item Let $f(x,t) = (x+t)e^{-x-\frac{1}{2}t}$
+		\begin{align*}
+			\frac{\partial f}{\partial t}
+			& = e^{-x-\frac{1}{2}t} - \frac{1}{2}(x+t)e^{-x-\frac{1}{2}t}\\
+			& = \left(1-\frac{1}{2}x - \frac{1}{2}t\right)e^{-x-\frac{1}{2}t}\\
+			\frac{\partial f}{\partial x}
+			& = \left(1-x-t\right)e^{-x-\frac{1}{2}t}\\
+			\frac{\partial^2 f}{\partial x^2}
+			& = \left(x+t-2\right)e^{-x-\frac{1}{2}t}
+		\end{align*}
+		Thus, \begin{align*}
+			dX_t
+			& = \left(1-B_t-t\right)e^{-B_t\frac{1}{2}t}dB_t + 0\\
+			& = \left(1-B_t - t\right)e^{-B_t-\frac{1}{2}t}dB_t
+		\end{align*}
+		So, this is martingale.
+	\end{enumerate}
 \end{document}

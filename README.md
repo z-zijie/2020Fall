@@ -133,3 +133,5 @@ Related book: [Basics of Stochastic Analysis](/MATH735/Textbooks/Basics%20of%20S
   - [x] [Solution](/COMP760/Homework3/solution_3.pdf)
 - [x] [Homework 4: Decision Trees(Oct 29)](/COMP760/Homework4)
   - [x] [Solution](/COMP760/Homework4/solution_4.pdf)
+- [x] [Homework 5: Nearest Neighbors & Naive Bayes(Nov 12)](/COMP760/Homework5)
+  - [ ] [Solution](/COMP760/Homework5/solution_5.pdf)

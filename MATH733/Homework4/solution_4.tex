@@ -1,0 +1,189 @@
+\documentclass{article}
+% --- Modify margins --- %
+\usepackage{geometry}
+\geometry{a4paper,scale=0.8}
+% --- Involved packages --- %
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{bbm}
+\usepackage{graphicx}
+\usepackage{physics}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{appendix}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	% backgroundcolor=\color{backcolour},
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\sffamily\footnotesize,
+	breakatwhitespace=false,
+	breaklines=true,
+	captionpos=b,
+	keepspaces=true,
+	% numbers=left,
+	numbersep=5pt,
+	showspaces=false,
+	showstringspaces=false,
+	showtabs=false,
+	tabsize=2
+}
+
+\lstset{style=mystyle}
+
+% --- NewCommand --- %
+% \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,
+	urlcolor=cyan,
+}
+
+\urlstyle{same}
+
+
+
+
+
+
+% --- Title information --- %
+\title{MATH 733 - Fall 2020\\
+		{\Large \textbf{Homework 4}}\\
+		{\normalsize \textbf{Due : 10PM, November 8, 2020}}
+	}
+\author{Zijie Zhang}
+\date{\today}
+
+
+
+% --- main --- %
+\begin{document}
+	\maketitle
+
+	\begin{enumerate}
+		\item $X_n \Rightarrow X$ means
+			$$\lim_{n\to\infty} P(X_n \leqslant k) = P(X \leqslant k)$$
+			Since all $X$ and $X_n$ are integer random variables. We have , for all $k$\begin{align*}
+				\lim_{n\to\infty}P(X_n = k) 
+				& = \lim_{n\to\infty} P(X_n \leqslant k) - \lim_{n\to\infty} P(X_n \leqslant k-1)\\
+				& = P(X \leqslant k) - P(X \leqslant k-1)\\
+				& = P(X = k)
+			\end{align*}
+		If $\lim_{n\to\infty} P(X_n=k) = P(X=k)$ for all $k\in\mathbb{Z}$, for finite $a$ and $b$, the sum of $P(X_n = m)$ is $P(a\leqslant X_n \leqslant b)$. It is also finite. We get the following equation immediately
+		$$\lim_{n\to\infty}P(a\leqslant X_n \leqslant b) = P(a \leqslant X \leqslant b)$$
+		Consider small enough $\epsilon > 0$, there exists $L$ s.t. $$P(-L \leqslant X \leqslant L) \geqslant 1-\epsilon$$
+		Pick big enough $N$ so that for $n \geqslant N$, we have $$P(-L \leqslant X_n \leqslant L) \geqslant 1-2\epsilon$$
+		Thus $P(X_n < -L) < 2\epsilon$ for $n > N$. By triangle inequality, \begin{align*}
+			|P(X_n \leqslant b) - P(X \leqslant b)|
+			& = |P(X_n < -L) + P(-L \leqslant X_n \leqslant b) - P(-L \leqslant X \leqslant b) - P(X < -L) |\\
+			& \leqslant |P(-L \leqslant X_n \leqslant b) - P(-L \leqslant X \leqslant b)| + 3\epsilon
+		\end{align*}
+		$$\limsup_{n\to\infty} |P(X_n \leqslant b) - P(X \leqslant b)| \leqslant 3 \epsilon$$
+		Therefore, $$X_n \Rightarrow X$$
+
+		\item Let $F_n$ be the CDF of $X_n$
+			\begin{align*}
+				F_n(t)
+				& = P(X_n \leqslant t)\\
+				& \geqslant P(X_n \leqslant t, X \leqslant t- \epsilon)\\
+				& \geqslant P(X \leqslant t - \epsilon) - P(|X_n - X|>\epsilon)
+			\end{align*}
+		Thus, we have $$\lim_{n\to\infty} F_n(t) \geqslant P(X \leqslant t - \epsilon) = F(t-\epsilon)$$
+		Similarly, $$F(t+\epsilon) \geqslant \lim_{n\to\infty} F_n(t) $$
+		Therefore,  $$X_n \Rightarrow X$$
+
+		If $X_n \Rightarrow c$, then $\lim_{n\to\infty}F_n(x) = \mathbbm{1}_{x \geqslant c}$. For all $\epsilon > 0$,\begin{align*}
+			P(|X_n-c|\geqslant \epsilon)
+			& = 1 - P(X_n < c+\epsilon) + P(X_n \leqslant c-\epsilon)\\
+			& = 1 - F_n(c+\epsilon) + F_n(c -\epsilon)\\
+			& \rightarrow 0
+		\end{align*}
+		So, $$X_n \overset{P}{\to} X$$
+
+		\item Let $F_n$ be the distribution function of $X_n$ and $F$ the distribution function of $X$. For fixed $x$ and small enough $\epsilon$.
+		\begin{align*}
+			P(X_n + Y_n \leqslant x)
+			& = P(X_n + Y_n \leqslant x, |Y_n -c|\leqslant \epsilon) + P(X_n + Y_n \leqslant x, |Y_n -c|>\epsilon)\\
+			& \leqslant P(X_n \leqslant x-c+\epsilon) + P(|Y_n-c|>\epsilon)
+		\end{align*}
+		We know that $$P(X_n \leqslant x-c+\epsilon) = F_n(x-c+\epsilon) \to F(x-c+\epsilon)$$
+		$$\limsup_{n\to\infty}P(X_n+Y_n\leqslant x) \leqslant F(x-c)$$
+		Similarly, the lower bound is$$\liminf_{n\to\infty}P(X_n+Y_n\leqslant x) \geqslant F(x-c)$$
+		This implies $$\lim_{n\to\infty}P(X_n+Y_n\leqslant x) = F(x-c)$$
+		Therefore, this shows that $$X_n+Y_n \Rightarrow X + c$$
+
+		\item Consider $X_n = \xi$, $Y_n = (-1)^n \xi$,  where $\xi \sim N(0,1)$ then\begin{align*}
+			P(X_n\leqslant x, Y_n \leqslant y) = \left\{\begin{aligned}
+				P(\xi \leqslant \min{(x,y)}), & \text{ if } n \text{ is even}\\
+				P(-y \leqslant \xi \leqslant x), & \text{ if } n \text{ is odd}
+			\end{aligned}\right.
+		\end{align*}
+		$X_n+Y_n$ does not converge in distribution.
+
+		\item $M_n$ is the maximum of the first $n$ element, then $F^n(x) = F_{M_n}(x)$
+		Thus $$F^n\left(n^{\frac{1}{\alpha}}x\right) = F_{M_n}\left(n^{\frac{1}{\alpha}}x\right) = P\left(M_n \leqslant n^{\frac{1}{\alpha}}x\right) = P\left(n^{-\frac{1}{\alpha}}M_n \leqslant x\right)$$
+		Replace $x = n^{\frac{1}{\alpha}}x$ in
+			$$\lim_{x\to\infty} x^{\alpha}(1-F(x))=b$$
+			$$\lim_{x\to\infty} n x^{\alpha}\left(1-F\left(n^{\frac{1}{\alpha}}x\right)\right)=b$$
+		Thus we have,\begin{align*}
+			\lim_{x\to\infty} F^n\left(n^{\frac{1}{\alpha}}x\right)
+			& = \lim_{x\to\infty} \left(1-\frac{b}{nx^\alpha}\right)^n\\
+			& = \lim_{x\to\infty} \left(\left(1-\frac{b}{nx^\alpha}\right)^{\frac{nx^\alpha}{b}}\right)^{\frac{b}{x^\alpha}}
+		\end{align*}
+		If $n\to \infty$, $$n^{-\frac{1}{\alpha}}M_n \Rightarrow \exp{-\frac{b}{x^{\alpha}}}$$
+
+		\item Consider $X_i \sim \text{Bernoulli}(-1,1)$, let $$Y = \sum_{k=1}^{\infty}X_k 2^{-k}$$
+		Note that the characteristic function of right hand side is $$\prod_{k=1}^{\infty} \cos{(t 2^{-k})}$$
+		Recall the Problem 6 in Homework 2, $Y \sim \text{Uniform}(-1,1)$, then its characteristic function is $$\int \frac{e^{itx}}{2}dx = \frac{\sin{(t)}}{t}$$
+		Therefore, $$\frac{\sin{(t)}}{t} = \prod_{k=1}^{\infty} \cos{\left(\frac{t}{2^k}\right)}$$
+		\item First consider the expectations of $S_n$
+		\begin{align*}
+			E[S_n]
+			& = E[X_1 + \cdots + X_n]\\
+			& = E[X_1] + \cdots + E[X_n]\\
+			& = 0
+		\end{align*}
+		Since $E[X_m] = 0+0 = 0$.
+
+		Then consider the variance of $S_n$
+		\begin{align*}
+			E[S_n^2]
+			& = E\left[(X_1 + \cdots + X_n)^2\right]\\
+			& = E\left[X_1^2\right] + \cdots + E\left[X_n^2\right] + \sum_{i\not=j} E[X_i]E[X_j]\\
+			& = 2n - \sum_{k=1}^n\left(\frac{1}{k^2}\right)
+		\end{align*}
+		Thus $$\frac{\text{Var}(S_n)}{n} = 2 - \frac{1}{n}\sum_{k=1}^n\left(\frac{1}{k^2}\right) \to 2 \text{ } (n\to \infty)$$
+
+		Consider the characteristic function of $X_k$,
+		\begin{align*}
+			\varphi_{X_k}(t)
+			& = E[e^{itX_k}]\\
+			& = \frac{\cos(tk)}{k^2} + \cos(t)\left(1-\frac{1}{k^2}\right)
+		\end{align*}
+		$$\varphi_{\frac{X_k}{\sqrt{n}}}(t) = \frac{\cos(\frac{tk}{\sqrt{n}})}{k^2} + \cos(\frac{t}{\sqrt{n}})\left(1-\frac{1}{k^2}\right)$$
+		When $k \to \infty$, $\varphi = \left(1-\frac{t^2}{2n}\right) \text{ (by Taylor Series)}$.
+
+		Thus 
+			$$\varphi_{\frac{S_n}{\sqrt{n}}}(t) \to \varphi^n = \left(1-\frac{t^2}{2n}\right) = e^{-\frac{t^2}{2}}$$
+		Therefore, $$\frac{S_n}{\sqrt{n}}\Rightarrow N(0,1)$$
+	\end{enumerate}
+
+
+\end{document}

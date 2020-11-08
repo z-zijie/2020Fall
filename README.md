@@ -9,7 +9,8 @@
 
 ## MATH 733
 
-**Midterm 1: Wednesday, October 21, 8pm-10pm.**
+**Final Exam: Tuesday, December 15, 12:25pm-2:25pm**
+*Midterm 1: Wednesday, October 21, 8pm-10pm.*
 
 - [x] 9/3/20 - First part (intro)
 - [x] 9/3/20 - 2nd part (Kolmogorov axioms, examples)
@@ -29,7 +30,7 @@
 - [x] [Homework 3 (Oct 11 @ 10pm)](/MATH733/Homework3/hw_3.pdf)
   - [x] [Solution](/MATH733/Homework3/solution_3.pdf)
 - [x] [Homework 4 (Nov 08 @ 10pm)](/MATH733/Homework4/hw_4.pdf)
-  - [ ] [Solution]
+  - [x] [Solution](/MATH733/Homework4/solution_4.pdf)
 
 ## MATH 735
 

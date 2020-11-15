@@ -1,0 +1,19 @@
+Homework 3 (due Dec 4)
+
+NOTE: 1) please submit only one file!  If you take photos please combine them into one single file. Thanks.  2) This homework set may require a bit more time so please start to work on it earlier.
+
+1) Timo’s notes Exercise 6.1, Exercise 6.7.
+
+2) Timo’s notes Exercise 7.6   -  This is a nice example of SDE driven by semi-martingale.
+
+3) Oksendal’s book Exercise 5.1,  5.4,  5.14,  5.15,  5.16,  7.1,  7.2.  Please see the attachments which are exercises from Chapter 5 and Chapter 7 of Oksendal’s book.    Oksendal_Chp5_Exercises.pdfPreview the documentOksendal_Chp7_Exercises.pdfPreview the document
+
+4) Read Timo’s notes Section 8.1 “local time”. There are three main results: 
+
+Theorem 8.1: local time process can be rigorously defined with the desired properties
+
+Theorem 8.5: Tanaka’s formula, relating local time with an Ito integral
+
+Theorem 8.7: An interesting relation between the laws of BM, running maximum, and local time.
+
+As a proof that you have read this section, please write down the proof in details for *one of* the above 3 theorems. (Your proof can of course be the same as in the notes.)

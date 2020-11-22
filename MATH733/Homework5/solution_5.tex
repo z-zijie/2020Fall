@@ -1,0 +1,147 @@
+\documentclass{article}
+% --- Modify margins --- %
+\usepackage{geometry}
+\geometry{a4paper,scale=0.8}
+% --- Involved packages --- %
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{bbm}
+\usepackage{graphicx}
+\usepackage{physics}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{appendix}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+	% backgroundcolor=\color{backcolour},
+	commentstyle=\color{codegreen},
+	keywordstyle=\color{magenta},
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{codepurple},
+	basicstyle=\sffamily\footnotesize,
+	breakatwhitespace=false,
+	breaklines=true,
+	captionpos=b,
+	keepspaces=true,
+	% numbers=left,
+	numbersep=5pt,
+	showspaces=false,
+	showstringspaces=false,
+	showtabs=false,
+	tabsize=2
+}
+
+\lstset{style=mystyle}
+
+% --- NewCommand --- %
+% \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,
+	urlcolor=cyan,
+}
+
+\urlstyle{same}
+
+
+
+
+
+
+% --- Title information --- %
+\title{MATH 733 - Fall 2020\\
+		{\Large \textbf{Homework 5}}\\
+		{\normalsize \textbf{Due : 10PM, November 22, 2020}}
+	}
+\author{Zijie Zhang}
+\date{\today}
+
+
+
+% --- main --- %
+\begin{document}
+	\maketitle
+
+	\begin{enumerate}
+		\item By Kolmogorov's 0-1 Law, If $X_1, X_2, \cdots$ are independent and $A \in \mathcal{T}$, then $P(A)=0$ or $1$.
+		
+		Notice that, by Fatou's lemma $$P\left(\limsup_{n\to\infty}\frac{S_n}{\sqrt{n}}>x\right) \geqslant \limsup_{n\to\infty}P\left(\frac{S_n}{\sqrt{n}}>x\right) $$
+		By CLT, we know
+		$$\limsup_{n\to\infty}P\left(\frac{S_n}{\sqrt{n}}>x\right) = P(\mathcal{N}(0,1)>x)>0$$
+		So, let $A_x = \{\limsup_{n\to\infty}\frac{S_n}{\sqrt{n}}>x\} \in \mathcal{T}$, $P(A_x)>0$. Then $P(A)=1$.
+
+		Thus,
+		$$\limsup_{n\to\infty}\frac{S_n}{\sqrt{n}} = \infty$$
+
+		\item By CLT,
+			$$P\left(\frac{S_n-n}{\sqrt{n}}\leqslant \alpha\right)\to \Phi(\alpha) \text{ as }(n\to \infty)$$
+			If we add $\frac{k}{\sqrt{n}}$ after $\alpha$, it still true.
+			$$P\left(\frac{S_n-n}{\sqrt{n}}\leqslant \alpha+\frac{\alpha^2}{4\sqrt{n}}\right)\to \Phi(\alpha) \text{ as }(n\to \infty)$$
+			$$\frac{S_n-n}{\sqrt{n}}\leqslant \alpha+\frac{\alpha^2}{4\sqrt{n}}
+			\Leftrightarrow
+			S_n \leqslant n + \alpha \sqrt{n} + \frac{\alpha^2}{4} = \left(\frac{\alpha}{2}+\sqrt{n}\right)^2
+			\Leftrightarrow
+			\sqrt{S_n} -\sqrt{n} \leqslant \frac{\alpha}{2}$$
+			So, we have
+			$$P\left(\sqrt{S_n} -\sqrt{n}\leqslant \frac{\alpha}{2}\right)\to \Phi(\alpha) \text{ as }(n\to \infty)$$
+			$$P\left(\frac{\sqrt{S_n} -\sqrt{n}}{\frac{1}{2}}\leqslant \alpha\right)\to \Phi(\alpha) \text{ as }(n\to \infty)$$
+			$$\sqrt{S_n} -\sqrt{n} \to \mathcal{N}\left(0,\frac{1}{4}\right)$$
+
+		\item The problem satisfies Lindeberg's condition. Assume $E[X_k] = \mu_k$ and $\text{Var}[X_k] = \sigma_k^2$.
+		
+		Then, $s_n^2 = \text{Var } S_n = \sum_{k=1}^{n}\sigma_k^2$.
+		$$\lim_{n\to\infty}\frac{1}{s_n^2}\sum_{k=1}^n\left[(X_k-\mu_k)^2\cdot \mathbbm{1}_{|X_k-\mu_k|>\varepsilon s_n}\right] = 0$$
+		Because, $|X_k|<M<\infty$ and $S_n\to \infty$.
+		By CTL, $$Z_n = \frac{S_n-ES_n}{s_n}$$ converge in distribution to a standard normal random variable as $n \to \infty$.
+
+		\item \begin{align*}
+			N_n(a,b)
+			& = \sum_{k=1}^n \mathbbm{1}\left(X_k\in\left(c+\frac{a}{n}, c+\frac{b}{n}\right)\right)\\
+			& = \sum_{k=1}^n \left[\mathbbm{1}\left(X_k\leqslant c+\frac{b}{n}\right) - \mathbbm{1}\left(X_k\leqslant c+\frac{a}{n}\right)\right]\\
+			& = nF_n\left(c+\frac{b}{n}\right)-nF_n\left(c+\frac{a}{n}\right)
+		\end{align*}
+		Consider \begin{align*}
+			\lim_{n\to\infty} \frac{N_{n}(a,b)}{b-a}
+			& = \lim_{n\to\infty} \frac{nF_n\left(c+\frac{b}{n}\right)-nF_n\left(c+\frac{a}{n}\right)}{b-a}\\
+			& = \lim_{n\to\infty} \frac{F_n\left(c+\frac{b}{n}\right)-F_n\left(c+\frac{a}{n}\right)}{\frac{b-a}{n}}\\
+			& = \lim_{n\to\infty} \frac{F\left(c+\frac{b}{n}\right)-F\left(c+\frac{a}{n}\right)}{\frac{b-a}{n}}
+		\end{align*}
+		Notice that, this is $f(c)$. So, $N_n(a,b)$ converges in distribution for any $a<b$ and $\lim_{n\to\infty} N_n(a,b) = (b-a)f(c)$.
+		\item \begin{enumerate}[label=(\alph*)]
+			\item Let $F_{n_m}(x)$ be the cdf. of $X_{n_m}$, $F_{n_m}(x) = P(X_{n_m} \leqslant x)$. We know $X_{n_m} \Rightarrow Y$, let $F(x)$ be the cdf. of $Y$.
+			
+			For any $k$, $$E[Y^k] 
+			= \int_{\Omega} x^k dF(x)
+			= \lim_{m\to \infty}\int_{\Omega} x^k dF_{n_m}(x)
+			= \lim_{m\to\infty} E[X_{n_m}^k]
+			= m_k$$
+			\item Consider the characteristic function of $X_m$,
+			$$\varphi_m(t)
+			= E\left[e^{itX_m}\right]
+			= \sum_{k=0}^\infty \frac{i^k E[X_m^k]}{k!} t^k
+			= \sum_{k=0}^n \frac{i^k E[X_m^k]}{k!} t^k + o(t^{n+1})$$
+			$$\lim_{m\to\infty}\varphi_{m}(t)
+			=\lim_{m\to\infty} \sum_{k=0}^\infty \frac{i^k E[X_m^k]}{k!} t^k
+			=\lim_{m\to\infty} \sum_{k=0}^\infty \frac{i^k m_k}{k!} t^k
+			= \varphi(t)$$
+			Here, $\varphi(t)$ is moment-generating function with $C^{\infty}$ at $t=0$. Thus $X_m$ converges in distribution.
+		\end{enumerate}
+	\end{enumerate}
+
+
+\end{document}

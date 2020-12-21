@@ -74,20 +74,63 @@
         $$p(\lambda) = A^N + \alpha_{N-1}A^{N-1} + \cdot + \alpha_1 A + (-1)^N \det |A|I_N = 0$$
         Thus $A^N$ is a linear combination of $I, A, A^2, \cdot, A^{N-1}$.
         \item \begin{enumerate}[label=\roman*]
-            \item 1
-            \item 2
-            \item 3
-            \item 4
+            \item \begin{align*}
+                e_n
+                & = u_n - u\\
+                & = u_{n-1} + \alpha(f-Au_{n-1})-u\\
+                & = (I-\alpha A) (u_{n-1}-u)\\
+                & = (I-\alpha A)e_{n-1}
+            \end{align*}
+            \item \begin{align*}
+                \Vert e_{n+1}\Vert
+                & = \Vert(I-\alpha A)e_{n}\Vert\\
+                & \leqslant \Vert (I-\alpha A)\Vert\cdot \Vert e_n \Vert
+            \end{align*}
+            Noticed that $$\rho(A) = \max_{1\leqslant i \leqslant N}|\lambda_i|$$
+            then, $$\Vert e_{n+1}\Vert \leqslant \rho \Vert e_{n}\Vert$$
+            where $\rho = \max_{1\leqslant j \leqslant N}|1-\alpha \lambda_j|$
+            \item \begin{align*}
+                \rho 
+                & = \max_{1\leqslant j \leqslant N}|1-\alpha \lambda_j|\\
+                & = \max(|1-\alpha \lambda_1|, |1-\alpha \lambda_N|)
+            \end{align*}
+            $$1-\alpha\lambda_1 = -1+\alpha\lambda_N$$
+            $$\alpha = \frac{2}{\lambda_1+\lambda_N}$$
+            Thus,  we have $\rho = 1 - \frac{2\lambda_1}{\lambda_1+\lambda_N} = \frac{\kappa-1}{\kappa+1} < 1$, where $\kappa = \frac{\lambda_N}{\lambda_1}$.
+            \item \begin{align*}
+                \rho
+                & = \max_{1\leqslant j \leqslant N}|1-\alpha \lambda_j|\\
+                & = \max\left(\left|1-\frac{2\lambda_1}{c+C}\right|, \left|1-\frac{2\lambda_N}{c+C}\right|\right)
+            \end{align*}
+            Noticed that \begin{align*}
+                \left|1-\frac{2\lambda_1}{c+C}\right|
+                & \leqslant \frac{C-c}{C+c}\\
+                1-\frac{2C}{C+c} \leqslant 1-&\frac{2\lambda_1}{C+c} \leqslant 1-\frac{2c}{C+c}\\
+                \Leftarrow c \leqslant &\lambda_1 \leqslant C
+            \end{align*}
+            Then, $$\rho \leqslant \frac{C-c}{C+c} = \frac{\kappa'-1}{\kappa' +1} <1$$
         \end{enumerate}
         \item \begin{enumerate}[label=\roman*]
-            \item 1
-            \item 2
-            \item 3
-            \item 4
-            \item 5
+            \item $$r_1 = r_0 - \alpha_0 A p_0 = r_0 - \alpha_0 A r_0$$
+            \item \begin{align*}
+                r_{n+1}
+                & = r_n - \alpha_n A p_n\\
+                & = r_n - \alpha_n A (r_n + \beta_{n-1}p_{n-1})\\
+                & = r_n - \alpha_n A r_n - \alpha_n\beta_{n-1}\frac{r_{n-1}-r_n}{\alpha_{n-1}}
+            \end{align*}
+            \item \begin{align*}
+                r_0q_0 - \delta_0q_1
+                & = \frac{1}{\alpha_0}q_0 - \frac{\sqrt{\beta_0}}{\alpha_0}q_1\\
+                & = \frac{1}{\alpha_0}q_0 - \frac{r_1}{\alpha_0\Vert r_0 \Vert}\\
+                & = \frac{\alpha_0Ar_0}{\alpha_0 \Vert r_0 \Vert}\\
+                & = Aq_0
+            \end{align*}
+            $$\frac{r_{n+1}}{\Vert r_n\Vert} = q_n - \alpha_n A r_n +\frac{\alpha_n \beta_{n-1}}{\alpha_{n-1}}\left(q_n-\frac{r_{n-1}}{\Vert r_n\Vert}\right)$$
+            $$q_{n+1}\sqrt{\beta_n} = q_n -\alpha_n A q_n + \frac{\alpha_n \beta_{n-1}}{\alpha_{n-1}}\left(q_n - \frac{q_{n-1}}{\sqrt{\beta_{n-1}}}\right)$$
+            $$Aq_n = -\delta_{n-1}q_{n-1}+\gamma_n q_n - \delta_n q_{n+1}$$
+            \item 
+            \item $$Q_n^TAQ_n = Q_n^T(Q_nT_n-\delta_{n-1}q_ne_n^T) = T_n$$
         \end{enumerate}
     \end{enumerate}
-    
-    \section{}
 
 \end{document}
